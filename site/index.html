@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Find My Meeting</title>
+  <meta name="description" content="Trouvez les meetings et réunions publiques de la présidentielle 2027 près de chez vous.">
+  <meta name="theme-color" content="#2B2483">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#meetings" aria-label="Find My Meeting — accueil">
+      <img src="assets/logo.png" alt="" width="40" height="40">
+      <span class="brand-text"><small>Find my</small>Meeting</span>
+    </a>
+    <nav class="tabs" role="tablist">
+      <a href="#meetings" data-tab="meetings" role="tab">Meetings</a>
+      <a href="#quiz" data-tab="quiz" role="tab">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- ====================== MEETINGS ====================== -->
+  <main id="view-meetings" class="view">
+    <section class="hero">
+      <h1>Les meetings de la présidentielle,<br><span>près de chez vous.</span></h1>
+      <p class="updated" id="updated"></p>
+    </section>
+
+    <section class="filters" aria-label="Filtres">
+      <div class="f-row f-where">
+        <div class="field grow">
+          <label for="city">Ma ville</label>
+          <div class="combo">
+            <input id="city" type="text" placeholder="Ex. Lyon, Rennes, 33000…" autocomplete="off">
+            <ul id="city-suggest" class="suggest" role="listbox" hidden></ul>
+          </div>
+        </div>
+        <button id="locate" class="btn ghost" type="button" title="Utiliser ma position">📍 Autour de moi</button>
+        <div class="field">
+          <label for="radius">Rayon</label>
+          <select id="radius">
+            <option value="10">10 km</option>
+            <option value="25">25 km</option>
+            <option value="50" selected>50 km</option>
+            <option value="100">100 km</option>
+            <option value="200">200 km</option>
+            <option value="0">Toute la France</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="field">
+          <label for="region">Région</label>
+          <select id="region"><option value="">Toutes les régions</option></select>
+        </div>
+        <div class="field">
+          <label for="period">Quand</label>
+          <select id="period">
+            <option value="7">7 prochains jours</option>
+            <option value="30" selected>30 prochains jours</option>
+            <option value="0">Tout</option>
+          </select>
+        </div>
+        <label class="switch"><input type="checkbox" id="only-candidate"><span></span>Candidat·e présent·e</label>
+      </div>
+      <div class="f-row">
+        <div class="field grow">
+          <span class="label">Candidats</span>
+          <div id="chips" class="chips"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="results-head">
+      <p id="count" aria-live="polite"></p>
+      <div class="seg" id="mobile-toggle">
+        <button type="button" data-mode="list" class="on">Liste</button>
+        <button type="button" data-mode="map">Carte</button>
+      </div>
+    </div>
+
+    <section class="results" data-mode="list">
+      <ol id="list" class="list"></ol>
+      <div class="map-wrap"><div id="map" aria-label="Carte des meetings"></div></div>
+    </section>
+  </main>
+
+  <!-- ====================== QUIZ ====================== -->
+  <main id="view-quiz" class="view" hidden>
+    <section id="quiz-intro" class="quiz-card center">
+      <h1>Qui aller écouter ?</h1>
+      <p>13 questions, 2 minutes. On compare vos réponses aux positions des candidats, puis on vous montre leurs meetings les plus proches.</p>
+      <button class="btn primary big" id="quiz-start" type="button">Commencer le quiz</button>
+      <p class="fine" id="quiz-disclaimer"></p>
+    </section>
+
+    <section id="quiz-q" class="quiz-card" hidden>
+      <div class="progress"><span id="quiz-bar"></span></div>
+      <p class="q-meta"><span id="q-num"></span> · <span id="q-theme"></span></p>
+      <h2 id="q-text"></h2>
+      <div class="answers" id="answers">
+        <button type="button" data-v="2">Tout à fait d'accord</button>
+        <button type="button" data-v="1">Plutôt d'accord</button>
+        <button type="button" data-v="0">Sans avis</button>
+        <button type="button" data-v="-1">Plutôt pas d'accord</button>
+        <button type="button" data-v="-2">Pas du tout d'accord</button>
+      </div>
+      <div class="q-foot">
+        <button type="button" class="btn ghost" id="q-back">← Retour</button>
+        <label class="switch"><input type="checkbox" id="q-important"><span></span>Important pour moi</label>
+        <button type="button" class="btn ghost" id="q-skip">Passer →</button>
+      </div>
+    </section>
+
+    <section id="quiz-result" hidden>
+      <div class="quiz-card">
+        <h1>Vos affinités</h1>
+        <p class="fine" id="result-note"></p>
+        <div id="result-where" class="result-where"></div>
+        <ol id="ranking" class="ranking"></ol>
+        <div class="center"><button class="btn ghost" id="quiz-restart" type="button">Refaire le quiz</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Find My Meeting — agenda mis à jour automatiquement chaque matin à partir des sites de campagne et de la presse. Les horaires peuvent changer : vérifiez toujours la source.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="data/bundle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[
+  {"id": "arthaud", "name": "Nathalie Arthaud", "party": "Lutte ouvrière", "family": "Extrême gauche", "color": "#B3001B", "site": "https://www.lutte-ouvriere.org"},
+  {"id": "melenchon", "name": "Jean-Luc Mélenchon", "party": "La France insoumise", "family": "Gauche radicale", "color": "#C9462C", "site": "https://melenchon2027.fr", "agenda": "https://melenchon2027.fr/agenda-de-campagne/"},
+  {"id": "roussel", "name": "Fabien Roussel", "party": "Parti communiste français", "family": "Gauche", "color": "#D2232A", "site": "https://www.pcf.fr"},
+  {"id": "ruffin", "name": "François Ruffin", "party": "Debout !", "family": "Gauche", "color": "#E4572E", "site": ""},
+  {"id": "royal", "name": "Ségolène Royal", "party": "Parti socialiste", "family": "Gauche", "color": "#EC4E7B", "site": ""},
+  {"id": "bouamrane", "name": "Karim Bouamrane", "party": "Parti socialiste", "family": "Gauche", "color": "#F06C9B", "site": ""},
+  {"id": "glucksmann", "name": "Raphaël Glucksmann", "party": "Place publique", "family": "Centre gauche", "color": "#E2557A", "site": "https://place-publique.eu"},
+  {"id": "batho", "name": "Delphine Batho", "party": "Génération écologie", "family": "Écologie", "color": "#2E9E4F", "site": ""},
+  {"id": "attal", "name": "Gabriel Attal", "party": "Renaissance", "family": "Centre", "color": "#F2A900", "site": "https://parti-renaissance.fr"},
+  {"id": "philippe", "name": "Édouard Philippe", "party": "Horizons", "family": "Centre droit", "color": "#1F8FCE", "site": "https://horizonsleparti.fr"},
+  {"id": "retailleau", "name": "Bruno Retailleau", "party": "Les Républicains", "family": "Droite", "color": "#0057B8", "site": "https://republicains.fr"},
+  {"id": "lisnard", "name": "David Lisnard", "party": "Nouvelle Énergie", "family": "Droite", "color": "#3A6EA5", "site": ""},
+  {"id": "dupont-aignan", "name": "Nicolas Dupont-Aignan", "party": "Debout la France", "family": "Droite souverainiste", "color": "#5B3F8C", "site": "https://www.debout-la-france.fr"},
+  {"id": "le-pen", "name": "Marine Le Pen", "party": "Rassemblement national", "family": "Extrême droite", "color": "#0D2D6B", "site": "https://rassemblementnational.fr", "note": "Éligibilité suspendue à la décision de la Cour de cassation (attendue d'ici début 2027)."},
+  {"id": "zemmour", "name": "Éric Zemmour", "party": "Reconquête", "family": "Extrême droite", "color": "#2B2B2B", "site": "https://www.parti-reconquete.fr"},
+  {"id": "philippot", "name": "Florian Philippot", "party": "Les Patriotes", "family": "Souverainiste", "color": "#3B4A6B", "site": ""}
+]
