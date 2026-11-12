@@ -33,7 +33,7 @@
   const ALLOWED = {
     recherche: { methode: ["ville", "code-postal", "geolocalisation"], resultats: ["0", "1-5", "6+"] },
     "fiche-meeting": { origine: ["lien-partage", "carte", "source", "itineraire"] },
-    "quiz-debut": {}, "quiz-fin": {}, calendrier: {},
+    "quiz-debut": { version: ["court", "long", "affinage"] }, "quiz-fin": { version: ["court", "long"] }, calendrier: {},
     partage: { objet: ["meeting", "resultat", "site"], canal: ["natif", "copie", "image", "whatsapp", "x", "linkedin"] },
   };
   function cleanData(name, data) {
@@ -98,7 +98,7 @@
   }
 
   /* ---------- Économie d'événements : au plus N envois par chargement de page ---------- */
-  const CAPS = { recherche: 3, "fiche-meeting": 8, "quiz-debut": 1, "quiz-fin": 1, calendrier: 5, partage: 5 };
+  const CAPS = { recherche: 3, "fiche-meeting": 8, "quiz-debut": 2, "quiz-fin": 2, calendrier: 5, partage: 5 };
   const sent = {}; const seenMeetings = new Set();
   let total = 0, lastView = null;
   const MAX_TOTAL = 25;

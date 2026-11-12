@@ -438,19 +438,31 @@
   }
 
   /* ---------------- QUIZ ---------------- */
-  const Q = DATA.quiz.questions || [];
+  const ALLQ = DATA.quiz.questions || [];
+  const CORE = ALLQ.filter((q) => q.core !== false);
+  const EXTRA = ALLQ.length - CORE.length;
+  const saved = store.get("quiz", null) || {};
+  let quizMode = saved.mode === "long" ? "long" : "court";
+  let Q = quizMode === "long" ? ALLQ : CORE;
+  function useMode(m) { quizMode = m; Q = m === "long" ? ALLQ : CORE; }
   const P = DATA.quiz.positions || {};
   const QSRC = DATA.quiz.sources || {};
   const USER_LABEL = { 2: "Tout à fait d'accord", 1: "Plutôt d'accord", 0: "Partagé", "-1": "Plutôt pas d'accord", "-2": "Pas du tout d'accord" };
   const POS_LABEL = { 2: "Pour", 1: "Plutôt pour", 0: "Position nuancée", "-1": "Plutôt contre", "-2": "Contre" };
   let qi = 0;
-  let answers = (store.get("quiz", null) || {}).answers || {};
+  let answers = saved.answers || {};
   let lastRanking = [];
 
   function initQuiz() {
-    $("#quiz-start").addEventListener("click", () => { qi = 0; answers = {}; STATS.event("quiz-debut"); showQ(); });
-    $("#shared-start").addEventListener("click", () => { history.replaceState(null, "", "#quiz"); qi = 0; answers = {}; STATS.event("quiz-debut"); showQ(); });
-    $("#quiz-restart").addEventListener("click", () => { qi = 0; answers = {}; persist(); STATS.event("quiz-debut"); showQ(); });
+    const start = (m) => { useMode(m); qi = 0; answers = {}; persist(); STATS.event("quiz-debut", { version: m }); showQ(); };
+    $$("[data-quiz-mode]").forEach((b) => b.addEventListener("click", () => start(b.dataset.quizMode)));
+    $("#quiz-n-court").textContent = CORE.length; $("#quiz-n-long").textContent = ALLQ.length;
+    $("#shared-start").addEventListener("click", () => { history.replaceState(null, "", "#quiz"); start("court"); });
+    $("#quiz-restart").addEventListener("click", () => { answers = {}; persist(); show("intro"); window.scrollTo(0, 0); });
+    $("#quiz-refine").addEventListener("click", () => {
+      useMode("long"); qi = ALLQ.findIndex((q) => q.core === false); if (qi < 0) qi = 0;
+      STATS.event("quiz-debut", { version: "affinage" }); showQ(); window.scrollTo(0, 0);
+    });
     $$("#answers button").forEach((b) => b.addEventListener("click", () => {
       const id = Q[qi].id;
       if (b.dataset.v === "skip") delete answers[id];
@@ -467,12 +479,12 @@
     $("#share-results").addEventListener("click", openShare);
     if (Object.keys(answers).length) showResult(); else show("intro");
   }
-  function persist() { if (store.get("quizConsent", false) && Object.keys(answers).length) store.set("quiz", { answers }); else store.del("quiz"); }
+  function persist() { if (store.get("quizConsent", false) && Object.keys(answers).length) store.set("quiz", { answers, mode: quizMode }); else store.del("quiz"); }
 
   function show(which) {
     ["intro", "q", "result", "shared"].forEach((w) => ($("#quiz-" + w).hidden = w !== which));
   }
-  function next() { qi++; if (qi >= Q.length) { persist(); STATS.event("quiz-fin"); showResult(); window.scrollTo(0, 0); } else showQ(); }
+  function next() { qi++; if (qi >= Q.length) { persist(); STATS.event("quiz-fin", { version: quizMode }); showResult(); window.scrollTo(0, 0); } else showQ(); }
   function showQ() {
     show("q");
     const q = Q[qi], a = answers[q.id];
@@ -491,7 +503,7 @@
     return Object.keys(P).filter((id) => CANDS[id]).map((id) => {
       let s = 0, w = 0;
       const details = [];
-      for (const q of Q) {
+      for (const q of ALLQ) {
         const a = answers[q.id];
         const p = P[id][q.id];
         if (!a || p == null) continue;
@@ -529,10 +541,12 @@
     const answered = Object.keys(answers).length;
     const important = Object.values(answers).filter((a) => a.w === 2).length;
     $("#result-note").textContent = answered
-      ? `Calculé sur ${answered} réponse${answered > 1 ? "s" : ""} sur ${Q.length}${important ? `, dont ${important} jugée${important > 1 ? "s" : ""} importante${important > 1 ? "s" : ""} (comptée${important > 1 ? "s" : ""} double)` : ""}.${answered < 6 ? " Avec si peu de réponses, le résultat est peu fiable." : ""}`
+      ? `${quizMode === "long" ? "Test complet" : "Test rapide"} : calculé sur ${answered} réponse${answered > 1 ? "s" : ""} sur ${Q.length}${important ? `, dont ${important} jugée${important > 1 ? "s" : ""} importante${important > 1 ? "s" : ""} (comptée${important > 1 ? "s" : ""} double)` : ""}.${answered < 6 ? " Avec si peu de réponses, le résultat est peu fiable." : ""}`
       : "Vous n'avez répondu à aucune question : impossible de calculer une proximité.";
     lastRanking = answered ? scores() : [];
     $("#share-results").hidden = !answered;
+    $("#quiz-refine").hidden = !answered || quizMode === "long" || !EXTRA;
+    $("#quiz-refine").textContent = `Affiner avec le test complet (+${EXTRA} questions)`;
 
     $("#top3").innerHTML = lastRanking.slice(0, 3).map((r, i) => {
       const c = CANDS[r.id];
@@ -557,12 +571,47 @@
       </li>`;
     }).join("");
 
+    renderDiscover();
+
     $("#ranking").innerHTML = lastRanking.map((r, i) => {
       const c = CANDS[r.id];
       return `<li class="rank" style="--c:${c.color}"><span>${i + 1}</span><span><b>${esc(c.name)}</b> <small>${esc(c.party)}</small></span><span class="rank-pct">${r.pct}%</span><div class="bar"><span style="width:${r.pct}%"></span></div></li>`;
     }).join("");
 
     renderResultMeetings();
+  }
+
+  /* « Vous aimez ces idées… mais avez-vous déjà écouté ? » : candidats assez proches (hors top 3),
+     d'un autre parti et si possible d'une autre famille politique, pour élargir l'horizon. */
+  function renderDiscover() {
+    const box = $("#discover");
+    if (lastRanking.length < 5) { box.innerHTML = ""; return; }
+    const top = lastRanking.slice(0, 3);
+    const topParties = new Set(top.map((r) => CANDS[r.id].party));
+    const topFams = new Set(top.map((r) => CANDS[r.id].family));
+    const pool = lastRanking.slice(3).filter((r) => !topParties.has(CANDS[r.id].party) && r.details.some((d) => d.diff <= 1));
+    const near = pool.filter((r) => r.pct >= top[0].pct - 20);
+    const cands = (near.length >= 2 ? near : pool).slice(0, 6);
+    // d'abord une autre famille politique, puis la même famille mais un autre parti
+    const picks = [...cands.filter((r) => !topFams.has(CANDS[r.id].family)), ...cands.filter((r) => topFams.has(CANDS[r.id].family))];
+    const chosen = [];
+    for (const r of picks) { if (!chosen.some((x) => CANDS[x.id].family === CANDS[r.id].family)) chosen.push(r); if (chosen.length === 2) break; }
+    if (!chosen.length) { box.innerHTML = ""; return; }
+    box.innerHTML = `<h2 class="h2">Vous aimez ces idées… mais avez-vous déjà écouté ?</h2>
+      <p class="fine" style="margin-top:0">Des candidats proches de vous sur plusieurs sujets, avec une approche différente. Les écouter en meeting, c'est le meilleur moyen de se faire son propre avis.</p>
+      <ul class="top3 compact">${chosen.map((r) => {
+        const c = CANDS[r.id], m = nearestFor(r.id, 1)[0];
+        const agree = r.details.filter((d) => d.diff <= 1).sort((a, b) => a.diff - b.diff || b.w - a.w).slice(0, 4);
+        const differ = r.details.filter((d) => d.diff >= 2).sort((a, b) => b.diff - a.diff).slice(0, 3);
+        return `<li style="--c:${c.color}">
+          <div class="t-head"><span class="t-name"><b>${esc(c.name)}</b><small>${esc(c.party)} · ${esc(c.family)}</small></span><span class="t-pct">${r.pct}%</span></div>
+          <div class="topics">
+            <p><b>D'accord avec vous sur :</b> ${agree.map((d) => `<span class="tag ok">${esc(d.q.theme)}</span>`).join("")}</p>
+            ${differ.length ? `<p><b>Une autre approche sur :</b> ${differ.map((d) => `<span class="tag ko">${esc(d.q.theme)}</span>`).join("")}</p>` : ""}
+            <p>${m ? `<b>Prochain meeting :</b> ${esc(fmtLong(m.date))}${m.time ? " · " + fmtTime(m.time) : ""} — ${esc(m.city)}${m.dist != null ? ` (${Math.round(m.dist)} km)` : ""} · <a class="link" href="#m=${encodeURIComponent(m.id)}">Voir la fiche</a>`
+              : `Pas encore de meeting annoncé.${c.site ? ` <a class="link" href="${esc(c.site)}" target="_blank" rel="noopener">Découvrir son programme</a>` : ""}`}</p>
+          </div></li>`;
+      }).join("")}</ul>`;
   }
 
   function renderResultMeetings() {
@@ -713,24 +762,29 @@
   function renderMethod() {
     if ($("#method-body").dataset.done) return;
     const cands = Object.keys(P).filter((id) => CANDS[id]).sort((a, b) => CANDS[a].name.localeCompare(CANDS[b].name, "fr"));
-    const head = `<tr><th>Candidat</th>${Q.map((q) => `<th title="${esc(q.text)}">${esc(q.theme)}</th>`).join("")}<th>Sources</th></tr>`;
-    const rows = cands.map((id) => `<tr><td><b>${esc(CANDS[id].name)}</b></td>${Q.map((q) => `<td>${P[id][q.id] > 0 ? "+" : ""}${P[id][q.id]}</td>`).join("")}<td>${sourcesFor(id) || "—"}</td></tr>`).join("");
+    const fmtP = (v) => (v == null ? "?" : (v > 0 ? "+" : "") + v);
+    const head = `<tr><th>Candidat</th>${ALLQ.map((q, i) => `<th title="${esc(q.text)}">${i + 1}. ${esc(q.theme)}${q.core === false ? "*" : ""}</th>`).join("")}<th>Sources</th></tr>`;
+    const rows = cands.map((id) => `<tr><td><b>${esc(CANDS[id].name)}</b></td>${ALLQ.map((q) => `<td>${fmtP(P[id][q.id])}</td>`).join("")}<td>${sourcesFor(id) || "—"}</td></tr>`).join("");
     $("#method-body").innerHTML = `
       <p>Le quiz mesure une <b>proximité idéologique</b> entre vos réponses et les positions publiques des candidats. Il ne recommande aucun candidat et ne prédit aucun vote.</p>
       <h2>1. Les questions</h2>
-      <p>${Q.length} affirmations couvrant les grands thèmes de la campagne. Pour chacune, vous indiquez votre accord sur une échelle de 4 niveaux, de « Pas du tout d'accord » (−2) à « Tout à fait d'accord » (+2), ou vous passez. Une question passée n'est pas prise en compte.</p>
+      <p>Deux versions : le <b>test rapide</b> (${CORE.length} affirmations sur les grands thèmes) et le <b>test complet</b> (${ALLQ.length} affirmations, plus précis : institutions, défense, santé, logement, société…). Le test rapide peut être complété à tout moment par les questions du test complet. Pour chacune, vous indiquez votre accord sur une échelle de 4 niveaux, de « Pas du tout d'accord » (−2) à « Tout à fait d'accord » (+2), ou vous passez. Une question passée n'est pas prise en compte.</p>
       <h2>2. Les positions des candidats</h2>
       <p>Chaque candidat reçoit une position sur la même échelle (−2 contre, −1 plutôt contre, 0 nuancé, +1 plutôt pour, +2 pour), établie à partir de son programme et de ses déclarations publiques. Toutes les positions sont publiées ci-dessous pour être vérifiables.</p>
       <h2>3. Le calcul</h2>
       <p>Pour chaque question, l'écart entre votre réponse et la position du candidat va de 0 (identique) à 4 (opposé). La proximité de la question vaut <code>1 − écart ÷ 4</code>. Le score est la moyenne de ces proximités, pondérée : les sujets marqués « important pour moi » comptent double. Il est exprimé en pourcentage.</p>
       <p>Un sujet est classé en « proximité » si l'écart vaut 0 ou 1, en « divergence » s'il vaut 2 ou plus. En cas d'égalité, les candidats sont classés par ordre alphabétique.</p>
       <h2>4. Limites</h2>
-      <ul><li>Une liste de questions ne résume pas un programme ; le choix des questions influence le résultat.</li>
+      <ul><li>Une liste de questions ne résume pas un programme ; le choix des questions influence le résultat. Le test complet réduit ce biais.</li>
+      <li>Une position marquée « ? » n'est pas établie : la question est alors ignorée pour ce candidat.</li>
       <li>Les positions sont une simplification et peuvent évoluer pendant la campagne. Signalez une erreur via le lien en bas de page.</li>
       <li>Les candidats sans position établie ne figurent pas dans le quiz.</li></ul>
-      <h2>5. Confidentialité</h2>
+      <h2>5. « Avez-vous déjà écouté ? »</h2>
+      <p>Après vos trois proximités, le site propose jusqu'à deux autres candidats, choisis automatiquement : hors de votre top 3, d'un autre parti, proches de vous sur au moins un sujet et si possible d'une autre famille politique. L'objectif est de découvrir d'autres approches, pas d'orienter un vote.</p>
+      <h2>6. Confidentialité</h2>
       <p>Le calcul est fait entièrement dans votre navigateur. Vos réponses ne sont envoyées à aucun serveur et ne sont gardées sur votre appareil que si vous l'activez. Le partage de résultat ne contient jamais vos réponses, seulement ce que vous choisissez d'afficher.</p>
-      <h2>6. Positions utilisées</h2>
+      <h2>7. Positions utilisées</h2>
+      <p class="fine">* question du test complet uniquement.</p>
       <p class="fine">Dernière mise à jour : ${esc(DATA.quiz.updated || "—")}.</p>
       <div class="table-wrap"><table>${head}${rows}</table></div>`;
     $("#method-body").dataset.done = "1";

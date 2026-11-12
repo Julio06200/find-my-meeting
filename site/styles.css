@@ -313,3 +313,5 @@ dialog::backdrop { background: rgba(15,13,42,.6); }
   .share-grid .btn.primary { grid-column: span 2; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+.result-actions .btn.big { white-space: normal; height: auto; min-height: 52px; padding: 10px 24px; }

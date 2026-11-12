@@ -4,67 +4,170 @@
   {
    "id": "retraite",
    "theme": "Retraites",
-   "text": "Il faut ramener l'âge légal de départ à la retraite à 62 ans ou moins."
+   "text": "Il faut ramener l'âge légal de départ à la retraite à 62 ans ou moins.",
+   "core": true
   },
   {
    "id": "smic",
    "theme": "Salaires",
-   "text": "Il faut augmenter fortement le SMIC par décision de l'État."
+   "text": "Il faut augmenter fortement le SMIC par décision de l'État.",
+   "core": true
   },
   {
    "id": "isf",
    "theme": "Fiscalité",
-   "text": "Il faut taxer davantage les très hauts patrimoines (type ISF ou taxe Zucman)."
+   "text": "Il faut taxer davantage les très hauts patrimoines (type ISF ou taxe Zucman).",
+   "core": true
   },
   {
    "id": "immigration",
    "theme": "Immigration",
-   "text": "Il faut réduire fortement l'immigration en France."
+   "text": "Il faut réduire fortement l'immigration en France.",
+   "core": true
   },
   {
    "id": "europe",
    "theme": "Europe",
-   "text": "La France doit aller vers davantage d'intégration européenne."
+   "text": "La France doit aller vers davantage d'intégration européenne.",
+   "core": true
   },
   {
    "id": "nucleaire",
    "theme": "Énergie",
-   "text": "Il faut sortir progressivement du nucléaire."
+   "text": "Il faut sortir progressivement du nucléaire.",
+   "core": true
   },
   {
    "id": "entreprises",
    "theme": "Économie",
-   "text": "Il faut baisser les impôts et les charges des entreprises."
+   "text": "Il faut baisser les impôts et les charges des entreprises.",
+   "core": true
   },
   {
    "id": "ukraine",
    "theme": "International",
-   "text": "La France doit renforcer son soutien militaire à l'Ukraine."
+   "text": "La France doit renforcer son soutien militaire à l'Ukraine.",
+   "core": true
   },
   {
    "id": "depense",
    "theme": "Budget",
-   "text": "Il faut réduire fortement la dépense publique pour baisser la dette."
+   "text": "Il faut réduire fortement la dépense publique pour baisser la dette.",
+   "core": true
   },
   {
    "id": "fonctionnaires",
    "theme": "Services publics",
-   "text": "Il faut recruter massivement dans les services publics (hôpital, école…)."
+   "text": "Il faut recruter massivement dans les services publics (hôpital, école…).",
+   "core": true
   },
   {
    "id": "securite",
    "theme": "Sécurité",
-   "text": "Il faut durcir les peines et construire davantage de places de prison."
+   "text": "Il faut durcir les peines et construire davantage de places de prison.",
+   "core": true
   },
   {
    "id": "ric",
    "theme": "Institutions",
-   "text": "Il faut instaurer le référendum d'initiative citoyenne (RIC)."
+   "text": "Il faut instaurer le référendum d'initiative citoyenne (RIC).",
+   "core": true
   },
   {
    "id": "ecologie",
    "theme": "Écologie",
-   "text": "La transition écologique doit passer avant la croissance économique."
+   "text": "La transition écologique doit passer avant la croissance économique.",
+   "core": true
+  },
+  {
+   "id": "frexit",
+   "theme": "Europe",
+   "text": "La France doit sortir de l'Union européenne.",
+   "core": false
+  },
+  {
+   "id": "otan",
+   "theme": "Défense",
+   "text": "La France doit quitter le commandement intégré de l'OTAN.",
+   "core": false
+  },
+  {
+   "id": "droit_du_sol",
+   "theme": "Immigration",
+   "text": "Il faut supprimer le droit du sol.",
+   "core": false
+  },
+  {
+   "id": "ame",
+   "theme": "Santé",
+   "text": "Il faut supprimer l'aide médicale d'État pour les étrangers en situation irrégulière (hors urgences).",
+   "core": false
+  },
+  {
+   "id": "succession",
+   "theme": "Fiscalité",
+   "text": "Il faut augmenter les droits de succession sur les très gros héritages.",
+   "core": false
+  },
+  {
+   "id": "capitalisation",
+   "theme": "Retraites",
+   "text": "Il faut introduire une part de retraite par capitalisation.",
+   "core": false
+  },
+  {
+   "id": "temps_travail",
+   "theme": "Travail",
+   "text": "Il faut augmenter le temps de travail (revenir sur les 35 heures).",
+   "core": false
+  },
+  {
+   "id": "nationalisations",
+   "theme": "Économie",
+   "text": "L'État doit nationaliser des entreprises stratégiques (autoroutes, énergie…).",
+   "core": false
+  },
+  {
+   "id": "loyers",
+   "theme": "Logement",
+   "text": "Il faut encadrer les loyers dans toutes les grandes villes.",
+   "core": false
+  },
+  {
+   "id": "pesticides",
+   "theme": "Agriculture",
+   "text": "Il faut sortir progressivement des pesticides de synthèse.",
+   "core": false
+  },
+  {
+   "id": "voiture_2035",
+   "theme": "Climat",
+   "text": "Il faut maintenir la fin de la vente des voitures neuves essence et diesel en 2035.",
+   "core": false
+  },
+  {
+   "id": "fin_de_vie",
+   "theme": "Société",
+   "text": "Il faut légaliser l'aide active à mourir, sous conditions strictes.",
+   "core": false
+  },
+  {
+   "id": "cannabis",
+   "theme": "Société",
+   "text": "Il faut légaliser le cannabis.",
+   "core": false
+  },
+  {
+   "id": "service_national",
+   "theme": "Défense",
+   "text": "Il faut rétablir un service militaire ou national obligatoire.",
+   "core": false
+  },
+  {
+   "id": "uniforme",
+   "theme": "Éducation",
+   "text": "Il faut instaurer l'uniforme à l'école.",
+   "core": false
   }
  ],
  "positions": {
@@ -81,7 +184,22 @@
    "fonctionnaires": 2,
    "securite": -2,
    "ric": 0,
-   "ecologie": 1
+   "ecologie": 1,
+   "frexit": -1,
+   "otan": 2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -2,
+   "temps_travail": -2,
+   "nationalisations": 2,
+   "loyers": 2,
+   "pesticides": null,
+   "voiture_2035": null,
+   "fin_de_vie": 1,
+   "cannabis": null,
+   "service_national": -2,
+   "uniforme": -2
   },
   "melenchon": {
    "retraite": 2,
@@ -96,7 +214,22 @@
    "fonctionnaires": 2,
    "securite": -1,
    "ric": 2,
-   "ecologie": 2
+   "ecologie": 2,
+   "frexit": -1,
+   "otan": 2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -2,
+   "temps_travail": -2,
+   "nationalisations": 2,
+   "loyers": 2,
+   "pesticides": 2,
+   "voiture_2035": 1,
+   "fin_de_vie": 2,
+   "cannabis": 2,
+   "service_national": 1,
+   "uniforme": -2
   },
   "roussel": {
    "retraite": 2,
@@ -111,7 +244,22 @@
    "fonctionnaires": 2,
    "securite": 1,
    "ric": 1,
-   "ecologie": 0
+   "ecologie": 0,
+   "frexit": -2,
+   "otan": 2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -2,
+   "temps_travail": -2,
+   "nationalisations": 2,
+   "loyers": 2,
+   "pesticides": 0,
+   "voiture_2035": -1,
+   "fin_de_vie": 1,
+   "cannabis": -1,
+   "service_national": null,
+   "uniforme": null
   },
   "ruffin": {
    "retraite": 2,
@@ -126,7 +274,22 @@
    "fonctionnaires": 2,
    "securite": 0,
    "ric": 1,
-   "ecologie": 2
+   "ecologie": 2,
+   "frexit": -2,
+   "otan": 1,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -2,
+   "temps_travail": -2,
+   "nationalisations": 2,
+   "loyers": 2,
+   "pesticides": 2,
+   "voiture_2035": 0,
+   "fin_de_vie": 0,
+   "cannabis": 1,
+   "service_national": null,
+   "uniforme": -1
   },
   "royal": {
    "retraite": 1,
@@ -141,7 +304,22 @@
    "fonctionnaires": 1,
    "securite": 1,
    "ric": 1,
-   "ecologie": 2
+   "ecologie": 2,
+   "frexit": -2,
+   "otan": 0,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 1,
+   "capitalisation": -2,
+   "temps_travail": -2,
+   "nationalisations": 1,
+   "loyers": 1,
+   "pesticides": 2,
+   "voiture_2035": null,
+   "fin_de_vie": 1,
+   "cannabis": null,
+   "service_national": 1,
+   "uniforme": 1
   },
   "bouamrane": {
    "retraite": 1,
@@ -156,7 +334,22 @@
    "fonctionnaires": 1,
    "securite": 1,
    "ric": 0,
-   "ecologie": 1
+   "ecologie": 1,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -1,
+   "temps_travail": -2,
+   "nationalisations": 0,
+   "loyers": 2,
+   "pesticides": 1,
+   "voiture_2035": 1,
+   "fin_de_vie": 1,
+   "cannabis": null,
+   "service_national": null,
+   "uniforme": null
   },
   "glucksmann": {
    "retraite": 0,
@@ -171,7 +364,22 @@
    "fonctionnaires": 1,
    "securite": 0,
    "ric": 0,
-   "ecologie": 2
+   "ecologie": 2,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 2,
+   "capitalisation": -1,
+   "temps_travail": -1,
+   "nationalisations": 0,
+   "loyers": 1,
+   "pesticides": 2,
+   "voiture_2035": 2,
+   "fin_de_vie": 2,
+   "cannabis": 1,
+   "service_national": 0,
+   "uniforme": -1
   },
   "batho": {
    "retraite": 0,
@@ -186,7 +394,22 @@
    "fonctionnaires": 1,
    "securite": 0,
    "ric": 1,
-   "ecologie": 2
+   "ecologie": 2,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": -2,
+   "ame": -2,
+   "succession": 1,
+   "capitalisation": -1,
+   "temps_travail": -1,
+   "nationalisations": 1,
+   "loyers": 1,
+   "pesticides": 2,
+   "voiture_2035": 2,
+   "fin_de_vie": 2,
+   "cannabis": 2,
+   "service_national": null,
+   "uniforme": null
   },
   "attal": {
    "retraite": -2,
@@ -201,7 +424,22 @@
    "fonctionnaires": -1,
    "securite": 1,
    "ric": -1,
-   "ecologie": 0
+   "ecologie": 0,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": -1,
+   "ame": -1,
+   "succession": -2,
+   "capitalisation": 1,
+   "temps_travail": 1,
+   "nationalisations": -2,
+   "loyers": -1,
+   "pesticides": -1,
+   "voiture_2035": 1,
+   "fin_de_vie": 1,
+   "cannabis": -2,
+   "service_national": 1,
+   "uniforme": 2
   },
   "philippe": {
    "retraite": -2,
@@ -216,7 +454,22 @@
    "fonctionnaires": -2,
    "securite": 2,
    "ric": -1,
-   "ecologie": 0
+   "ecologie": 0,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": -1,
+   "ame": null,
+   "succession": -1,
+   "capitalisation": 2,
+   "temps_travail": 2,
+   "nationalisations": -2,
+   "loyers": -1,
+   "pesticides": -1,
+   "voiture_2035": 0,
+   "fin_de_vie": 1,
+   "cannabis": -1,
+   "service_national": 1,
+   "uniforme": 1
   },
   "retailleau": {
    "retraite": -2,
@@ -231,7 +484,22 @@
    "fonctionnaires": -2,
    "securite": 2,
    "ric": -1,
-   "ecologie": -1
+   "ecologie": -1,
+   "frexit": -2,
+   "otan": -1,
+   "droit_du_sol": 1,
+   "ame": 2,
+   "succession": -2,
+   "capitalisation": 2,
+   "temps_travail": 2,
+   "nationalisations": -1,
+   "loyers": -2,
+   "pesticides": -2,
+   "voiture_2035": -2,
+   "fin_de_vie": -2,
+   "cannabis": -2,
+   "service_national": 2,
+   "uniforme": 2
   },
   "lisnard": {
    "retraite": -2,
@@ -246,7 +514,22 @@
    "fonctionnaires": -2,
    "securite": 2,
    "ric": 0,
-   "ecologie": -1
+   "ecologie": -1,
+   "frexit": -2,
+   "otan": -2,
+   "droit_du_sol": 1,
+   "ame": 2,
+   "succession": -2,
+   "capitalisation": 2,
+   "temps_travail": 2,
+   "nationalisations": -2,
+   "loyers": -2,
+   "pesticides": -2,
+   "voiture_2035": -2,
+   "fin_de_vie": -1,
+   "cannabis": -1,
+   "service_national": 1,
+   "uniforme": 1
   },
   "dupont-aignan": {
    "retraite": 1,
@@ -261,7 +544,22 @@
    "fonctionnaires": 0,
    "securite": 2,
    "ric": 2,
-   "ecologie": -1
+   "ecologie": -1,
+   "frexit": -1,
+   "otan": 2,
+   "droit_du_sol": 2,
+   "ame": 2,
+   "succession": -2,
+   "capitalisation": null,
+   "temps_travail": null,
+   "nationalisations": 1,
+   "loyers": null,
+   "pesticides": -1,
+   "voiture_2035": -2,
+   "fin_de_vie": -1,
+   "cannabis": -2,
+   "service_national": 2,
+   "uniforme": 2
   },
   "le-pen": {
    "retraite": 1,
@@ -276,7 +574,22 @@
    "fonctionnaires": 0,
    "securite": 2,
    "ric": 2,
-   "ecologie": -1
+   "ecologie": -1,
+   "frexit": -1,
+   "otan": 2,
+   "droit_du_sol": 2,
+   "ame": 2,
+   "succession": -2,
+   "capitalisation": -1,
+   "temps_travail": -1,
+   "nationalisations": 1,
+   "loyers": -1,
+   "pesticides": -1,
+   "voiture_2035": -2,
+   "fin_de_vie": -1,
+   "cannabis": -2,
+   "service_national": 1,
+   "uniforme": 2
   },
   "zemmour": {
    "retraite": -1,
@@ -291,7 +604,22 @@
    "fonctionnaires": -1,
    "securite": 2,
    "ric": 1,
-   "ecologie": -2
+   "ecologie": -2,
+   "frexit": -1,
+   "otan": 1,
+   "droit_du_sol": 2,
+   "ame": 2,
+   "succession": -2,
+   "capitalisation": 1,
+   "temps_travail": 1,
+   "nationalisations": -1,
+   "loyers": -1,
+   "pesticides": -2,
+   "voiture_2035": -2,
+   "fin_de_vie": -2,
+   "cannabis": -2,
+   "service_national": 2,
+   "uniforme": 2
   },
   "philippot": {
    "retraite": 1,
@@ -306,9 +634,25 @@
    "fonctionnaires": 0,
    "securite": 2,
    "ric": 2,
-   "ecologie": -1
+   "ecologie": -1,
+   "frexit": 2,
+   "otan": 2,
+   "droit_du_sol": 2,
+   "ame": 2,
+   "succession": -1,
+   "capitalisation": null,
+   "temps_travail": null,
+   "nationalisations": 2,
+   "loyers": null,
+   "pesticides": -1,
+   "voiture_2035": -2,
+   "fin_de_vie": -1,
+   "cannabis": null,
+   "service_national": 1,
+   "uniforme": null
   }
  },
  "updated": "2026-11-12",
- "sources": {}
+ "sources": {},
+ "to_verify": "Positions estimées à partir des programmes et déclarations connus ; à faire relire et sourcer question par question avant le lancement. « null » = position non établie (question ignorée pour ce candidat)."
 }

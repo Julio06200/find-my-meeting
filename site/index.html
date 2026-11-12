@@ -34,13 +34,13 @@
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://tile.openstreetmap.org">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.min.css">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Find My Meeting","url":"https://julio06200.github.io/find-my-meeting/","inLanguage":"fr-FR","description":"Les meetings et réunions publiques de la présidentielle 2027 près de chez vous."}
   </script>
   <script src="config.js?v=3"></script>
-  <script src="analytics.js?v=1" defer></script>
+  <script src="analytics.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip" href="#list">Aller aux meetings</a>
@@ -133,12 +133,16 @@
   <main id="view-quiz" class="view" hidden>
     <section id="quiz-intro" class="quiz-card center">
       <h1>Vos proximités politiques</h1>
-      <p>13 questions, 2 minutes. On compare vos réponses aux positions publiques des candidats et on vous montre de qui vous êtes le plus proche — puis leurs meetings près de chez vous.</p>
+      <p>On compare vos réponses aux positions publiques des candidats et on vous montre de qui vous êtes le plus proche — puis leurs meetings près de chez vous.</p>
       <ul class="promises">
         <li>🔒 Vos réponses et votre résultat restent sur votre appareil : rien n'est envoyé.</li>
         <li>⚖️ Une mesure de proximité, pas une consigne de vote.</li>
       </ul>
-      <button class="btn primary big" id="quiz-start" type="button">Commencer le quiz</button>
+      <div class="result-actions" style="justify-content:center">
+        <button class="btn primary big" type="button" data-quiz-mode="court">Test rapide · <span id="quiz-n-court">13</span> questions</button>
+        <button class="btn ghost big" type="button" data-quiz-mode="long">Test complet · <span id="quiz-n-long">28</span> questions</button>
+      </div>
+      <p class="fine" style="margin-top:4px">Rapide : environ 2 minutes. Complet : environ 5 minutes, pour une meilleure précision.</p>
       <p class="fine"><a href="#methodologie" class="link">Comment le score est-il calculé ?</a></p>
     </section>
 
@@ -165,8 +169,10 @@
         <p class="neutral-note">Ce résultat mesure la proximité entre vos réponses et les positions publiques des candidats. <b>Ce n'est pas une recommandation de vote.</b> <a href="#methodologie" class="link">Méthodologie</a></p>
         <p class="fine" id="result-note"></p>
         <ol id="top3" class="top3"></ol>
+        <div id="discover"></div>
         <div class="result-actions">
           <button class="btn primary" id="share-results" type="button">Partager mes résultats</button>
+          <button class="btn ghost" id="quiz-refine" type="button" hidden>Affiner avec le test complet</button>
           <button class="btn ghost" id="quiz-restart" type="button">Refaire le quiz</button>
         </div>
         <details class="all-cands">
@@ -245,6 +251,6 @@
 
   <script src="vendor/leaflet/leaflet.min.js" defer></script>
   <script src="data/bundle.js" defer></script>
-  <script src="app.js?v=5" defer></script>
+  <script src="app.js?v=6" defer></script>
 </body>
 </html>
