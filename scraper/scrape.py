@@ -305,6 +305,12 @@ def main() -> int:
             except ValidationError as e:
                 print(f"  ! ignoré : {it.get('title')} ({e.error_count()} erreurs)")
     else:
+        import os
+
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            print("ANTHROPIC_API_KEY absent : scraping ignoré, données existantes conservées.")
+            write_bundle()
+            return 0
         import anthropic
 
         client = anthropic.Anthropic()
