@@ -60,3 +60,7 @@ python -m http.server 8000 --directory site               # puis http://localhos
 Ajouter des événements à la main (sans IA) : complétez un fichier comme `scraper/seed_events.json`, puis lancez `python scraper/scrape.py --import mon_fichier.json`.
 
 Après avoir modifié `candidates.json` ou `quiz.json`, lancez `python scraper/scrape.py --bundle-only`.
+
+## Statistiques
+
+Voir [docs/statistiques.md](docs/statistiques.md) : Umami (sans donnée politique) et compteurs agrégés par candidat (désactivés, checklist RGPD).

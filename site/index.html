@@ -39,14 +39,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Find My Meeting","url":"https://julio06200.github.io/find-my-meeting/","inLanguage":"fr-FR","description":"Les meetings et réunions publiques de la présidentielle 2027 près de chez vous."}
   </script>
-  <script>
-    /* Réglages du site : à compléter avant le lancement */
-    window.FMM_CONFIG = {
-      siteUrl: "https://julio06200.github.io/find-my-meeting/",
-      reportEmail: "",   // ex. "contact@findmymeeting.fr" : sinon, signalement via GitHub
-      reportGithub: "https://github.com/Julio06200/find-my-meeting/issues/new"
-    };
-  </script>
+  <script src="config.js?v=1"></script>
+  <script src="analytics.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip" href="#list">Aller aux meetings</a>
@@ -141,7 +135,7 @@
       <h1>Vos proximités politiques</h1>
       <p>13 questions, 2 minutes. On compare vos réponses aux positions publiques des candidats et on vous montre de qui vous êtes le plus proche — puis leurs meetings près de chez vous.</p>
       <ul class="promises">
-        <li>🔒 Vos réponses restent sur votre appareil, rien n'est envoyé.</li>
+        <li>🔒 Vos réponses et votre résultat restent sur votre appareil : rien n'est envoyé.</li>
         <li>⚖️ Une mesure de proximité, pas une consigne de vote.</li>
       </ul>
       <button class="btn primary big" id="quiz-start" type="button">Commencer le quiz</button>
@@ -251,6 +245,6 @@
 
   <script src="vendor/leaflet/leaflet.min.js" defer></script>
   <script src="data/bundle.js" defer></script>
-  <script src="app.js?v=3" defer></script>
+  <script src="app.js?v=5" defer></script>
 </body>
 </html>

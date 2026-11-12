@@ -25,6 +25,10 @@
   );
   const save = () => store.set("prefs", state);
 
+  const STATS = window.fmmStats || { view() {}, event() {}, countMeeting() {} };
+  const bucket = (n) => (n === 0 ? "0" : n <= 5 ? "1-5" : "6+");
+  function meetingSeen(id, origine) { STATS.event("fiche-meeting", { origine }, id); STATS.countMeeting(id); }
+
   function toast(msg) {
     const t = $("#toast");
     t.textContent = msg; t.hidden = false;
@@ -78,6 +82,7 @@
     if (h === "#methodologie") tab = "methodologie";
     ["meetings", "quiz", "methodologie"].forEach((v) => ($("#view-" + v).hidden = v !== tab));
     $$(".tabs a").forEach((a) => a.classList.toggle("on", a.dataset.tab === (tab === "methodologie" ? "quiz" : tab)));
+    STATS.view(tab === "methodologie" ? "/methodologie" : tab === "quiz" ? (h.startsWith("#r=") ? "/resultat-partage" : "/quiz") : (h.startsWith("#m=") ? "/meeting-partage" : "/"));
     if (tab === "meetings") {
       if (map) setTimeout(() => map.invalidateSize(), 50);
       renderShared();
@@ -93,7 +98,7 @@
 
   /* ---------------- recherche de ville (geo.api.gouv.fr) ---------------- */
   function cityCombo(input, list, onPick) {
-    let items = [], active = -1, timer, ctrl;
+    let items = [], active = -1, timer, ctrl, lastQ = "";
     const close = () => { list.hidden = true; active = -1; input.setAttribute("aria-expanded", "false"); };
     const render = () => {
       list.innerHTML = items.map((c, i) =>
@@ -103,6 +108,7 @@
       if (active >= 0) input.setAttribute("aria-activedescendant", `${list.id}-${active}`);
     };
     async function search(q) {
+      lastQ = q;
       ctrl?.abort(); ctrl = new AbortController();
       const isCP = /^\d{5}$/.test(q);
       const url = `https://geo.api.gouv.fr/communes?${isCP ? "codePostal" : "nom"}=${encodeURIComponent(q)}&fields=nom,centre,codesPostaux,departement,region&boost=population&limit=6`;
@@ -133,7 +139,7 @@
       if (!c || !c.centre) return;
       input.value = c.nom;
       close(); input.blur();
-      onPick({ name: c.nom, lat: c.centre.coordinates[1], lon: c.centre.coordinates[0], region: c.region?.nom || "" });
+      onPick({ name: c.nom, lat: c.centre.coordinates[1], lon: c.centre.coordinates[0], region: c.region?.nom || "" }, /^\d{5}$/.test(lastQ) ? "code-postal" : "ville");
     }
   }
 
@@ -146,17 +152,18 @@
         const r = await (await fetch(`https://geo.api.gouv.fr/communes?lat=${place.lat}&lon=${place.lon}&fields=nom,region&limit=1`)).json();
         if (r[0]) { place.name = r[0].nom; place.region = r[0].region?.nom || ""; }
       } catch { /* on garde "Ma position" */ }
-      cb(place);
+      cb(place, "geolocalisation");
     }, () => toast("Position refusée ou introuvable : saisissez votre ville."), { timeout: 10000, maximumAge: 600000 });
   }
 
   /* ---------------- MEETINGS ---------------- */
   let map, layer, meLayer, markers = {}, chipsExpanded = false;
 
-  function setPlace(p) {
+  function setPlace(p, method) {
     state.place = p; save();
     $("#city").value = p ? p.name : "";
     renderChips(); renderMeetings(true);
+    if (p && method) STATS.event("recherche", { methode: method, resultats: bucket(filtered().length) });
     if (p) $(".results-head").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -259,11 +266,11 @@
         ${m.status_note ? `<p class="note">${esc(m.status_note)}</p>` : ""}
         ${changes ? `<p class="changes">✎ ${changes}</p>` : ""}
         <div class="badges">${badges}</div>
-        <p class="source">${KIND_LABEL[m.source_kind] || "Source"} : <a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.source || host(m.url))} ↗</a><span>${verified}</span></p>
+        <p class="source">${KIND_LABEL[m.source_kind] || "Source"} : <a href="${esc(m.url)}" target="_blank" rel="noopener" data-track="source" data-mid="${esc(m.id)}">${esc(m.source || host(m.url))} ↗</a><span>${verified}</span></p>
         <div class="actions">
           ${st !== "annule" ? `<button type="button" data-ics="${esc(m.id)}">📅 Ajouter à mon calendrier</button>` : ""}
           <button type="button" data-share="${esc(m.id)}">↗ Partager</button>
-          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([m.venue, m.address, m.city].filter(Boolean).join(", "))}" target="_blank" rel="noopener">🧭 Itinéraire</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([m.venue, m.address, m.city].filter(Boolean).join(", "))}" target="_blank" rel="noopener" data-track="itineraire" data-mid="${esc(m.id)}">🧭 Itinéraire</a>
           <a class="report" href="${esc(reportUrl(m))}" target="_blank" rel="noopener">⚑ Signaler une erreur</a>
         </div>
       </div></article>`;
@@ -310,6 +317,7 @@
     if (!h.startsWith("#m=")) { box.innerHTML = ""; return; }
     const id = decodeURIComponent(h.slice(3));
     const m = byId(id);
+    if (m) meetingSeen(m.id, "lien-partage");
     box.innerHTML = `<div class="shared-box"><p class="kicker">Meeting partagé</p>${m ? cardHTML(m, { hl: true }) :
       `<div class="empty"><b>Ce meeting est passé ou n'est plus référencé.</b>Découvrez les autres meetings ci-dessous.</div>`}</div>`;
     setTimeout(() => box.scrollIntoView({ block: "start" }), 50);
@@ -338,7 +346,7 @@
       const icon = L.divIcon({ className: "", html: `<div class="${cls}" style="--c:${c.color}"></div>`, iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28] });
       const html = g.map((x) => {
         const cx = CANDS[x.candidate_id] || {}, sx = statusOf(x);
-        return `<div style="margin-bottom:8px"><span class="st st-${sx}">${STATUS_LABEL[sx]}</span><br><b>${esc(cx.name || "")}</b><br>${esc(fmtLong(x.date))}${x.time ? " · " + fmtTime(x.time) : ""}<br>${esc(x.title)}<br>${esc(x.venue || "")} ${esc(x.city)}<br><a href="#m=${encodeURIComponent(x.id)}">Voir la fiche</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">Source ↗</a></div>`;
+        return `<div style="margin-bottom:8px"><span class="st st-${sx}">${STATUS_LABEL[sx]}</span><br><b>${esc(cx.name || "")}</b><br>${esc(fmtLong(x.date))}${x.time ? " · " + fmtTime(x.time) : ""}<br>${esc(x.title)}<br>${esc(x.venue || "")} ${esc(x.city)}<br><a href="#m=${encodeURIComponent(x.id)}">Voir la fiche</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener" data-track="source" data-mid="${esc(x.id)}">Source ↗</a></div>`;
       }).join("");
       const mk = L.marker([m.lat, m.lon], { icon, title: `${(CANDS[m.candidate_id] || {}).name || ""} — ${m.city}` }).bindPopup(html, { maxWidth: 260 }).addTo(layer);
       g.forEach((x) => (markers[x.id] = mk));
@@ -361,6 +369,8 @@
 
   /* interactions des fiches */
   document.addEventListener("click", (e) => {
+    const tr = e.target.closest("a[data-track]");
+    if (tr) meetingSeen(tr.dataset.mid, tr.dataset.track);
     const ics = e.target.closest("[data-ics]");
     if (ics) return downloadICS(byId(ics.dataset.ics));
     const sh = e.target.closest("[data-share]");
@@ -369,6 +379,7 @@
     if (f) {
       const mk = markers[f.dataset.focus];
       if (!mk) return;
+      meetingSeen(f.dataset.focus, "carte");
       if (window.matchMedia("(max-width: 860px)").matches) setMode("map");
       setTimeout(() => { map.setView(mk.getLatLng(), 12); mk.openPopup(); }, 80);
     }
@@ -404,14 +415,16 @@
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1500);
     toast("Événement ajouté : ouvrez le fichier pour l'enregistrer.");
+    STATS.event("calendrier"); STATS.countMeeting(m.id);
   }
 
   async function shareOrCopy(data) {
     try {
-      if (navigator.share) { await navigator.share(data); return; }
-    } catch (e) { if (e.name === "AbortError") return; }
+      if (navigator.share) { await navigator.share(data); return "natif"; }
+    } catch (e) { if (e.name === "AbortError") return null; }
     try { await navigator.clipboard.writeText(`${data.text}\n${data.url}`); toast("Lien copié !"); }
     catch { prompt("Copiez ce lien :", data.url); }
+    return "copie";
   }
   function shareMeeting(m) {
     if (!m) return;
@@ -421,7 +434,7 @@
       title: "Find My Meeting",
       text: `${c.name} : ${m.title}, ${fmtLong(m.date)}${m.time ? " à " + fmtTime(m.time) : ""}, ${m.city}${unsure}`,
       url: `${SITE}#m=${encodeURIComponent(m.id)}`,
-    });
+    }).then((canal) => { if (canal) STATS.event("partage", { objet: "meeting", canal }); });
   }
 
   /* ---------------- QUIZ ---------------- */
@@ -435,9 +448,9 @@
   let lastRanking = [];
 
   function initQuiz() {
-    $("#quiz-start").addEventListener("click", () => { qi = 0; answers = {}; showQ(); });
-    $("#shared-start").addEventListener("click", () => { history.replaceState(null, "", "#quiz"); qi = 0; answers = {}; showQ(); });
-    $("#quiz-restart").addEventListener("click", () => { qi = 0; answers = {}; persist(); showQ(); });
+    $("#quiz-start").addEventListener("click", () => { qi = 0; answers = {}; STATS.event("quiz-debut"); showQ(); });
+    $("#shared-start").addEventListener("click", () => { history.replaceState(null, "", "#quiz"); qi = 0; answers = {}; STATS.event("quiz-debut"); showQ(); });
+    $("#quiz-restart").addEventListener("click", () => { qi = 0; answers = {}; persist(); STATS.event("quiz-debut"); showQ(); });
     $$("#answers button").forEach((b) => b.addEventListener("click", () => {
       const id = Q[qi].id;
       if (b.dataset.v === "skip") delete answers[id];
@@ -459,7 +472,7 @@
   function show(which) {
     ["intro", "q", "result", "shared"].forEach((w) => ($("#quiz-" + w).hidden = w !== which));
   }
-  function next() { qi++; if (qi >= Q.length) { persist(); showResult(); window.scrollTo(0, 0); } else showQ(); }
+  function next() { qi++; if (qi >= Q.length) { persist(); STATS.event("quiz-fin"); showResult(); window.scrollTo(0, 0); } else showQ(); }
   function showQ() {
     show("q");
     const q = Q[qi], a = answers[q.id];
@@ -592,9 +605,11 @@
         shareFormat = b.dataset.v; $$("#sh-format button").forEach((x) => x.setAttribute("aria-checked", String(x === b))); upd();
       }));
       $("#sh-native").addEventListener("click", shareImage);
-      $("#sh-download").addEventListener("click", downloadImage);
+      $("#sh-download").addEventListener("click", () => downloadImage(true));
+      [["wa", "whatsapp"], ["x", "x"], ["li", "linkedin"]].forEach(([k, c]) => $("#sh-" + k).addEventListener("click", () => trackShare(c)));
       $("#sh-copy").addEventListener("click", async () => {
         const { url } = sharePayload();
+        trackShare("copie");
         try { await navigator.clipboard.writeText(url); $("#sh-msg").textContent = "Lien copié !"; }
         catch { prompt("Copiez ce lien :", url); }
       });
@@ -666,13 +681,15 @@
     const file = new File([blob], "mes-proximites-politiques.png", { type: "image/png" });
     const p = sharePayload();
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try { await navigator.share({ files: [file], title: "Mes proximités politiques", text: shareText(p) + " " + p.url }); return; }
+      try { await navigator.share({ files: [file], title: "Mes proximités politiques", text: shareText(p) + " " + p.url }); trackShare("natif"); return; }
       catch (e) { if (e.name === "AbortError") return; }
     }
     $("#sh-msg").textContent = "Le partage direct d'image n'est pas disponible ici : l'image est téléchargée, publiez-la depuis votre galerie.";
-    downloadImage();
+    downloadImage(true);
   }
-  async function downloadImage() {
+  const trackShare = (canal) => STATS.event("partage", { objet: $("#sh-names").checked ? "resultat" : "site", canal });
+  async function downloadImage(track) {
+    if (track) trackShare("image");
     const blob = await canvasBlob();
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob); a.download = "mes-proximites-politiques.png";

@@ -8,7 +8,9 @@
   <link rel="canonical" href="https://julio06200.github.io/find-my-meeting/confidentialite.html">
   <meta name="theme-color" content="#302689">
   <link rel="icon" href="favicon.ico" sizes="48x48">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="config.js?v=1"></script>
+  <script src="analytics.js?v=1" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -21,7 +23,7 @@
   <main id="view-methodologie" class="view">
     <article class="quiz-card prose">
       <h1>Confidentialité</h1>
-      <p><b>En résumé : Find My Meeting ne collecte aucune donnée personnelle.</b> Pas de compte, pas de cookie, pas de mesure d'audience, pas de publicité. Vos réponses au quiz ne quittent jamais votre appareil.</p>
+      <p><b>En résumé :</b> pas de compte, pas de cookie, pas de publicité. Vos réponses au quiz et votre résultat ne quittent jamais votre appareil. Nous mesurons seulement l'audience du site, de façon anonyme et sans cookie (voir plus bas), et vous pouvez vous y opposer en un clic.</p>
 
       <h2>Le quiz et vos opinions politiques</h2>
       <p>Les opinions politiques sont des données sensibles au sens de l'article 9 du RGPD. C'est pourquoi le quiz est conçu pour qu'aucune réponse ne soit transmise :</p>
@@ -31,6 +33,15 @@
         <li>par défaut, elles sont effacées dès que vous quittez la page. Elles ne sont conservées sur votre appareil (stockage local du navigateur) que si vous cochez « Garder mes réponses sur cet appareil », et vous pouvez les effacer à tout moment avec « Effacer mes réponses » ;</li>
         <li>le partage de résultat ne contient jamais vos réponses : seulement, si vous le choisissez, les noms de vos trois candidats les plus proches et, en option, les pourcentages. C'est vous qui décidez de publier ou non ce lien ou cette image.</li>
       </ul>
+
+      <h2>Mesure d'audience</h2>
+      <p>Nous utilisons <b>Umami</b> (Umami Software, offre Umami Cloud) pour compter les visites, sans cookie et sans identifiant de visiteur. Seules des statistiques globales sont produites : nombre de visites et de pages vues, sites et campagnes d'origine (paramètres UTM), type d'appareil, pays, région et ville approximatifs déduits de l'adresse IP (l'adresse elle-même n'est pas conservée), et le nombre de certaines actions : recherches de meetings (sans la ville saisie), fiches consultées (sans le candidat), quiz commencés et terminés, ajouts au calendrier et partages.</p>
+      <p><b>Aucune information politique n'est transmise à Umami</b> : ni candidat, ni parti, ni réponse, score ou résultat du quiz. Les adresses internes des pages (meeting ou résultat partagés) sont remplacées par des adresses génériques avant l'envoi. Les données sont conservées 6 mois au plus.</p>
+      <div class="privacy-box">
+        <label class="switch"><input type="checkbox" id="stats-optout"><span></span>Ne pas mesurer mes visites sur cet appareil</label>
+        <p class="fine" id="stats-state" aria-live="polite"></p>
+      </div>
+      <p class="fine">Le site respecte aussi le réglage « Ne pas me pister » (Do Not Track) de votre navigateur.</p>
 
       <h2>Préférences de recherche</h2>
       <p>Votre ville, votre rayon et vos filtres sont mémorisés dans le stockage local de votre navigateur, pour vous éviter de les ressaisir. Ils ne sont pas transmis. Vous pouvez les effacer en vidant les données du site dans votre navigateur.</p>
@@ -59,5 +70,23 @@
       <p><a class="btn primary" href="./">Retour au site</a></p>
     </article>
   </main>
+<script>
+  (function () {
+    var box = document.getElementById("stats-optout"), st = document.getElementById("stats-state");
+    function sync() {
+      var off = false; try { off = localStorage.getItem("umami.disabled") === "1"; } catch (e) {}
+      box.checked = off; st.textContent = off ? "Vos visites ne sont pas mesurées sur cet appareil." : "Mesure d'audience anonyme active.";
+    }
+    box.addEventListener("change", function () {
+      try {
+        if (box.checked) { localStorage.setItem("umami.disabled", "1"); localStorage.setItem("fmm.noStats", "1"); }
+        else { localStorage.removeItem("umami.disabled"); localStorage.removeItem("fmm.noStats"); }
+      } catch (e) {}
+      sync();
+    });
+    sync();
+    document.addEventListener("DOMContentLoaded", function () { if (window.fmmStats) window.fmmStats.view("/confidentialite"); });
+  })();
+</script>
 </body>
 </html>
