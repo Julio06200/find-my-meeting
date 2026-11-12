@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T13:39:53+00:00",
+ "updated_at": "2026-11-12T13:46:53+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -26,6 +26,29 @@
    "id": "attal-2026-11-12-la-rochelle",
    "first_seen": "2026-11-12T13:02:27+00:00",
    "last_seen": "2026-11-12T13:02:27+00:00"
+  },
+  {
+   "candidate_id": "arthaud",
+   "title": "Réunion publique de soutien à la candidature de Nathalie Arthaud",
+   "type": "reunion",
+   "date": "2026-11-12",
+   "time": "18:00",
+   "city": "Metz",
+   "venue": "FJT Etap'Habitat",
+   "address": "2 Rue Georges Ducrocq, 57070 Metz",
+   "speakers": [],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://www.lutte-ouvriere.org/portail/agenda/metz-195406.html",
+   "source": "Lutte ouvrière",
+   "lat": 49.11015,
+   "lon": 6.18695,
+   "postcode": "57070",
+   "department": "Moselle",
+   "region": "Grand Est",
+   "id": "arthaud-2026-11-12-metz-1800",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -187,6 +210,31 @@
    "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
+   "candidate_id": "philippe",
+   "title": "Réunion publique d'Édouard Philippe à Toulouse",
+   "type": "reunion",
+   "date": "2026-11-14",
+   "time": null,
+   "city": "Toulouse",
+   "venue": null,
+   "address": null,
+   "speakers": [
+    "Édouard Philippe"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.france24.com/fr/info-en-continu/20261106-%C3%A9douard-philippe-entame-une-tourn%C3%A9e-des-r%C3%A9gions-refusant-toujours-la-primaire",
+   "source": "France 24 (AFP)",
+   "lat": 43.60408,
+   "lon": 1.4338,
+   "postcode": "31000",
+   "department": "Haute-Garonne",
+   "region": "Occitanie",
+   "id": "philippe-2026-11-14-toulouse",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
+  },
+  {
    "candidate_id": "melenchon",
    "title": "Réunion publique avec Clémence Guetté, Mathilde Panot et Louis Boyard",
    "type": "reunion",
@@ -263,6 +311,32 @@
    "id": "melenchon-2026-11-19-niort-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
    "last_seen": "2026-11-12T13:39:26+00:00"
+  },
+  {
+   "candidate_id": "philippe",
+   "title": "Réunion publique d'Édouard Philippe à Rillieux-la-Pape",
+   "type": "reunion",
+   "date": "2026-11-19",
+   "time": null,
+   "city": "Rillieux-la-Pape",
+   "venue": "Espace 140",
+   "address": null,
+   "speakers": [
+    "Édouard Philippe",
+    "Alexandre Vincendet"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://mesinfos.fr/69140-rillieux-la-pape/edouard-philippe-candidat-a-la-presidentielle-2027-fera-halte-a-rillieux-la-pape-342858.html",
+   "source": "Mes Infos (Tout Lyon)",
+   "lat": 45.81839,
+   "lon": 4.89282,
+   "postcode": "69140",
+   "department": "Rhône",
+   "region": "Auvergne-Rhône-Alpes",
+   "id": "philippe-2026-11-19-rillieux-la-pape",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
   },
   {
    "candidate_id": "retailleau",
@@ -495,6 +569,131 @@
    "id": "melenchon-2026-12-05-le-havre-1500",
    "first_seen": "2026-11-12T13:02:27+00:00",
    "last_seen": "2026-11-12T13:39:26+00:00"
+  },
+  {
+   "candidate_id": "glucksmann",
+   "title": "Grand meeting de lancement de campagne de Raphaël Glucksmann",
+   "type": "meeting",
+   "date": "2026-12-06",
+   "time": "14:30",
+   "city": "Paris",
+   "venue": "Paris Event Center",
+   "address": "20 avenue de la Porte de la Villette, 75019 Paris",
+   "speakers": [
+    "Raphaël Glucksmann"
+   ],
+   "with_candidate": true,
+   "access": "inscription",
+   "url": "https://glucks2027.fr/meeting/",
+   "source": "glucks2027.fr",
+   "lat": 48.89945,
+   "lon": 2.38786,
+   "postcode": "75019",
+   "department": "Paris",
+   "region": "Île-de-France",
+   "id": "glucksmann-2026-12-06-paris-1430",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
+  },
+  {
+   "candidate_id": "roussel",
+   "title": "Premier grand meeting de Fabien Roussel",
+   "type": "meeting",
+   "date": "2026-12-06",
+   "time": null,
+   "city": "Avion",
+   "venue": "Salle Jorion",
+   "address": null,
+   "speakers": [
+    "Fabien Roussel"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.horizonactu.fr/actualite-50403-presidentielles-2027-le-candidat-communiste-fabien-roussel-tiendra-son-premier-grand-meeting-a-avion-le-6-decembre",
+   "source": "Horizon Actu",
+   "lat": 50.40801,
+   "lon": 2.82913,
+   "postcode": "62210",
+   "department": "Pas-de-Calais",
+   "region": "Hauts-de-France",
+   "id": "roussel-2026-12-06-avion",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
+  },
+  {
+   "candidate_id": "arthaud",
+   "title": "Réunion publique avec Nathalie Arthaud",
+   "type": "reunion",
+   "date": "2026-12-08",
+   "time": "18:30",
+   "city": "Chambéry",
+   "venue": "Salle L'Embut, Chambéry Savoie Stadium",
+   "address": "Esplanade André Gilbertas, Chambéry",
+   "speakers": [
+    "Nathalie Arthaud"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://www.lutte-ouvriere.org/portail/agenda/chambery-206008.html",
+   "source": "Lutte ouvrière",
+   "lat": 45.57381,
+   "lon": 5.90853,
+   "postcode": "73000",
+   "department": "Savoie",
+   "region": "Auvergne-Rhône-Alpes",
+   "id": "arthaud-2026-12-08-chambery-1830",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
+  },
+  {
+   "candidate_id": "arthaud",
+   "title": "Réunion publique avec Nathalie Arthaud",
+   "type": "reunion",
+   "date": "2026-12-09",
+   "time": "18:00",
+   "city": "Annonay",
+   "venue": "Salle de réception, Gymnase du Zodiaque",
+   "address": "18 Avenue Jean Moulin, Annonay",
+   "speakers": [
+    "Nathalie Arthaud"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://www.lutte-ouvriere.org/portail/agenda/annonay-205932.html",
+   "source": "Lutte ouvrière",
+   "lat": 45.25248,
+   "lon": 4.66993,
+   "postcode": "07100",
+   "department": "Ardèche",
+   "region": "Auvergne-Rhône-Alpes",
+   "id": "arthaud-2026-12-09-annonay-1800",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
+  },
+  {
+   "candidate_id": "lisnard",
+   "title": "Grand meeting de David Lisnard à Eurexpo",
+   "type": "meeting",
+   "date": "2026-12-13",
+   "time": "15:00",
+   "city": "Chassieu",
+   "venue": "Eurexpo",
+   "address": null,
+   "speakers": [
+    "David Lisnard"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.lyonmag.com/article/154666/presidentielle-2027-david-lisnard-prepare-un-grand-meeting-a-lyon",
+   "source": "LyonMag",
+   "lat": 45.73584,
+   "lon": 4.95871,
+   "postcode": "69680",
+   "department": "Rhône",
+   "region": "Auvergne-Rhône-Alpes",
+   "id": "lisnard-2026-12-13-chassieu-1500",
+   "first_seen": "2026-11-12T13:46:50+00:00",
+   "last_seen": "2026-11-12T13:46:50+00:00"
   }
  ]
 }
