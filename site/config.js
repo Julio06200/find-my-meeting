@@ -7,7 +7,7 @@ window.FMM_CONFIG = {
   reportGithub: "https://github.com/Julio06200/find-my-meeting/issues/new",
 
   /* Statistiques Umami Cloud (sans cookie). Vide = aucune statistique envoyée. Voir docs/statistiques.md */
-  umamiWebsiteId: "",
+  umamiWebsiteId: "afece08b-46c2-42f5-a155-a71eeba85aba",
   umamiScript: "https://cloud.umami.is/script.js",
   umamiDomains: "julio06200.github.io",
 
