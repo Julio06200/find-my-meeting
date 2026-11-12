@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T13:36:51+00:00",
+ "updated_at": "2026-11-12T13:39:53+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -51,7 +51,7 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-12-saint-quirc-1830",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -78,7 +78,7 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-12-rodez-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -104,7 +104,7 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "id": "melenchon-2026-11-12-arles-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -157,7 +157,7 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-14-argeles-sur-mer-1800",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -184,7 +184,7 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "id": "melenchon-2026-11-14-nice-1930",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -211,7 +211,7 @@
    "region": "Île-de-France",
    "id": "melenchon-2026-11-16-creteil-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -236,7 +236,7 @@
    "region": "Centre-Val de Loire",
    "id": "melenchon-2026-11-18-orleans-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -262,7 +262,7 @@
    "region": "Nouvelle-Aquitaine",
    "id": "melenchon-2026-11-19-niort-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "retailleau",
@@ -315,7 +315,7 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-21-carbonne-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -338,7 +338,7 @@
    "region": "Île-de-France",
    "id": "melenchon-2026-11-24-bondy-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "le-pen",
@@ -389,7 +389,7 @@
    "region": "Normandie",
    "id": "melenchon-2026-11-29-vernon-1600",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -417,7 +417,7 @@
    "region": "Bourgogne-Franche-Comté",
    "id": "melenchon-2026-12-01-besancon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -469,7 +469,7 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "melenchon-2026-12-04-lyon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -494,7 +494,7 @@
    "region": "Normandie",
    "id": "melenchon-2026-12-05-le-havre-1500",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "last_seen": "2026-11-12T13:39:26+00:00"
   }
  ]
 }
