@@ -1,36 +1,314 @@
 {
-  "disclaimer": "Positions résumées à partir des programmes et déclarations publiques connus des candidats, sur une échelle de -2 (contre) à +2 (pour). Résultat indicatif : lisez les programmes et allez les écouter en meeting !",
-  "questions": [
-    {"id": "retraite", "theme": "Retraites", "text": "Il faut ramener l'âge légal de départ à la retraite à 62 ans ou moins."},
-    {"id": "smic", "theme": "Salaires", "text": "Il faut augmenter fortement le SMIC par décision de l'État."},
-    {"id": "isf", "theme": "Fiscalité", "text": "Il faut taxer davantage les très hauts patrimoines (type ISF ou taxe Zucman)."},
-    {"id": "immigration", "theme": "Immigration", "text": "Il faut réduire fortement l'immigration en France."},
-    {"id": "europe", "theme": "Europe", "text": "La France doit aller vers davantage d'intégration européenne."},
-    {"id": "nucleaire", "theme": "Énergie", "text": "Il faut sortir progressivement du nucléaire."},
-    {"id": "entreprises", "theme": "Économie", "text": "Il faut baisser les impôts et les charges des entreprises."},
-    {"id": "ukraine", "theme": "International", "text": "La France doit renforcer son soutien militaire à l'Ukraine."},
-    {"id": "depense", "theme": "Budget", "text": "Il faut réduire fortement la dépense publique pour baisser la dette."},
-    {"id": "fonctionnaires", "theme": "Services publics", "text": "Il faut recruter massivement dans les services publics (hôpital, école…)."},
-    {"id": "securite", "theme": "Sécurité", "text": "Il faut durcir les peines et construire davantage de places de prison."},
-    {"id": "ric", "theme": "Institutions", "text": "Il faut instaurer le référendum d'initiative citoyenne (RIC)."},
-    {"id": "ecologie", "theme": "Écologie", "text": "La transition écologique doit passer avant la croissance économique."}
-  ],
-  "positions": {
-    "arthaud":       {"retraite": 2,  "smic": 2,  "isf": 2,  "immigration": -2, "europe": -1, "nucleaire": 0,  "entreprises": -2, "ukraine": -1, "depense": -2, "fonctionnaires": 2,  "securite": -2, "ric": 0,  "ecologie": 1},
-    "melenchon":     {"retraite": 2,  "smic": 2,  "isf": 2,  "immigration": -2, "europe": -1, "nucleaire": 2,  "entreprises": -2, "ukraine": 0,  "depense": -2, "fonctionnaires": 2,  "securite": -1, "ric": 2,  "ecologie": 2},
-    "roussel":       {"retraite": 2,  "smic": 2,  "isf": 2,  "immigration": -1, "europe": -1, "nucleaire": -2, "entreprises": -2, "ukraine": 0,  "depense": -2, "fonctionnaires": 2,  "securite": 1,  "ric": 1,  "ecologie": 0},
-    "ruffin":        {"retraite": 2,  "smic": 2,  "isf": 2,  "immigration": -1, "europe": -1, "nucleaire": 0,  "entreprises": -2, "ukraine": 1,  "depense": -2, "fonctionnaires": 2,  "securite": 0,  "ric": 1,  "ecologie": 2},
-    "royal":         {"retraite": 1,  "smic": 1,  "isf": 2,  "immigration": -1, "europe": 1,  "nucleaire": 0,  "entreprises": -1, "ukraine": 1,  "depense": -1, "fonctionnaires": 1,  "securite": 1,  "ric": 1,  "ecologie": 2},
-    "bouamrane":     {"retraite": 1,  "smic": 1,  "isf": 2,  "immigration": -1, "europe": 2,  "nucleaire": -1, "entreprises": -1, "ukraine": 2,  "depense": -1, "fonctionnaires": 1,  "securite": 1,  "ric": 0,  "ecologie": 1},
-    "glucksmann":    {"retraite": 0,  "smic": 1,  "isf": 2,  "immigration": -1, "europe": 2,  "nucleaire": -1, "entreprises": -1, "ukraine": 2,  "depense": -1, "fonctionnaires": 1,  "securite": 0,  "ric": 0,  "ecologie": 2},
-    "batho":         {"retraite": 0,  "smic": 1,  "isf": 1,  "immigration": -1, "europe": 1,  "nucleaire": 1,  "entreprises": -1, "ukraine": 2,  "depense": -1, "fonctionnaires": 1,  "securite": 0,  "ric": 1,  "ecologie": 2},
-    "attal":         {"retraite": -2, "smic": -1, "isf": -2, "immigration": 1,  "europe": 2,  "nucleaire": -2, "entreprises": 1,  "ukraine": 2,  "depense": 1,  "fonctionnaires": -1, "securite": 1,  "ric": -1, "ecologie": 0},
-    "philippe":      {"retraite": -2, "smic": -1, "isf": -2, "immigration": 1,  "europe": 2,  "nucleaire": -2, "entreprises": 2,  "ukraine": 2,  "depense": 2,  "fonctionnaires": -2, "securite": 2,  "ric": -1, "ecologie": 0},
-    "retailleau":    {"retraite": -2, "smic": -1, "isf": -2, "immigration": 2,  "europe": 0,  "nucleaire": -2, "entreprises": 2,  "ukraine": 1,  "depense": 2,  "fonctionnaires": -2, "securite": 2,  "ric": -1, "ecologie": -1},
-    "lisnard":       {"retraite": -2, "smic": -2, "isf": -2, "immigration": 2,  "europe": 0,  "nucleaire": -2, "entreprises": 2,  "ukraine": 1,  "depense": 2,  "fonctionnaires": -2, "securite": 2,  "ric": 0,  "ecologie": -1},
-    "dupont-aignan": {"retraite": 1,  "smic": 0,  "isf": -1, "immigration": 2,  "europe": -2, "nucleaire": -2, "entreprises": 1,  "ukraine": -1, "depense": 0,  "fonctionnaires": 0,  "securite": 2,  "ric": 2,  "ecologie": -1},
-    "le-pen":        {"retraite": 1,  "smic": 0,  "isf": -1, "immigration": 2,  "europe": -2, "nucleaire": -2, "entreprises": 1,  "ukraine": -1, "depense": 0,  "fonctionnaires": 0,  "securite": 2,  "ric": 2,  "ecologie": -1},
-    "zemmour":       {"retraite": -1, "smic": -1, "isf": -2, "immigration": 2,  "europe": -2, "nucleaire": -2, "entreprises": 2,  "ukraine": -1, "depense": 1,  "fonctionnaires": -1, "securite": 2,  "ric": 1,  "ecologie": -2},
-    "philippot":     {"retraite": 1,  "smic": 0,  "isf": -1, "immigration": 2,  "europe": -2, "nucleaire": -2, "entreprises": 1,  "ukraine": -2, "depense": 0,  "fonctionnaires": 0,  "securite": 2,  "ric": 2,  "ecologie": -1}
+ "disclaimer": "Positions établies à partir des programmes et déclarations publiques des candidats, sur une échelle de -2 (contre) à +2 (pour). Mesure de proximité, pas une consigne de vote.",
+ "questions": [
+  {
+   "id": "retraite",
+   "theme": "Retraites",
+   "text": "Il faut ramener l'âge légal de départ à la retraite à 62 ans ou moins."
+  },
+  {
+   "id": "smic",
+   "theme": "Salaires",
+   "text": "Il faut augmenter fortement le SMIC par décision de l'État."
+  },
+  {
+   "id": "isf",
+   "theme": "Fiscalité",
+   "text": "Il faut taxer davantage les très hauts patrimoines (type ISF ou taxe Zucman)."
+  },
+  {
+   "id": "immigration",
+   "theme": "Immigration",
+   "text": "Il faut réduire fortement l'immigration en France."
+  },
+  {
+   "id": "europe",
+   "theme": "Europe",
+   "text": "La France doit aller vers davantage d'intégration européenne."
+  },
+  {
+   "id": "nucleaire",
+   "theme": "Énergie",
+   "text": "Il faut sortir progressivement du nucléaire."
+  },
+  {
+   "id": "entreprises",
+   "theme": "Économie",
+   "text": "Il faut baisser les impôts et les charges des entreprises."
+  },
+  {
+   "id": "ukraine",
+   "theme": "International",
+   "text": "La France doit renforcer son soutien militaire à l'Ukraine."
+  },
+  {
+   "id": "depense",
+   "theme": "Budget",
+   "text": "Il faut réduire fortement la dépense publique pour baisser la dette."
+  },
+  {
+   "id": "fonctionnaires",
+   "theme": "Services publics",
+   "text": "Il faut recruter massivement dans les services publics (hôpital, école…)."
+  },
+  {
+   "id": "securite",
+   "theme": "Sécurité",
+   "text": "Il faut durcir les peines et construire davantage de places de prison."
+  },
+  {
+   "id": "ric",
+   "theme": "Institutions",
+   "text": "Il faut instaurer le référendum d'initiative citoyenne (RIC)."
+  },
+  {
+   "id": "ecologie",
+   "theme": "Écologie",
+   "text": "La transition écologique doit passer avant la croissance économique."
   }
+ ],
+ "positions": {
+  "arthaud": {
+   "retraite": 2,
+   "smic": 2,
+   "isf": 2,
+   "immigration": -2,
+   "europe": -1,
+   "nucleaire": 0,
+   "entreprises": -2,
+   "ukraine": -1,
+   "depense": -2,
+   "fonctionnaires": 2,
+   "securite": -2,
+   "ric": 0,
+   "ecologie": 1
+  },
+  "melenchon": {
+   "retraite": 2,
+   "smic": 2,
+   "isf": 2,
+   "immigration": -2,
+   "europe": -1,
+   "nucleaire": 2,
+   "entreprises": -2,
+   "ukraine": 0,
+   "depense": -2,
+   "fonctionnaires": 2,
+   "securite": -1,
+   "ric": 2,
+   "ecologie": 2
+  },
+  "roussel": {
+   "retraite": 2,
+   "smic": 2,
+   "isf": 2,
+   "immigration": -1,
+   "europe": -1,
+   "nucleaire": -2,
+   "entreprises": -2,
+   "ukraine": 0,
+   "depense": -2,
+   "fonctionnaires": 2,
+   "securite": 1,
+   "ric": 1,
+   "ecologie": 0
+  },
+  "ruffin": {
+   "retraite": 2,
+   "smic": 2,
+   "isf": 2,
+   "immigration": -1,
+   "europe": -1,
+   "nucleaire": 0,
+   "entreprises": -2,
+   "ukraine": 1,
+   "depense": -2,
+   "fonctionnaires": 2,
+   "securite": 0,
+   "ric": 1,
+   "ecologie": 2
+  },
+  "royal": {
+   "retraite": 1,
+   "smic": 1,
+   "isf": 2,
+   "immigration": -1,
+   "europe": 1,
+   "nucleaire": 0,
+   "entreprises": -1,
+   "ukraine": 1,
+   "depense": -1,
+   "fonctionnaires": 1,
+   "securite": 1,
+   "ric": 1,
+   "ecologie": 2
+  },
+  "bouamrane": {
+   "retraite": 1,
+   "smic": 1,
+   "isf": 2,
+   "immigration": -1,
+   "europe": 2,
+   "nucleaire": -1,
+   "entreprises": -1,
+   "ukraine": 2,
+   "depense": -1,
+   "fonctionnaires": 1,
+   "securite": 1,
+   "ric": 0,
+   "ecologie": 1
+  },
+  "glucksmann": {
+   "retraite": 0,
+   "smic": 1,
+   "isf": 2,
+   "immigration": -1,
+   "europe": 2,
+   "nucleaire": -1,
+   "entreprises": -1,
+   "ukraine": 2,
+   "depense": -1,
+   "fonctionnaires": 1,
+   "securite": 0,
+   "ric": 0,
+   "ecologie": 2
+  },
+  "batho": {
+   "retraite": 0,
+   "smic": 1,
+   "isf": 1,
+   "immigration": -1,
+   "europe": 1,
+   "nucleaire": 1,
+   "entreprises": -1,
+   "ukraine": 2,
+   "depense": -1,
+   "fonctionnaires": 1,
+   "securite": 0,
+   "ric": 1,
+   "ecologie": 2
+  },
+  "attal": {
+   "retraite": -2,
+   "smic": -1,
+   "isf": -2,
+   "immigration": 1,
+   "europe": 2,
+   "nucleaire": -2,
+   "entreprises": 1,
+   "ukraine": 2,
+   "depense": 1,
+   "fonctionnaires": -1,
+   "securite": 1,
+   "ric": -1,
+   "ecologie": 0
+  },
+  "philippe": {
+   "retraite": -2,
+   "smic": -1,
+   "isf": -2,
+   "immigration": 1,
+   "europe": 2,
+   "nucleaire": -2,
+   "entreprises": 2,
+   "ukraine": 2,
+   "depense": 2,
+   "fonctionnaires": -2,
+   "securite": 2,
+   "ric": -1,
+   "ecologie": 0
+  },
+  "retailleau": {
+   "retraite": -2,
+   "smic": -1,
+   "isf": -2,
+   "immigration": 2,
+   "europe": 0,
+   "nucleaire": -2,
+   "entreprises": 2,
+   "ukraine": 1,
+   "depense": 2,
+   "fonctionnaires": -2,
+   "securite": 2,
+   "ric": -1,
+   "ecologie": -1
+  },
+  "lisnard": {
+   "retraite": -2,
+   "smic": -2,
+   "isf": -2,
+   "immigration": 2,
+   "europe": 0,
+   "nucleaire": -2,
+   "entreprises": 2,
+   "ukraine": 1,
+   "depense": 2,
+   "fonctionnaires": -2,
+   "securite": 2,
+   "ric": 0,
+   "ecologie": -1
+  },
+  "dupont-aignan": {
+   "retraite": 1,
+   "smic": 0,
+   "isf": -1,
+   "immigration": 2,
+   "europe": -2,
+   "nucleaire": -2,
+   "entreprises": 1,
+   "ukraine": -1,
+   "depense": 0,
+   "fonctionnaires": 0,
+   "securite": 2,
+   "ric": 2,
+   "ecologie": -1
+  },
+  "le-pen": {
+   "retraite": 1,
+   "smic": 0,
+   "isf": -1,
+   "immigration": 2,
+   "europe": -2,
+   "nucleaire": -2,
+   "entreprises": 1,
+   "ukraine": -1,
+   "depense": 0,
+   "fonctionnaires": 0,
+   "securite": 2,
+   "ric": 2,
+   "ecologie": -1
+  },
+  "zemmour": {
+   "retraite": -1,
+   "smic": -1,
+   "isf": -2,
+   "immigration": 2,
+   "europe": -2,
+   "nucleaire": -2,
+   "entreprises": 2,
+   "ukraine": -1,
+   "depense": 1,
+   "fonctionnaires": -1,
+   "securite": 2,
+   "ric": 1,
+   "ecologie": -2
+  },
+  "philippot": {
+   "retraite": 1,
+   "smic": 0,
+   "isf": -1,
+   "immigration": 2,
+   "europe": -2,
+   "nucleaire": -2,
+   "entreprises": 1,
+   "ukraine": -2,
+   "depense": 0,
+   "fonctionnaires": 0,
+   "securite": 2,
+   "ric": 2,
+   "ecologie": -1
+  }
+ },
+ "updated": "2026-11-12",
+ "sources": {}
 }

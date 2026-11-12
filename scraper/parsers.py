@@ -101,6 +101,8 @@ def parse_melenchon() -> List[dict]:
             "access": "public",
             "url": url,
             "source": "melenchon2027.fr",
+            "source_kind": "officiel",
+            "status": "annule" if re.search(r"\bannul", title, re.I) else "confirme",
         }
     return list(out.values())
 
@@ -110,13 +112,17 @@ PARSERS: Dict[str, Callable[[], List[dict]]] = {
 }
 
 
-def run_all() -> List[dict]:
+def run_all():
+    """Renvoie (événements, domaines lus avec succès)."""
     events: List[dict] = []
+    ok = set()
     for name, fn in PARSERS.items():
         try:
             evs = fn()
             print(f"-> {name} : {len(evs)} événements")
             events.extend(evs)
+            if evs:  # une page vide = probablement cassée : on ne déclasse rien
+                ok.add(name)
         except Exception as e:  # un site cassé ne doit pas bloquer les autres
             print(f"  ! {name} : échec ({e})")
-    return events
+    return events, ok

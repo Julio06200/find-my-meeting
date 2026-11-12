@@ -25,6 +25,19 @@ run_daily.bat         alternative : exécution locale (Planificateur de tâches 
 
 Les lieux sont géocodés avec l'API Adresse de l'État (gratuite), qui fournit aussi le département et la région.
 
+## Fiabilité des données
+
+Chaque événement porte :
+- `status` : `confirme` (date et lieu annoncés par un agenda officiel ou l'organisateur), `a_confirmer` (presse seule, horaire/lieu manquant, ou retiré d'un agenda officiel), `annule` ;
+- `source_kind` (`officiel` / `organisateur` / `presse`), `url` (source affichée sur la fiche) et `verified_at` (dernière fois vu dans une source) ;
+- `changes` : historique des modifications de date, horaire, commune ou lieu.
+
+Doublons : même candidat + même page source, ou même candidat + même date + même commune. Une source de presse ne peut jamais écraser ni « confirmer » une information d'agenda officiel.
+
+## Réglages avant lancement
+
+Dans `site/index.html`, bloc `window.FMM_CONFIG` : `reportEmail` (adresse pour les signalements d'erreur ; sinon, signalement via une issue GitHub). Compléter aussi l'éditeur et le contact dans `site/confidentialite.html`.
+
 ## Mise en ligne (GitHub Pages, gratuit)
 
 1. Créez un dépôt GitHub et poussez ce dossier sur la branche `main`.

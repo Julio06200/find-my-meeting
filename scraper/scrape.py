@@ -26,7 +26,7 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel, ValidationError
 
@@ -56,6 +56,10 @@ class Event(BaseModel):
     access: str = "public"  # public | inscription | a_verifier
     url: str
     source: Optional[str] = None
+    # Fiabilité : si absent, déduit de la source (officielle -> confirme, presse -> a_confirmer)
+    status: Optional[str] = None  # confirme | a_confirmer | annule
+    status_note: Optional[str] = None
+    source_kind: Optional[str] = None  # officiel | organisateur | presse
 
 
 class EventList(BaseModel):
@@ -168,7 +172,10 @@ Réponds UNIQUEMENT avec un objet JSON entre balises <events> et </events>, de l
   "with_candidate": true/false,
   "access": "public | inscription | a_verifier",
   "url": "https://…",
-  "source": "nom du site"
+  "source": "nom du site",
+  "source_kind": "officiel (site du candidat/parti) | organisateur | presse",
+  "status": "confirme (annoncé par une source officielle avec date et lieu) | a_confirmer | annule",
+  "status_note": "précision éventuelle ou null"
 }}]}}</events>
 Si rien n'est trouvé : <events>{{"events": []}}</events>"""
 
@@ -222,7 +229,45 @@ def ask_claude(client, c: dict) -> List[dict]:
 
 # --------------------------------------------------------------------------- pipeline
 
-def normalize(ev: dict, now_iso: str) -> Optional[dict]:
+STATUSES = ("confirme", "a_confirmer", "annule")
+# Organisateurs tiers dont la page fait foi pour la date (mais pas forcément pour l'accès public)
+ORGANIZER_DOMAINS = {"u2p-france.fr"}
+
+
+def domain(url: str) -> str:
+    host = urllib.parse.urlparse(url).netloc.lower()
+    return host[4:] if host.startswith("www.") else host
+
+
+def official_domains(c: dict) -> set:
+    doms = {domain(u) for u in (c.get("site"), c.get("agenda")) if u}
+    doms |= set(c.get("domains", []))
+    return {d for d in doms if d}
+
+
+def classify(ev: dict, cand: dict) -> None:
+    """Déduit source_kind et status quand la source ne les donne pas. Ne promeut jamais une info incertaine."""
+    d = domain(ev["url"])
+    if ev.get("source_kind") not in ("officiel", "organisateur", "presse"):
+        ev["source_kind"] = "officiel" if d in official_domains(cand) else "organisateur" if d in ORGANIZER_DOMAINS else "presse"
+    st = ev.get("status")
+    text = f"{ev.get('title', '')} {ev.get('status_note') or ''}".lower()
+    if re.search(r"\bannul", text):
+        st = "annule"
+    if st not in STATUSES:
+        st = "confirme" if ev["source_kind"] == "officiel" else "a_confirmer"
+    # une source de presse seule ne suffit pas à « confirmer »
+    if st == "confirme" and ev["source_kind"] == "presse":
+        st = "a_confirmer"
+        ev["status_note"] = ev.get("status_note") or "Annoncé par la presse, pas encore sur un agenda officiel."
+    if st == "a_confirmer" and ev["source_kind"] == "presse" and not ev.get("status_note"):
+        ev["status_note"] = "Annoncé par la presse, pas encore sur un agenda officiel."
+    if st == "a_confirmer" and not ev.get("time") and not ev.get("status_note"):
+        ev["status_note"] = "Horaire et lieu exact non encore communiqués."
+    ev["status"] = st
+
+
+def normalize(ev: dict, now_iso: str, cands: Dict[str, dict]) -> Optional[dict]:
     try:
         date = dt.date.fromisoformat(ev["date"])
     except Exception:
@@ -241,25 +286,80 @@ def normalize(ev: dict, now_iso: str) -> Optional[dict]:
         "lat": round(geo["lat"], 5), "lon": round(geo["lon"], 5),
         "postcode": geo["postcode"], "department": geo["department"], "region": geo["region"],
     })
-    ev["id"] = slug(event_key(ev))
-    ev.setdefault("first_seen", now_iso)
-    ev["last_seen"] = now_iso
+    classify(ev, cands[ev["candidate_id"]])
+    ev["verified_at"] = now_iso
     return ev
 
 
-def merge(existing: List[dict], fresh: List[dict]) -> List[dict]:
-    by_key = {event_key(e): e for e in existing}
+TRACKED = ("date", "time", "city", "venue")
+
+
+def find_match(pool: List[dict], e: dict) -> Optional[dict]:
+    """Même événement = même candidat et (même page d'événement, ou même date + même commune)."""
+    same_c = [x for x in pool if x["candidate_id"] == e["candidate_id"]]
+    # 1) URL identique ET page dédiée à un seul événement de ce candidat dans la source
+    by_url = [x for x in same_c if x.get("url") == e["url"]]
+    if len(by_url) == 1 and sum(1 for y in same_c if y.get("url") == e["url"]) == 1:
+        if by_url[0]["date"] == e["date"] or slug(by_url[0]["city"]) == slug(e["city"]):
+            return by_url[0]
+    # 2) même date + même commune (heure non bloquante : une heure ajoutée ou corrigée = modification)
+    for x in same_c:
+        if x["date"] == e["date"] and slug(x["city"]) == slug(e["city"]):
+            if not x.get("time") or not e.get("time") or x["time"] == e["time"] or x.get("url") == e["url"]:
+                return x
+    return None
+
+
+RANK = {"officiel": 3, "organisateur": 2, "presse": 1}
+
+
+def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set, cands: Dict[str, dict]) -> List[dict]:
+    pool = [dict(x) for x in existing]
+    seen_ids = set()
     for e in fresh:
-        k = event_key(e)
-        if k in by_key:
-            e["first_seen"] = by_key[k].get("first_seen", e["first_seen"])
-            # on complète sans écraser une info existante par du vide
-            merged = {**by_key[k], **{kk: vv for kk, vv in e.items() if vv not in (None, "", [])}}
-            by_key[k] = merged
+        x = find_match(pool, e)
+        if not x:
+            e["first_seen"] = now_iso
+            e["changes"] = []
+            e["id"] = slug(event_key(e))
+            pool.append(e)
+            seen_ids.add(e["id"])
+            continue
+        # la source la plus fiable l'emporte ; la presse ne peut pas écraser un agenda officiel
+        stronger = RANK.get(e.get("source_kind"), 0) >= RANK.get(x.get("source_kind"), 0)
+        if stronger:
+            for f in TRACKED:
+                old, new = x.get(f), e.get(f)
+                if new and old and new != old:
+                    x.setdefault("changes", []).append({"at": now_iso[:10], "field": f, "old": old, "new": new})
+            for k, v in e.items():
+                if k in ("id", "first_seen", "changes"):
+                    continue
+                if v not in (None, "", []):
+                    x[k] = v
         else:
-            by_key[k] = e
+            # source plus faible : on ne garde que l'info d'annulation et la date de vérification
+            if e.get("status") == "annule":
+                x["status"], x["status_note"] = "annule", e.get("status_note") or f"Annulation signalée par {e.get('source') or domain(e['url'])}."
+        x["verified_at"] = now_iso
+        seen_ids.add(x["id"])
+
+    # Un événement qui disparaît d'un agenda officiel lu avec succès aujourd'hui n'est plus « confirmé »
+    for x in pool:
+        if x.get("id") in seen_ids or x.get("status") == "annule":
+            continue
+        if domain(x.get("url", "")) in ok_sources and x.get("status") == "confirme":
+            x["status"] = "a_confirmer"
+            x["status_note"] = f"N'apparaît plus sur l'agenda officiel depuis le {now_iso[:10]} (modifié ou annulé ?)."
+
     t = today().isoformat()
-    kept = [e for e in by_key.values() if e["date"] >= t]
+    kept = [e for e in pool if e["date"] >= t]
+    for e in kept:  # rétro-compatibilité des anciennes entrées
+        e.setdefault("changes", [])
+        e.setdefault("verified_at", e.get("last_seen") or e.get("first_seen"))
+        e.pop("last_seen", None)
+        if e.get("status") not in STATUSES or not e.get("source_kind"):
+            classify(e, cands[e["candidate_id"]])
     return sorted(kept, key=lambda e: (e["date"], e.get("time") or "99:99"))
 
 
@@ -297,6 +397,8 @@ def main() -> int:
     existing = load_json(MEETINGS_FILE, {"meetings": []}).get("meetings", [])
     now_iso = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     raw: List[dict] = []
+    ok_sources: set = set()
+    cands = {c["id"]: c for c in candidates}
 
     if args.import_file:
         items = load_json(Path(args.import_file), [])
@@ -310,7 +412,8 @@ def main() -> int:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         import parsers
 
-        raw.extend(parsers.run_all())
+        evs, ok_sources = parsers.run_all()
+        raw.extend(evs)
 
     if args.ai and not args.import_file:
         # 2) option payante : recherche web par l'API Claude (si une clé est configurée)
@@ -343,9 +446,9 @@ def main() -> int:
                 raw.extend(evs)
 
     known = {c["id"] for c in candidates}
-    fresh = [n for ev in raw if ev["candidate_id"] in known and (n := normalize(ev, now_iso))]
+    fresh = [n for ev in raw if ev["candidate_id"] in known and (n := normalize(ev, now_iso, cands))]
     print(f"{len(fresh)} événements valides trouvés")
-    meetings = merge(existing, fresh)
+    meetings = merge(existing, fresh, now_iso, ok_sources, cands)
     write_outputs(meetings, "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.")
     return 0
 

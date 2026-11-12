@@ -3,26 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Find My Meeting</title>
-  <meta name="description" content="Trouvez les meetings et réunions publiques de la présidentielle 2027 près de chez vous.">
-  <meta name="theme-color" content="#2B2483">
-  <link rel="icon" href="assets/logo.png">
-  <link rel="apple-touch-icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <title>Find My Meeting — Les meetings de la présidentielle 2027 près de chez vous</title>
+  <meta name="description" content="Trouvez en quelques secondes les meetings et réunions publiques de la présidentielle 2027 près de chez vous, avec leurs sources officielles. Et testez vos proximités politiques avec le quiz.">
+  <link rel="canonical" href="https://julio06200.github.io/find-my-meeting/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#302689">
+
+  <!-- Aperçus de partage (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Find My Meeting">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Find My Meeting — les meetings de la présidentielle près de chez vous">
+  <meta property="og:description" content="Carte des meetings et réunions publiques de la présidentielle 2027, avec sources officielles. Quiz de proximité politique gratuit et anonyme.">
+  <meta property="og:url" content="https://julio06200.github.io/find-my-meeting/">
+  <meta property="og:image" content="https://julio06200.github.io/find-my-meeting/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Find My Meeting : les meetings de la présidentielle près de chez vous">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Find My Meeting — les meetings de la présidentielle près de chez vous">
+  <meta name="twitter:description" content="Carte des meetings de la présidentielle 2027 avec sources officielles, et quiz de proximité politique.">
+  <meta name="twitter:image" content="https://julio06200.github.io/find-my-meeting/assets/og-image.png">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preload" href="assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.min.css">
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Find My Meeting","url":"https://julio06200.github.io/find-my-meeting/","inLanguage":"fr-FR","description":"Les meetings et réunions publiques de la présidentielle 2027 près de chez vous."}
+  </script>
+  <script>
+    /* Réglages du site : à compléter avant le lancement */
+    window.FMM_CONFIG = {
+      siteUrl: "https://julio06200.github.io/find-my-meeting/",
+      reportEmail: "",   // ex. "contact@findmymeeting.fr" : sinon, signalement via GitHub
+      reportGithub: "https://github.com/Julio06200/find-my-meeting/issues/new"
+    };
+  </script>
 </head>
 <body>
+  <a class="skip" href="#list">Aller aux meetings</a>
   <header class="topbar">
     <a class="brand" href="#meetings" aria-label="Find My Meeting — accueil">
-      <img src="assets/logo.png" alt="" width="40" height="40">
+      <img src="assets/logo-96.png" alt="" width="40" height="40">
       <span class="brand-text"><small>Find my</small>Meeting</span>
     </a>
-    <nav class="tabs" role="tablist">
-      <a href="#meetings" data-tab="meetings" role="tab">Meetings</a>
-      <a href="#quiz" data-tab="quiz" role="tab">Quiz</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#meetings" data-tab="meetings">Meetings</a>
+      <a href="#quiz" data-tab="quiz">Quiz</a>
     </nav>
   </header>
 
@@ -33,19 +68,19 @@
       <p class="updated" id="updated"></p>
     </section>
 
-    <section class="filters" aria-label="Filtres">
+    <section class="filters" aria-label="Rechercher un meeting">
       <div class="f-row f-where">
         <div class="field grow">
-          <label for="city">Ma ville</label>
+          <label for="city">Où êtes-vous ?</label>
           <div class="combo">
-            <input id="city" type="text" placeholder="Ex. Lyon, Rennes, 33000…" autocomplete="off">
+            <input id="city" type="search" inputmode="search" enterkeyhint="search" placeholder="Ville ou code postal" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="city-suggest" aria-expanded="false">
             <ul id="city-suggest" class="suggest" role="listbox" hidden></ul>
           </div>
         </div>
-        <button id="locate" class="btn ghost" type="button" title="Utiliser ma position">📍 Autour de moi</button>
-        <div class="field">
-          <label for="radius">Rayon</label>
-          <select id="radius">
+        <div class="f-inline">
+          <button id="locate" class="btn ghost" type="button">📍 Autour de moi</button>
+          <label class="sr" for="radius">Rayon</label>
+          <select id="radius" aria-label="Rayon de recherche">
             <option value="10">10 km</option>
             <option value="25">25 km</option>
             <option value="50" selected>50 km</option>
@@ -55,87 +90,167 @@
           </select>
         </div>
       </div>
+
       <div class="f-row">
-        <div class="field">
-          <label for="region">Région</label>
-          <select id="region"><option value="">Toutes les régions</option></select>
+        <div class="seg-chips" id="period" role="radiogroup" aria-label="Période">
+          <button type="button" role="radio" data-v="1">Aujourd'hui</button>
+          <button type="button" role="radio" data-v="7">7 jours</button>
+          <button type="button" role="radio" data-v="30">30 jours</button>
+          <button type="button" role="radio" data-v="0">Tout</button>
         </div>
-        <div class="field">
-          <label for="period">Quand</label>
-          <select id="period">
-            <option value="7">7 prochains jours</option>
-            <option value="30" selected>30 prochains jours</option>
-            <option value="0">Tout</option>
-          </select>
-        </div>
-        <label class="switch"><input type="checkbox" id="only-candidate"><span></span>Candidat·e présent·e</label>
       </div>
+
       <div class="f-row">
         <div class="field grow">
-          <span class="label">Candidats</span>
-          <div id="chips" class="chips"></div>
+          <span class="label" id="chips-label">Candidats</span>
+          <div id="chips" class="chips" role="group" aria-labelledby="chips-label"></div>
         </div>
       </div>
+
+      <details class="more" id="more-filters">
+        <summary>Plus de filtres</summary>
+        <div class="f-row">
+          <div class="field">
+            <label for="region">Région</label>
+            <select id="region"><option value="">Toutes les régions</option></select>
+          </div>
+          <label class="switch"><input type="checkbox" id="only-candidate"><span></span>Candidat·e présent·e</label>
+          <label class="switch"><input type="checkbox" id="only-confirmed"><span></span>Confirmés uniquement</label>
+          <button type="button" class="btn ghost small" id="reset">Réinitialiser</button>
+        </div>
+      </details>
     </section>
+
+    <div id="shared-meeting"></div>
 
     <div class="results-head">
       <p id="count" aria-live="polite"></p>
-      <div class="seg" id="mobile-toggle">
-        <button type="button" data-mode="list" class="on">Liste</button>
-        <button type="button" data-mode="map">Carte</button>
-      </div>
+      <p class="legend"><span class="st st-confirme">Confirmé</span><span class="st st-a_confirmer">À confirmer</span><span class="st st-annule">Annulé</span></p>
     </div>
 
     <section class="results" data-mode="list">
-      <ol id="list" class="list"></ol>
-      <div class="map-wrap"><div id="map" aria-label="Carte des meetings"></div></div>
+      <div id="list" class="list"></div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Carte des meetings"></div></div>
     </section>
+    <button type="button" class="fab" id="fab" aria-label="Afficher la carte">🗺️ Carte</button>
   </main>
 
   <!-- ====================== QUIZ ====================== -->
   <main id="view-quiz" class="view" hidden>
     <section id="quiz-intro" class="quiz-card center">
-      <h1>Qui aller écouter ?</h1>
-      <p>13 questions, 2 minutes. On compare vos réponses aux positions des candidats, puis on vous montre leurs meetings les plus proches.</p>
+      <h1>Vos proximités politiques</h1>
+      <p>13 questions, 2 minutes. On compare vos réponses aux positions publiques des candidats et on vous montre de qui vous êtes le plus proche — puis leurs meetings près de chez vous.</p>
+      <ul class="promises">
+        <li>🔒 Vos réponses restent sur votre appareil, rien n'est envoyé.</li>
+        <li>⚖️ Une mesure de proximité, pas une consigne de vote.</li>
+      </ul>
       <button class="btn primary big" id="quiz-start" type="button">Commencer le quiz</button>
-      <p class="fine" id="quiz-disclaimer"></p>
+      <p class="fine"><a href="#methodologie" class="link">Comment le score est-il calculé ?</a></p>
     </section>
 
     <section id="quiz-q" class="quiz-card" hidden>
-      <div class="progress"><span id="quiz-bar"></span></div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span id="quiz-bar"></span></div>
       <p class="q-meta"><span id="q-num"></span> · <span id="q-theme"></span></p>
-      <h2 id="q-text"></h2>
+      <h2 id="q-text" tabindex="-1"></h2>
       <div class="answers" id="answers">
         <button type="button" data-v="2">Tout à fait d'accord</button>
         <button type="button" data-v="1">Plutôt d'accord</button>
-        <button type="button" data-v="0">Sans avis</button>
         <button type="button" data-v="-1">Plutôt pas d'accord</button>
         <button type="button" data-v="-2">Pas du tout d'accord</button>
+        <button type="button" data-v="skip" class="neutral">Sans avis / je passe</button>
       </div>
       <div class="q-foot">
         <button type="button" class="btn ghost" id="q-back">← Retour</button>
-        <label class="switch"><input type="checkbox" id="q-important"><span></span>Important pour moi</label>
-        <button type="button" class="btn ghost" id="q-skip">Passer →</button>
+        <label class="switch"><input type="checkbox" id="q-important"><span></span>Sujet important pour moi</label>
       </div>
     </section>
 
     <section id="quiz-result" hidden>
       <div class="quiz-card">
-        <h1>Vos affinités</h1>
+        <h1 id="result-title">Vos proximités politiques</h1>
+        <p class="neutral-note">Ce résultat mesure la proximité entre vos réponses et les positions publiques des candidats. <b>Ce n'est pas une recommandation de vote.</b> <a href="#methodologie" class="link">Méthodologie</a></p>
         <p class="fine" id="result-note"></p>
+        <ol id="top3" class="top3"></ol>
+        <div class="result-actions">
+          <button class="btn primary" id="share-results" type="button">Partager mes résultats</button>
+          <button class="btn ghost" id="quiz-restart" type="button">Refaire le quiz</button>
+        </div>
+        <details class="all-cands">
+          <summary>Voir tous les candidats</summary>
+          <ol id="ranking" class="ranking"></ol>
+        </details>
+        <div class="privacy-box">
+          <label class="switch"><input type="checkbox" id="remember"><span></span>Garder mes réponses sur cet appareil</label>
+          <button type="button" class="btn ghost small" id="forget">Effacer mes réponses</button>
+          <p class="fine">Par défaut, vos réponses sont effacées à la fermeture de la page. Elles ne quittent jamais votre appareil.</p>
+        </div>
+      </div>
+      <div class="quiz-card">
+        <h2 class="h2">Leurs meetings près de chez vous</h2>
         <div id="result-where" class="result-where"></div>
-        <ol id="ranking" class="ranking"></ol>
-        <div class="center"><button class="btn ghost" id="quiz-restart" type="button">Refaire le quiz</button></div>
+        <div id="result-meetings"></div>
+      </div>
+    </section>
+
+    <section id="quiz-shared" hidden>
+      <div class="quiz-card center">
+        <p class="kicker">Résultat partagé</p>
+        <h1>Ses proximités politiques</h1>
+        <ol id="shared-top3" class="top3 compact"></ol>
+        <p class="neutral-note">Proximité idéologique calculée par le quiz Find My Meeting, pas une consigne de vote. Les réponses individuelles ne sont jamais partagées.</p>
+        <button class="btn primary big" id="shared-start" type="button">Faire le quiz moi aussi</button>
       </div>
     </section>
   </main>
 
+  <!-- ====================== MÉTHODOLOGIE ====================== -->
+  <main id="view-methodologie" class="view" hidden>
+    <article class="quiz-card prose">
+      <h1>Méthodologie du quiz</h1>
+      <div id="method-body"></div>
+      <p><a href="#quiz" class="btn primary">Faire le quiz</a></p>
+    </article>
+  </main>
+
+  <!-- Partage des résultats -->
+  <dialog id="share-dialog" aria-labelledby="share-title">
+    <form method="dialog" class="dlg">
+      <div class="dlg-head">
+        <h2 id="share-title">Partager mes résultats</h2>
+        <button class="x" value="close" aria-label="Fermer">✕</button>
+      </div>
+      <p class="fine">Vous choisissez ce qui est rendu public. <b>Vos réponses aux questions ne sont jamais partagées.</b></p>
+      <fieldset class="consent">
+        <legend class="sr">Contenu partagé</legend>
+        <label class="check"><input type="checkbox" id="sh-names" checked> Mes 3 candidats les plus proches</label>
+        <label class="check"><input type="checkbox" id="sh-pct"> Afficher les pourcentages</label>
+        <div class="seg-chips" id="sh-format" role="radiogroup" aria-label="Format de l'image">
+          <button type="button" role="radio" data-v="story" aria-checked="true">Story 9:16</button>
+          <button type="button" role="radio" data-v="square" aria-checked="false">Carré</button>
+        </div>
+      </fieldset>
+      <div class="preview"><canvas id="share-canvas" width="1080" height="1920" aria-label="Aperçu de l'image partagée"></canvas></div>
+      <div class="share-grid">
+        <button type="button" class="btn primary" id="sh-native">Partager l'image</button>
+        <button type="button" class="btn ghost" id="sh-download">Télécharger l'image</button>
+        <button type="button" class="btn ghost" id="sh-copy">Copier le lien</button>
+        <a class="btn ghost" id="sh-wa" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" id="sh-x" target="_blank" rel="noopener">X</a>
+        <a class="btn ghost" id="sh-li" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="fine" id="sh-msg" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
   <footer class="foot">
-    <p>Find My Meeting — agenda mis à jour automatiquement chaque matin à partir des sites de campagne et de la presse. Les horaires peuvent changer : vérifiez toujours la source.</p>
+    <p>Find My Meeting est un site indépendant, sans lien avec les candidats ni les partis. Agenda mis à jour chaque matin à partir des agendas officiels et de la presse : vérifiez toujours la source avant de vous déplacer.</p>
+    <p><a href="#methodologie">Méthodologie du quiz</a> · <a href="confidentialite.html">Confidentialité &amp; mentions légales</a> · <a href="https://github.com/Julio06200/find-my-meeting" rel="noopener">Code source</a></p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <script src="data/bundle.js"></script>
-  <script src="app.js"></script>
+  <script src="vendor/leaflet/leaflet.min.js" defer></script>
+  <script src="data/bundle.js" defer></script>
+  <script src="app.js?v=3" defer></script>
 </body>
 </html>

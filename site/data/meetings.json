@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T13:46:53+00:00",
+ "updated_at": "2026-11-12T14:51:17+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -25,7 +25,10 @@
    "region": "Nouvelle-Aquitaine",
    "id": "attal-2026-11-12-la-rochelle",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:02:27+00:00",
+   "source_kind": "organisateur",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "arthaud",
@@ -48,7 +51,10 @@
    "region": "Grand Est",
    "id": "arthaud-2026-11-12-metz-1800",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "officiel",
+   "status": "confirme"
   },
   {
    "candidate_id": "melenchon",
@@ -74,7 +80,10 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-12-saint-quirc-1830",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -101,7 +110,10 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-12-rodez-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -127,7 +139,10 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "id": "melenchon-2026-11-12-arles-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -155,7 +170,10 @@
    "region": "Grand Est",
    "id": "melenchon-2026-11-12-metz-1930",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:36:44+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -180,7 +198,10 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-14-argeles-sur-mer-1800",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -207,7 +228,10 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "id": "melenchon-2026-11-14-nice-1930",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "philippe",
@@ -232,7 +256,11 @@
    "region": "Occitanie",
    "id": "philippe-2026-11-14-toulouse",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "presse",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "melenchon",
@@ -259,7 +287,10 @@
    "region": "Île-de-France",
    "id": "melenchon-2026-11-16-creteil-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -284,7 +315,10 @@
    "region": "Centre-Val de Loire",
    "id": "melenchon-2026-11-18-orleans-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -310,7 +344,10 @@
    "region": "Nouvelle-Aquitaine",
    "id": "melenchon-2026-11-19-niort-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "philippe",
@@ -336,7 +373,11 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "philippe-2026-11-19-rillieux-la-pape",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "presse",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "retailleau",
@@ -361,7 +402,11 @@
    "region": "Centre-Val de Loire",
    "id": "retailleau-2026-11-20-chartres",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:02:27+00:00",
+   "source_kind": "organisateur",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "melenchon",
@@ -389,7 +434,10 @@
    "region": "Occitanie",
    "id": "melenchon-2026-11-21-carbonne-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -412,7 +460,10 @@
    "region": "Île-de-France",
    "id": "melenchon-2026-11-24-bondy-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "le-pen",
@@ -437,7 +488,11 @@
    "region": "Grand Est",
    "id": "le-pen-2026-11-25-reims",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:02:27+00:00",
+   "source_kind": "organisateur",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "melenchon",
@@ -463,7 +518,10 @@
    "region": "Normandie",
    "id": "melenchon-2026-11-29-vernon-1600",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -491,7 +549,10 @@
    "region": "Bourgogne-Franche-Comté",
    "id": "melenchon-2026-12-01-besancon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -516,7 +577,11 @@
    "region": "Île-de-France",
    "id": "melenchon-2026-12-01-bretigny-sur-orge",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:02:27+00:00",
+   "source_kind": "organisateur",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "melenchon",
@@ -543,7 +608,10 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "melenchon-2026-12-04-lyon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "melenchon",
@@ -568,7 +636,10 @@
    "region": "Normandie",
    "id": "melenchon-2026-12-05-le-havre-1500",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:39:26+00:00"
+   "source_kind": "officiel",
+   "status": "confirme",
+   "verified_at": "2026-11-12T14:51:10+00:00",
+   "changes": []
   },
   {
    "candidate_id": "glucksmann",
@@ -593,7 +664,10 @@
    "region": "Île-de-France",
    "id": "glucksmann-2026-12-06-paris-1430",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "officiel",
+   "status": "confirme"
   },
   {
    "candidate_id": "roussel",
@@ -618,7 +692,11 @@
    "region": "Hauts-de-France",
    "id": "roussel-2026-12-06-avion",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "presse",
+   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "arthaud",
@@ -643,7 +721,10 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "arthaud-2026-12-08-chambery-1830",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "officiel",
+   "status": "confirme"
   },
   {
    "candidate_id": "arthaud",
@@ -668,7 +749,10 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "arthaud-2026-12-09-annonay-1800",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "officiel",
+   "status": "confirme"
   },
   {
    "candidate_id": "lisnard",
@@ -693,7 +777,10 @@
    "region": "Auvergne-Rhône-Alpes",
    "id": "lisnard-2026-12-13-chassieu-1500",
    "first_seen": "2026-11-12T13:46:50+00:00",
-   "last_seen": "2026-11-12T13:46:50+00:00"
+   "changes": [],
+   "verified_at": "2026-11-12T13:46:50+00:00",
+   "source_kind": "presse",
+   "status": "a_confirmer"
   }
  ]
 }
