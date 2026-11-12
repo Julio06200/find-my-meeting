@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T13:02:35+00:00",
+ "updated_at": "2026-11-12T13:36:51+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique : planification écologique, vite les éco-régions",
+   "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Gabriel Amard et Claire Lejeune",
    "type": "reunion",
    "date": "2026-11-12",
    "time": "18:30",
@@ -49,18 +49,18 @@
    "postcode": "09700",
    "department": "Ariège",
    "region": "Occitanie",
-   "id": "melenchon-2026-11-12-saint-quirc-salle-des-fetes",
+   "id": "melenchon-2026-11-12-saint-quirc-1830",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Anne Stambach-Terrenoir, Bérenger Cernon et Laurent Alexandre",
    "type": "reunion",
    "date": "2026-11-12",
    "time": "19:00",
    "city": "Rodez",
-   "venue": "Maison de quartier Saint-Éloi",
+   "venue": "Maison de quartier Saint-Eloi",
    "address": null,
    "speakers": [
     "Anne Stambach-Terrenoir",
@@ -76,18 +76,18 @@
    "postcode": "12000",
    "department": "Aveyron",
    "region": "Occitanie",
-   "id": "melenchon-2026-11-12-rodez-maison-de-quartier-s",
+   "id": "melenchon-2026-11-12-rodez-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Manuel Bompard et Sophia Chikirou",
    "type": "reunion",
    "date": "2026-11-12",
    "time": "19:00",
    "city": "Arles",
-   "venue": "Salle des fêtes",
+   "venue": "Salle des Fetes",
    "address": null,
    "speakers": [
     "Manuel Bompard",
@@ -102,23 +102,23 @@
    "postcode": "13104",
    "department": "Bouches-du-Rhône",
    "region": "Provence-Alpes-Côte d'Azur",
-   "id": "melenchon-2026-11-12-arles-salle-des-fetes",
+   "id": "melenchon-2026-11-12-arles-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Mathilde Panot, Louis Boyard, Anaïs Belouassa Cherifi et Charlotte Leduc",
    "type": "reunion",
    "date": "2026-11-12",
    "time": "19:30",
    "city": "Metz",
-   "venue": "Centre culturel Saint-Denis de la Réunion",
+   "venue": "Centre culturel Saint Denis de la Réunion",
    "address": null,
    "speakers": [
     "Mathilde Panot",
     "Louis Boyard",
-    "Anaïs Belouassa-Cherifi",
+    "Anaïs Belouassa Cherifi",
     "Charlotte Leduc"
    ],
    "with_candidate": false,
@@ -130,13 +130,13 @@
    "postcode": "57000",
    "department": "Moselle",
    "region": "Grand Est",
-   "id": "melenchon-2026-11-12-metz-centre-culturel-sain",
+   "id": "melenchon-2026-11-12-metz-1930",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique : planification écologique",
+   "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Gabriel Amard",
    "type": "reunion",
    "date": "2026-11-14",
    "time": "18:00",
@@ -155,13 +155,13 @@
    "postcode": "66700",
    "department": "Pyrénées-Orientales",
    "region": "Occitanie",
-   "id": "melenchon-2026-11-14-argeles-sur-mer-salle-ferdinand-buis",
+   "id": "melenchon-2026-11-14-argeles-sur-mer-1800",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Clémence Guetté, Manuel Bompard et François Piquemal",
    "type": "reunion",
    "date": "2026-11-14",
    "time": "19:30",
@@ -182,13 +182,13 @@
    "postcode": "06000",
    "department": "Alpes-Maritimes",
    "region": "Provence-Alpes-Côte d'Azur",
-   "id": "melenchon-2026-11-14-nice-salle-leyrit",
+   "id": "melenchon-2026-11-14-nice-1930",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Clémence Guetté, Mathilde Panot et Louis Boyard",
    "type": "reunion",
    "date": "2026-11-16",
    "time": "19:00",
@@ -209,13 +209,13 @@
    "postcode": "94000",
    "department": "Val-de-Marne",
    "region": "Île-de-France",
-   "id": "melenchon-2026-11-16-creteil-salle-georges-duhame",
+   "id": "melenchon-2026-11-16-creteil-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique : l'eau, un bien commun",
+   "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Claire Lejeune",
    "type": "reunion",
    "date": "2026-11-18",
    "time": "19:00",
@@ -234,18 +234,18 @@
    "postcode": "45000",
    "department": "Loiret",
    "region": "Centre-Val de Loire",
-   "id": "melenchon-2026-11-18-orleans-salle-eiffel",
+   "id": "melenchon-2026-11-18-orleans-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Manon Aubry et Alma Dufour",
    "type": "reunion",
    "date": "2026-11-19",
    "time": "19:00",
    "city": "Niort",
-   "venue": "Salle polyvalente du Clou Bouchet",
+   "venue": "Salle Polyvalente du Clou Bouchet",
    "address": null,
    "speakers": [
     "Manon Aubry",
@@ -260,9 +260,9 @@
    "postcode": "79000",
    "department": "Deux-Sèvres",
    "region": "Nouvelle-Aquitaine",
-   "id": "melenchon-2026-11-19-niort-salle-polyvalente-du",
+   "id": "melenchon-2026-11-19-niort-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "retailleau",
@@ -291,12 +291,12 @@
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Mathilde Panot, Christophe Bex, Anne Stambach-Terrenoir et Hadrien Clouet",
    "type": "reunion",
    "date": "2026-11-21",
    "time": "19:00",
    "city": "Carbonne",
-   "venue": "Centre socio-culturel du Bois de Castre",
+   "venue": "Centre socio culturel du Bois de Castre",
    "address": null,
    "speakers": [
     "Mathilde Panot",
@@ -313,9 +313,9 @@
    "postcode": "31390",
    "department": "Haute-Garonne",
    "region": "Occitanie",
-   "id": "melenchon-2026-11-21-carbonne-centre-socio-culture",
+   "id": "melenchon-2026-11-21-carbonne-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -336,9 +336,9 @@
    "postcode": "93140",
    "department": "Seine-Saint-Denis",
    "region": "Île-de-France",
-   "id": "melenchon-2026-11-24-bondy-espace-marcel-chauzy",
+   "id": "melenchon-2026-11-24-bondy-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "le-pen",
@@ -367,12 +367,12 @@
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion Publique à Vernon avec Antoine Léaument et Nadège Abomangoli",
    "type": "reunion",
    "date": "2026-11-29",
    "time": "16:00",
    "city": "Vernon",
-   "venue": "Espace Philippe Auguste",
+   "venue": "Espace Phillipe Auguste",
    "address": null,
    "speakers": [
     "Antoine Léaument",
@@ -387,13 +387,13 @@
    "postcode": "27200",
    "department": "Eure",
    "region": "Normandie",
-   "id": "melenchon-2026-11-29-vernon-espace-philippe-augu",
+   "id": "melenchon-2026-11-29-vernon-1600",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Mathilde Panot, Bally Bagayoko, Sophia Chikirou et Séverine Véziès",
    "type": "reunion",
    "date": "2026-12-01",
    "time": "19:00",
@@ -415,9 +415,9 @@
    "postcode": "25000",
    "department": "Doubs",
    "region": "Bourgogne-Franche-Comté",
-   "id": "melenchon-2026-12-01-besancon-grand-kursaal",
+   "id": "melenchon-2026-12-01-besancon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -446,7 +446,7 @@
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Mathilde Panot, Manuel Bompard et Anaïs Belouassa-Cherifi",
    "type": "reunion",
    "date": "2026-12-04",
    "time": "19:00",
@@ -467,9 +467,9 @@
    "postcode": "69001",
    "department": "Rhône",
    "region": "Auvergne-Rhône-Alpes",
-   "id": "melenchon-2026-12-04-lyon-bourse-du-travail",
+   "id": "melenchon-2026-12-04-lyon-1900",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   },
   {
    "candidate_id": "melenchon",
@@ -492,9 +492,9 @@
    "postcode": "76600",
    "department": "Seine-Maritime",
    "region": "Normandie",
-   "id": "melenchon-2026-12-05-le-havre-docks-oceane",
+   "id": "melenchon-2026-12-05-le-havre-1500",
    "first_seen": "2026-11-12T13:02:27+00:00",
-   "last_seen": "2026-11-12T13:02:27+00:00"
+   "last_seen": "2026-11-12T13:36:44+00:00"
   }
  ]
 }

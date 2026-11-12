@@ -17,16 +17,18 @@ scraper/seed_events.json  événements ajoutés à la main (exemple d'import)
 run_daily.bat         alternative : exécution locale (Planificateur de tâches Windows)
 ```
 
-## Comment marche le scraping
+## Comment marche la mise à jour (gratuite)
 
-Pour chaque candidat, `scrape.py` demande à Claude (`claude-opus-5-5`, avec les outils web search et web fetch) de trouver les meetings à venir sur les 60 prochains jours, à partir de l'agenda de campagne s'il est connu (`agenda` dans `candidates.json`), de la presse et des sites des partis. Chaque événement doit avoir une URL source. Les lieux sont ensuite géocodés avec l'API Adresse de l'État (gratuite), qui fournit aussi le département et la région. Enfin, les événements sont fusionnés avec l'existant et les dates passées sont retirées.
+1. **Robot GitHub, chaque jour à 6h (gratuit)** : `scrape.py` lit les agendas de campagne structurés avec les lecteurs de `scraper/parsers.py` (aujourd'hui : melenchon2027.fr). Pour ajouter un site, écrivez une fonction dans `parsers.py` et ajoutez-la à `PARSERS`.
+2. **Tâche Claude, chaque jour à 7h30** (application Claude sur le PC, incluse dans l'abonnement) : Claude cherche sur le web les meetings de tous les candidats, les écrit dans `scraper/claude_events.json`, les importe, puis pousse sur GitHub. Ne tourne que si le PC est allumé et l'application ouverte.
+3. **Option payante** : si un secret `ANTHROPIC_API_KEY` est ajouté au dépôt, le robot GitHub ajoute aussi une recherche web par l'API Claude (`--ai`).
 
-Le modèle se change avec la variable `FMM_MODEL` (par ex. `claude-sonnet-5-5` pour réduire le coût).
+Les lieux sont géocodés avec l'API Adresse de l'État (gratuite), qui fournit aussi le département et la région.
 
 ## Mise en ligne (GitHub Pages, gratuit)
 
 1. Créez un dépôt GitHub et poussez ce dossier sur la branche `main`.
-2. Dans **Settings → Secrets and variables → Actions**, ajoutez `ANTHROPIC_API_KEY`.
+2. (Optionnel, payant) Dans **Settings → Secrets and variables → Actions**, ajoutez `ANTHROPIC_API_KEY`.
 3. Dans **Settings → Pages**, choisissez « Source : GitHub Actions ».
 4. Dans **Actions → Scraping quotidien → Run workflow**, lancez un premier passage.
 

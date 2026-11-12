@@ -121,7 +121,7 @@ def geocode(city: str, venue: Optional[str], address: Optional[str]) -> Optional
 
 
 def event_key(e: dict) -> str:
-    return f"{e['candidate_id']}|{e['date']}|{slug(e['city'])}|{slug(e.get('venue') or '')[:20]}"
+    return f"{e['candidate_id']}|{e['date']}|{slug(e['city'])}|{(e.get('time') or '').replace(':', '')}"
 
 
 def load_json(path: Path, default):
@@ -285,6 +285,7 @@ def main() -> int:
     ap.add_argument("--only", help="ids de candidats séparés par des virgules")
     ap.add_argument("--import", dest="import_file", help="fichier JSON d'événements à ajouter")
     ap.add_argument("--bundle-only", action="store_true")
+    ap.add_argument("--ai", action="store_true", help="ajoute la recherche web via l'API Claude (payant)")
     ap.add_argument("--workers", type=int, default=4)
     args = ap.parse_args()
 
@@ -305,12 +306,20 @@ def main() -> int:
             except ValidationError as e:
                 print(f"  ! ignoré : {it.get('title')} ({e.error_count()} erreurs)")
     else:
+        # 1) lecteurs gratuits (sans IA), toujours exécutés
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import parsers
+
+        raw.extend(parsers.run_all())
+
+    if args.ai and not args.import_file:
+        # 2) option payante : recherche web par l'API Claude (si une clé est configurée)
         import os
 
         if not os.environ.get("ANTHROPIC_API_KEY"):
-            print("ANTHROPIC_API_KEY absent : scraping ignoré, données existantes conservées.")
-            write_bundle()
-            return 0
+            print("--ai demandé mais ANTHROPIC_API_KEY absent : étape IA ignorée.")
+            args.ai = False
+    if args.ai and not args.import_file:
         import anthropic
 
         client = anthropic.Anthropic()

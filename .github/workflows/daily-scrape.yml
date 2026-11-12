@@ -31,7 +31,7 @@ jobs:
       - name: Scraper les meetings
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scraper/scrape.py
+        run: python scraper/scrape.py $([ -n "$ANTHROPIC_API_KEY" ] && echo --ai)
       - name: Commit des nouvelles données
         run: |
           git config user.name "find-my-meeting-bot"
