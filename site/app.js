@@ -252,7 +252,8 @@
     ].join("");
     const speakers = m.speakers?.length && !(m.with_candidate && m.speakers.length === 1)
       ? `<p class="speakers">Avec ${esc(m.speakers.join(", "))}</p>` : "";
-    const place = [m.venue, m.address].filter(Boolean).join(", ");
+    const same = (a, b) => String(a || "").trim().toLowerCase() === String(b || "").trim().toLowerCase();
+    const place = [same(m.venue, m.city) ? "" : m.venue, m.address].filter(Boolean).join(", ");
     const changes = (m.changes || []).slice(-2).map((ch) =>
       `${FIELD_LABEL[ch.field] || ch.field} modifié le ${fmtShort(ch.at)} (avant : ${esc(ch.field === "date" ? fmtLong(ch.old) : ch.field === "time" ? fmtTime(ch.old) : ch.old)})`).join(" · ");
     const verified = m.verified_at ? `Vérifié le ${fmtShort(m.verified_at)}` : "Date de vérification inconnue";
