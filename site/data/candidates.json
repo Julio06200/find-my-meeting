@@ -41,23 +41,8 @@
   "party": "Debout !",
   "family": "Gauche",
   "color": "#E4572E",
-  "site": ""
- },
- {
-  "id": "royal",
-  "name": "Ségolène Royal",
-  "party": "Parti socialiste",
-  "family": "Gauche",
-  "color": "#EC4E7B",
-  "site": ""
- },
- {
-  "id": "bouamrane",
-  "name": "Karim Bouamrane",
-  "party": "Parti socialiste",
-  "family": "Gauche",
-  "color": "#F06C9B",
-  "site": ""
+  "site": "",
+  "note": "A indiqué qu'il se retirerait si une solution se dégage pour battre Marine Le Pen au second tour."
  },
  {
   "id": "glucksmann",
@@ -69,15 +54,8 @@
   "domains": [
    "glucks2027.fr",
    "place-publique.eu"
-  ]
- },
- {
-  "id": "batho",
-  "name": "Delphine Batho",
-  "party": "Génération écologie",
-  "family": "Écologie",
-  "color": "#2E9E4F",
-  "site": ""
+  ],
+  "note": "Vainqueur de la primaire sociale-démocrate d'octobre 2026."
  },
  {
   "id": "attal",
@@ -160,6 +138,94 @@
   "party": "Les Patriotes",
   "family": "Souverainiste",
   "color": "#3B4A6B",
+  "site": ""
+ },
+ {
+  "id": "tondelier",
+  "name": "Marine Tondelier",
+  "party": "Les Écologistes",
+  "family": "Écologie",
+  "color": "#2E9E4F",
+  "site": "https://lesecologistes.fr",
+  "domains": [
+   "lesecologistes.fr"
+  ],
+  "note": "Candidature soumise au vote des adhérents des Écologistes le 13 décembre 2026."
+ },
+ {
+  "id": "asselineau",
+  "name": "François Asselineau",
+  "party": "Union populaire républicaine",
+  "family": "Souverainiste",
+  "color": "#1B4D8C",
+  "site": "https://www.upr.fr",
+  "domains": [
+   "upr.fr"
+  ]
+ },
+ {
+  "id": "labib",
+  "name": "Selma Labib",
+  "party": "NPA-Révolutionnaires",
+  "family": "Extrême gauche",
+  "color": "#C1121F",
+  "site": "",
+  "domains": [
+   "npa-revolutionnaires.org"
+  ]
+ },
+ {
+  "id": "kazib",
+  "name": "Anasse Kazib",
+  "party": "Révolution permanente",
+  "family": "Extrême gauche",
+  "color": "#9B2226",
+  "site": "https://www.revolutionpermanente.fr",
+  "domains": [
+   "revolutionpermanente.fr"
+  ]
+ },
+ {
+  "id": "markovic",
+  "name": "Mira Markovic",
+  "party": "Parti animaliste",
+  "family": "Animaliste",
+  "color": "#6A994E",
+  "site": "https://parti-animaliste.fr",
+  "domains": [
+   "parti-animaliste.fr"
+  ]
+ },
+ {
+  "id": "lassalle",
+  "name": "Jean Lassalle",
+  "party": "Résistons",
+  "family": "Divers",
+  "color": "#8D6E63",
+  "site": ""
+ },
+ {
+  "id": "lalanne",
+  "name": "Francis Lalanne",
+  "party": "France Libre",
+  "family": "Divers",
+  "color": "#9C6644",
+  "site": ""
+ },
+ {
+  "id": "polony",
+  "name": "Natacha Polony",
+  "party": "Sans étiquette",
+  "family": "Société civile",
+  "color": "#5E548E",
+  "site": ""
+ },
+ {
+  "id": "riner",
+  "name": "Teddy Riner",
+  "party": "Sans étiquette",
+  "family": "Société civile",
+  "color": "#457B9D",
   "site": ""
  }
 ]

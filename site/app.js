@@ -507,8 +507,12 @@
     if (window.scrollY > 80) window.scrollTo(0, 0);
   }
 
+  // Un candidat n'entre dans le quiz que si assez de ses positions sont établies
+  const MIN_POS = DATA.quiz.min_positions || 10;
+  const QUIZ_IDS = Object.keys(P).filter((id) => CANDS[id] && ALLQ.filter((q) => P[id][q.id] != null).length >= MIN_POS);
   function scores() {
-    return Object.keys(P).filter((id) => CANDS[id]).map((id) => {
+    const answered = Object.keys(answers).length;
+    return QUIZ_IDS.map((id) => {
       let s = 0, w = 0;
       const details = [];
       for (const q of ALLQ) {
@@ -520,7 +524,10 @@
         details.push({ q, u: a.v, p, diff, w: a.w });
       }
       return { id, pct: w ? Math.round((s / w) * 100) : 0, details };
-    }).sort((a, b) => b.pct - a.pct || CANDS[a.id].name.localeCompare(CANDS[b.id].name, "fr"));
+    })
+    // pas de classement sur trop peu de sujets comparables (évite les scores gonflés)
+    .filter((r) => r.details.length >= Math.min(5, answered) && r.details.length >= answered * 0.5)
+    .sort((a, b) => b.pct - a.pct || CANDS[a.id].name.localeCompare(CANDS[b.id].name, "fr"));
   }
 
   function nearestFor(id, n) {
@@ -585,6 +592,10 @@
       const c = CANDS[r.id];
       return `<li class="rank" style="--c:${c.color}"><span>${i + 1}</span><span><b>${esc(c.name)}</b> <small>${esc(c.party)}</small></span><span class="rank-pct">${r.pct}%</span><div class="bar"><span style="width:${r.pct}%"></span></div></li>`;
     }).join("");
+    const ranked = new Set(lastRanking.map((r) => r.id));
+    const unranked = DATA.candidates.filter((c) => !ranked.has(c.id)).map((c) => c.name).sort((a, b) => a.localeCompare(b, "fr"));
+    $("#unranked").textContent = answered && unranked.length
+      ? `Non classés, faute de positions publiques suffisantes pour vous comparer : ${unranked.join(", ")}.` : "";
 
     renderResultMeetings();
   }
@@ -769,7 +780,8 @@
   /* ---------------- méthodologie ---------------- */
   function renderMethod() {
     if ($("#method-body").dataset.done) return;
-    const cands = Object.keys(P).filter((id) => CANDS[id]).sort((a, b) => CANDS[a].name.localeCompare(CANDS[b].name, "fr"));
+    const cands = [...QUIZ_IDS].sort((a, b) => CANDS[a].name.localeCompare(CANDS[b].name, "fr"));
+    const outside = DATA.candidates.filter((c) => !QUIZ_IDS.includes(c.id)).map((c) => c.name).sort((a, b) => a.localeCompare(b, "fr"));
     const fmtP = (v) => (v == null ? "?" : (v > 0 ? "+" : "") + v);
     const head = `<tr><th>Candidat</th>${ALLQ.map((q, i) => `<th title="${esc(q.text)}">${i + 1}. ${esc(q.theme)}${q.core === false ? "*" : ""}</th>`).join("")}<th>Sources</th></tr>`;
     const rows = cands.map((id) => `<tr><td><b>${esc(CANDS[id].name)}</b></td>${ALLQ.map((q) => `<td>${fmtP(P[id][q.id])}</td>`).join("")}<td>${sourcesFor(id) || "-"}</td></tr>`).join("");
@@ -786,7 +798,7 @@
       <ul><li>Une liste de questions ne résume pas un programme ; le choix des questions influence le résultat. Le test complet réduit ce biais.</li>
       <li>Une position marquée « ? » n'est pas établie : la question est alors ignorée pour ce candidat.</li>
       <li>Les positions sont une simplification et peuvent évoluer pendant la campagne. Signalez une erreur via le lien en bas de page.</li>
-      <li>Les candidats sans position établie ne figurent pas dans le quiz.</li></ul>
+      <li>Un candidat n'est classé que si au moins ${MIN_POS} de ses positions sont établies, et seulement s'il peut être comparé sur au moins la moitié de vos réponses.${outside.length ? ` Pas encore dans le quiz faute de positions publiques suffisantes : ${esc(outside.join(", "))}.` : ""}</li></ul>
       <h2>5. « Avez-vous déjà écouté ? »</h2>
       <p>Après vos trois proximités, le site propose jusqu'à deux autres candidats, choisis automatiquement : hors de votre top 3, d'un autre parti, proches de vous sur au moins un sujet et si possible d'une autre famille politique. L'objectif est de découvrir d'autres approches, pas d'orienter un vote.</p>
       <h2>6. Confidentialité</h2>
