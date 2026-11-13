@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T08:26:35+00:00",
+ "updated_at": "2026-11-13T08:34:30+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -438,6 +438,35 @@
    "status": "a_confirmer"
   },
   {
+   "candidate_id": "asselineau",
+   "title": "Réunion publique de François Asselineau à Carros",
+   "type": "reunion",
+   "date": "2026-11-28",
+   "time": "16:00",
+   "city": "Carros",
+   "venue": "Salle Écovie",
+   "address": "Route de la ZA de la Grave, Carros",
+   "speakers": [
+    "François Asselineau"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.upr.fr/agenda/reunion-publique-de-francois-asselineau-a-carros-alpes-maritimes",
+   "source": "upr.fr",
+   "status": "confirme",
+   "status_note": null,
+   "source_kind": "officiel",
+   "lat": 43.77857,
+   "lon": 7.20852,
+   "postcode": "06510",
+   "department": "Alpes-Maritimes",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "verified_at": "2026-11-13T08:34:29+00:00",
+   "first_seen": "2026-11-13T08:34:29+00:00",
+   "changes": [],
+   "id": "asselineau-2026-11-28-carros-1600"
+  },
+  {
    "candidate_id": "melenchon",
    "title": "Réunion Publique à Vernon avec Antoine Léaument et Nadège Abomangoli",
    "type": "reunion",
@@ -636,9 +665,9 @@
    "id": "roussel-2026-12-06-avion",
    "first_seen": "2026-11-12T13:46:50+00:00",
    "changes": [],
-   "verified_at": "2026-11-12T13:46:50+00:00",
+   "verified_at": "2026-11-13T08:34:29+00:00",
    "source_kind": "presse",
-   "status_note": "Horaire et lieu exact non encore communiqués.",
+   "status_note": "Salle Jorion selon la presse ; horaire non communiqué, pas encore sur un agenda officiel.",
    "status": "a_confirmer"
   },
   {
