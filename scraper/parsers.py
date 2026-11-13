@@ -68,7 +68,7 @@ def parse_melenchon() -> List[dict]:
                 og = re.search(r'<meta property="og:title" content="([^"]+)"', ev_page)
                 h1 = re.search(r"<h1\b[^>]*>([^<]{6,})</h1>", ev_page)
                 raw = (og.group(1) if og else h1.group(1) if h1 else "")
-                raw = re.sub(r"\s*[-–|]\s*Mélenchon 2027.*$", "", htmllib.unescape(raw)).strip()
+                raw = re.sub(r"\s*[--|]\s*Mélenchon 2027.*$", "", htmllib.unescape(raw)).strip()
                 title = raw or title
             except Exception:
                 pass

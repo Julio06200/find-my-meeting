@@ -1,4 +1,4 @@
-"""Find My Meeting — scraper quotidien.
+"""Find My Meeting - scraper quotidien.
 
 Chaque matin, pour chaque candidat de site/data/candidates.json, Claude cherche
 sur le web (recherche + lecture des agendas de campagne) les prochains meetings et
@@ -268,6 +268,10 @@ def classify(ev: dict, cand: dict) -> None:
 
 
 def normalize(ev: dict, now_iso: str, cands: Dict[str, dict]) -> Optional[dict]:
+    for k in ("title", "city", "venue", "address", "status_note", "source"):
+        if isinstance(ev.get(k), str):
+            ev[k] = ev[k].replace("—", "-").replace("–", "-")
+    ev["speakers"] = [x.replace("—", "-").replace("–", "-") for x in ev.get("speakers") or []]
     try:
         date = dt.date.fromisoformat(ev["date"])
     except Exception:

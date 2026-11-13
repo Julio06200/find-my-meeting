@@ -1,5 +1,5 @@
 /**
- * Find My Meeting — compteurs agrégés de consultations par meeting / candidat / parti.
+ * Find My Meeting - compteurs agrégés de consultations par meeting / candidat / parti.
  *
  * Service séparé d'Umami (Cloudflare Worker + base D1, offre gratuite). Principes :
  *  - le navigateur envoie UNIQUEMENT l'identifiant public du meeting (aucun cookie, aucun référent) ;
@@ -27,7 +27,7 @@ async function catalogue(env) {
   const map = {};
   for (const ev of m.meetings || []) {
     const cand = cands[ev.candidate_id];
-    if (cand) map[ev.id] = { candidate: cand.name, party: cand.party, label: `${ev.city} — ${ev.date}` };
+    if (cand) map[ev.id] = { candidate: cand.name, party: cand.party, label: `${ev.city} - ${ev.date}` };
   }
   cache = { at: Date.now(), meetings: map };
   return map;
@@ -95,7 +95,7 @@ async function flush(env) {
     else if (rest > 0) smallTotal[g.day] = (smallTotal[g.day] || 0) + rest;
   }
   for (const [day, n] of Object.entries(smallTotal)) {
-    if (n >= K) lines.push({ candidate: "Autres (moins de " + K + " vues)", party: "—", meeting: "—", day, n });
+    if (n >= K) lines.push({ candidate: "Autres (moins de " + K + " vues)", party: "-", meeting: "-", day, n });
     // en dessous de K au total : non publié, simplement supprimé
   }
 

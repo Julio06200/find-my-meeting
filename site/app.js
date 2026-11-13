@@ -1,4 +1,4 @@
-/* Find My Meeting — front (vanilla JS, aucune dépendance hors Leaflet) */
+/* Find My Meeting - front (vanilla JS, aucune dépendance hors Leaflet) */
 (function () {
   "use strict";
 
@@ -8,7 +8,7 @@
   const CANDS = Object.fromEntries(DATA.candidates.map((c) => [c.id, c]));
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
-  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const esc = (s) => String(s ?? "").replace(/[–—]/g, "-").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   /* ---------------- stockage local ---------------- */
   const store = {
@@ -66,6 +66,7 @@
   const STATUS_LABEL = { confirme: "Confirmé", a_confirmer: "À confirmer", annule: "Annulé" };
   const KIND_LABEL = { officiel: "Agenda officiel", organisateur: "Site de l'organisateur", presse: "Article de presse" };
   const FIELD_LABEL = { date: "date", time: "horaire", city: "commune", venue: "lieu" };
+  const lastName = (c) => (c && c.surname) || String(c?.name || "").split(" ").slice(1).join(" ") || String(c?.name || "");
   const statusOf = (m) => (STATUS_LABEL[m.status] ? m.status : "a_confirmer"); // jamais « confirmé » par défaut
 
   const upcoming = () => {
@@ -209,7 +210,7 @@
     const counts = {};
     upcoming().forEach((m) => (counts[m.candidate_id] = (counts[m.candidate_id] || 0) + 1));
     // ordre alphabétique (par nom de famille) : aucun candidat n'est mis en avant
-    const sorted = [...DATA.candidates].sort((a, b) => a.name.split(" ").slice(-1)[0].localeCompare(b.name.split(" ").slice(-1)[0], "fr"));
+    const sorted = [...DATA.candidates].sort((a, b) => lastName(a).localeCompare(lastName(b), "fr"));
     const visible = chipsExpanded ? sorted : sorted.filter((c) => counts[c.id] || state.cands.includes(c.id));
     const hidden = sorted.length - visible.length;
     $("#chips").innerHTML =
@@ -243,7 +244,7 @@
     const d = parseDate(m.date);
     const st = statusOf(m);
     const badges = [
-      m.with_candidate ? `<span class="badge red">${esc(c.name.split(" ").slice(-1)[0])} en personne</span>` : "",
+      m.with_candidate ? `<span class="badge red">${esc(lastName(c))} en personne</span>` : "",
       `<span class="badge">${TYPE_LABEL[m.type] || "Événement"}</span>`,
       m.access === "inscription" ? `<span class="badge warn">Sur inscription</span>` : "",
       m.access === "a_verifier" ? `<span class="badge warn">Accès public à vérifier</span>` : "",
@@ -261,7 +262,7 @@
         <span class="st st-${st}">${STATUS_LABEL[st]}</span>
         <h3>${esc(m.title)}</h3>
         <p class="who"><b>${esc(c.name)}</b> · ${esc(c.party)}</p>
-        <p class="where">📍 ${place ? esc(place) + " — " : ""}<b>${esc(m.city)}</b>${m.department ? ` (${esc(m.department)})` : ""}</p>
+        <p class="where">📍 ${place ? esc(place) + " - " : ""}<b>${esc(m.city)}</b>${m.department ? ` (${esc(m.department)})` : ""}</p>
         ${speakers}
         ${m.status_note ? `<p class="note">${esc(m.status_note)}</p>` : ""}
         ${changes ? `<p class="changes">✎ ${changes}</p>` : ""}
@@ -278,8 +279,8 @@
 
   function reportUrl(m) {
     const c = CANDS[m.candidate_id] || {};
-    const subject = `Erreur sur un meeting : ${c.name || ""} — ${m.city}, ${m.date}`;
-    const body = `Meeting concerné : ${m.title}\n${c.name || ""} — ${fmtLong(m.date)} ${fmtTime(m.time)} — ${m.city}\nIdentifiant : ${m.id}\nLien : ${SITE}#m=${m.id}\n\nQuelle est l'erreur ? (date, heure, lieu, annulation…)\n\nSource qui le prouve (lien) :\n`;
+    const subject = `Erreur sur un meeting : ${c.name || ""} - ${m.city}, ${m.date}`;
+    const body = `Meeting concerné : ${m.title}\n${c.name || ""} - ${fmtLong(m.date)} ${fmtTime(m.time)} - ${m.city}\nIdentifiant : ${m.id}\nLien : ${SITE}#m=${m.id}\n\nQuelle est l'erreur ? (date, heure, lieu, annulation…)\n\nSource qui le prouve (lien) :\n`;
     if (CONFIG.reportEmail) return `mailto:${CONFIG.reportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     return `${CONFIG.reportGithub}?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&labels=signalement`;
   }
@@ -348,7 +349,7 @@
         const cx = CANDS[x.candidate_id] || {}, sx = statusOf(x);
         return `<div style="margin-bottom:8px"><span class="st st-${sx}">${STATUS_LABEL[sx]}</span><br><b>${esc(cx.name || "")}</b><br>${esc(fmtLong(x.date))}${x.time ? " · " + fmtTime(x.time) : ""}<br>${esc(x.title)}<br>${esc(x.venue || "")} ${esc(x.city)}<br><a href="#m=${encodeURIComponent(x.id)}">Voir la fiche</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener" data-track="source" data-mid="${esc(x.id)}">Source ↗</a></div>`;
       }).join("");
-      const mk = L.marker([m.lat, m.lon], { icon, title: `${(CANDS[m.candidate_id] || {}).name || ""} — ${m.city}` }).bindPopup(html, { maxWidth: 260 }).addTo(layer);
+      const mk = L.marker([m.lat, m.lon], { icon, title: `${(CANDS[m.candidate_id] || {}).name || ""} - ${m.city}` }).bindPopup(html, { maxWidth: 260 }).addTo(layer);
       g.forEach((x) => (markers[x.id] = mk));
     });
     if (state.place) {
@@ -404,7 +405,7 @@
     const body = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Find My Meeting//FR", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
       `UID:${m.id}@findmymeeting`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`, dtStart, dtEnd,
-      `SUMMARY:${icsEsc(`${m.title} — ${c.name || ""}${unsure}`)}`,
+      `SUMMARY:${icsEsc(`${m.title} - ${c.name || ""}${unsure}`)}`,
       `LOCATION:${icsEsc([m.venue, m.address, m.city].filter(Boolean).join(", "))}`,
       `DESCRIPTION:${icsEsc(`Statut : ${STATUS_LABEL[statusOf(m)]}. Vérifiez avant de vous déplacer.\nSource : ${m.url}\nFiche : ${SITE}#m=${m.id}`)}`,
       `URL:${SITE}#m=${m.id}`, statusOf(m) === "confirme" ? "STATUS:CONFIRMED" : "STATUS:TENTATIVE", "END:VEVENT", "END:VCALENDAR",
@@ -565,7 +566,7 @@
         ${c.note ? `<p class="fine">ℹ️ ${esc(c.note)}</p>` : ""}
         <details class="explain"><summary>Comprendre ce score</summary>
           <p>${r.pct} % de proximité : sur vos ${r.details.length} réponses comparables, vous êtes proche de ${esc(c.name)} sur ${ok} sujet${ok > 1 ? "s" : ""} (écart de 0 ou 1 point) et nettement opposé sur ${ko} (écart de 3 ou 4 points). Chaque écart retire des points, les sujets marqués ★ comptent double. <a href="#methodologie" class="link">Méthodologie complète</a></p>
-          <div class="table-wrap"><table><thead><tr><th>Sujet</th><th>Vous</th><th>${esc(c.name.split(" ").slice(-1)[0])}</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+          <div class="table-wrap"><table><thead><tr><th>Sujet</th><th>Vous</th><th>${esc(lastName(c))}</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
           <p class="src">Positions établies à partir des programmes et déclarations publiques. Vérifier : ${sourcesFor(r.id) || "sources en cours d'ajout"}.</p>
         </details>
       </li>`;
@@ -608,7 +609,7 @@
           <div class="topics">
             <p><b>D'accord avec vous sur :</b> ${agree.map((d) => `<span class="tag ok">${esc(d.q.theme)}</span>`).join("")}</p>
             ${differ.length ? `<p><b>Une autre approche sur :</b> ${differ.map((d) => `<span class="tag ko">${esc(d.q.theme)}</span>`).join("")}</p>` : ""}
-            <p>${m ? `<b>Prochain meeting :</b> ${esc(fmtLong(m.date))}${m.time ? " · " + fmtTime(m.time) : ""} — ${esc(m.city)}${m.dist != null ? ` (${Math.round(m.dist)} km)` : ""} · <a class="link" href="#m=${encodeURIComponent(m.id)}">Voir la fiche</a>`
+            <p>${m ? `<b>Prochain meeting :</b> ${esc(fmtLong(m.date))}${m.time ? " · " + fmtTime(m.time) : ""} - ${esc(m.city)}${m.dist != null ? ` (${Math.round(m.dist)} km)` : ""} · <a class="link" href="#m=${encodeURIComponent(m.id)}">Voir la fiche</a>`
               : `Pas encore de meeting annoncé.${c.site ? ` <a class="link" href="${esc(c.site)}" target="_blank" rel="noopener">Découvrir son programme</a>` : ""}`}</p>
           </div></li>`;
       }).join("")}</ul>`;
@@ -626,7 +627,7 @@
     $("#result-meetings").innerHTML = lastRanking.slice(0, 3).map((r) => {
       const c = CANDS[r.id], near = nearestFor(r.id, 3);
       return `<p class="mini-head"><i style="background:${c.color}"></i>${esc(c.name)}</p>` + (near.length
-        ? `<ul class="mini">${near.map((m) => `<li><span>${esc(fmtLong(m.date))}${m.time ? " · " + fmtTime(m.time) : ""} — <b>${esc(m.city)}</b>${m.dist != null ? ` (${Math.round(m.dist)} km)` : ""} <span class="st st-${statusOf(m)}">${STATUS_LABEL[statusOf(m)]}</span></span><a href="#m=${encodeURIComponent(m.id)}">Voir</a></li>`).join("")}</ul>`
+        ? `<ul class="mini">${near.map((m) => `<li><span>${esc(fmtLong(m.date))}${m.time ? " · " + fmtTime(m.time) : ""} - <b>${esc(m.city)}</b>${m.dist != null ? ` (${Math.round(m.dist)} km)` : ""} <span class="st st-${statusOf(m)}">${STATUS_LABEL[statusOf(m)]}</span></span><a href="#m=${encodeURIComponent(m.id)}">Voir</a></li>`).join("")}</ul>`
         : `<p class="fine">Aucun meeting annoncé pour l'instant.</p>`);
     }).join("") + (lastRanking.length ? `<button type="button" class="btn ghost small" id="see-all-top">Voir ces candidats sur la carte</button>` : "");
     $("#see-all-top")?.addEventListener("click", () => {
@@ -764,7 +765,7 @@
     const cands = Object.keys(P).filter((id) => CANDS[id]).sort((a, b) => CANDS[a].name.localeCompare(CANDS[b].name, "fr"));
     const fmtP = (v) => (v == null ? "?" : (v > 0 ? "+" : "") + v);
     const head = `<tr><th>Candidat</th>${ALLQ.map((q, i) => `<th title="${esc(q.text)}">${i + 1}. ${esc(q.theme)}${q.core === false ? "*" : ""}</th>`).join("")}<th>Sources</th></tr>`;
-    const rows = cands.map((id) => `<tr><td><b>${esc(CANDS[id].name)}</b></td>${ALLQ.map((q) => `<td>${fmtP(P[id][q.id])}</td>`).join("")}<td>${sourcesFor(id) || "—"}</td></tr>`).join("");
+    const rows = cands.map((id) => `<tr><td><b>${esc(CANDS[id].name)}</b></td>${ALLQ.map((q) => `<td>${fmtP(P[id][q.id])}</td>`).join("")}<td>${sourcesFor(id) || "-"}</td></tr>`).join("");
     $("#method-body").innerHTML = `
       <p>Le quiz mesure une <b>proximité idéologique</b> entre vos réponses et les positions publiques des candidats. Il ne recommande aucun candidat et ne prédit aucun vote.</p>
       <h2>1. Les questions</h2>
@@ -785,7 +786,7 @@
       <p>Le calcul est fait entièrement dans votre navigateur. Vos réponses ne sont envoyées à aucun serveur et ne sont gardées sur votre appareil que si vous l'activez. Le partage de résultat ne contient jamais vos réponses, seulement ce que vous choisissez d'afficher.</p>
       <h2>7. Positions utilisées</h2>
       <p class="fine">* question du test complet uniquement.</p>
-      <p class="fine">Dernière mise à jour : ${esc(DATA.quiz.updated || "—")}.</p>
+      <p class="fine">Dernière mise à jour : ${esc(DATA.quiz.updated || "-")}.</p>
       <div class="table-wrap"><table>${head}${rows}</table></div>`;
     $("#method-body").dataset.done = "1";
   }

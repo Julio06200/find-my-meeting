@@ -1,4 +1,4 @@
-/* Find My Meeting — mesure d'audience respectueuse de la vie privée.
+/* Find My Meeting - mesure d'audience respectueuse de la vie privée.
  *
  * 1) Umami (statistiques générales, sans cookie) : pages vues, sources, UTM, et quelques événements.
  *    AUCUNE donnée politique n'est envoyée : ni candidat, ni parti, ni réponse/score du quiz, ni ville tapée.

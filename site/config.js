@@ -1,4 +1,4 @@
-/* Réglages de Find My Meeting — seul fichier à modifier pour configurer le site. */
+/* Réglages de Find My Meeting - seul fichier à modifier pour configurer le site. */
 window.FMM_CONFIG = {
   siteUrl: "https://julio06200.github.io/find-my-meeting/",
 
