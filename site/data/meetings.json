@@ -1,180 +1,7 @@
 {
- "updated_at": "2026-11-12T14:51:17+00:00",
+ "updated_at": "2026-11-13T05:50:22+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "attal",
-   "title": "Rencontre U2P (artisans & indépendants) avec Gabriel Attal",
-   "type": "rencontre",
-   "date": "2026-11-12",
-   "time": "16:30",
-   "city": "La Rochelle",
-   "venue": null,
-   "address": null,
-   "speakers": [
-    "Gabriel Attal"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://u2p-france.fr/2027",
-   "source": "U2P",
-   "lat": 46.15746,
-   "lon": -1.17064,
-   "postcode": "17000",
-   "department": "Charente-Maritime",
-   "region": "Nouvelle-Aquitaine",
-   "id": "attal-2026-11-12-la-rochelle",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "changes": [],
-   "verified_at": "2026-11-12T13:02:27+00:00",
-   "source_kind": "organisateur",
-   "status": "a_confirmer"
-  },
-  {
-   "candidate_id": "arthaud",
-   "title": "Réunion publique de soutien à la candidature de Nathalie Arthaud",
-   "type": "reunion",
-   "date": "2026-11-12",
-   "time": "18:00",
-   "city": "Metz",
-   "venue": "FJT Etap'Habitat",
-   "address": "2 Rue Georges Ducrocq, 57070 Metz",
-   "speakers": [],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://www.lutte-ouvriere.org/portail/agenda/metz-195406.html",
-   "source": "Lutte ouvrière",
-   "lat": 49.11015,
-   "lon": 6.18695,
-   "postcode": "57070",
-   "department": "Moselle",
-   "region": "Grand Est",
-   "id": "arthaud-2026-11-12-metz-1800",
-   "first_seen": "2026-11-12T13:46:50+00:00",
-   "changes": [],
-   "verified_at": "2026-11-12T13:46:50+00:00",
-   "source_kind": "officiel",
-   "status": "confirme"
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Gabriel Amard et Claire Lejeune",
-   "type": "reunion",
-   "date": "2026-11-12",
-   "time": "18:30",
-   "city": "Saint-Quirc",
-   "venue": "Salle des fêtes",
-   "address": null,
-   "speakers": [
-    "Gabriel Amard",
-    "Claire Lejeune"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-pour-la-planification-ecologique-vite-les-eco-regions-avec-gabriel-amard-et-claire-lejeune/",
-   "source": "melenchon2027.fr",
-   "lat": 43.27744,
-   "lon": 1.50262,
-   "postcode": "09700",
-   "department": "Ariège",
-   "region": "Occitanie",
-   "id": "melenchon-2026-11-12-saint-quirc-1830",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Anne Stambach-Terrenoir, Bérenger Cernon et Laurent Alexandre",
-   "type": "reunion",
-   "date": "2026-11-12",
-   "time": "19:00",
-   "city": "Rodez",
-   "venue": "Maison de quartier Saint-Eloi",
-   "address": null,
-   "speakers": [
-    "Anne Stambach-Terrenoir",
-    "Bérenger Cernon",
-    "Laurent Alexandre"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-anne-stambach-terrenoir-berenger-cernon-et-laurent-alexandre/",
-   "source": "melenchon2027.fr",
-   "lat": 44.35927,
-   "lon": 2.56673,
-   "postcode": "12000",
-   "department": "Aveyron",
-   "region": "Occitanie",
-   "id": "melenchon-2026-11-12-rodez-1900",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Manuel Bompard et Sophia Chikirou",
-   "type": "reunion",
-   "date": "2026-11-12",
-   "time": "19:00",
-   "city": "Arles",
-   "venue": "Salle des Fetes",
-   "address": null,
-   "speakers": [
-    "Manuel Bompard",
-    "Sophia Chikirou"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-manuel-bompard-et-sophia-chikirou/",
-   "source": "melenchon2027.fr",
-   "lat": 43.59672,
-   "lon": 4.64509,
-   "postcode": "13104",
-   "department": "Bouches-du-Rhône",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "id": "melenchon-2026-11-12-arles-1900",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Mathilde Panot, Louis Boyard, Anaïs Belouassa Cherifi et Charlotte Leduc",
-   "type": "reunion",
-   "date": "2026-11-12",
-   "time": "19:30",
-   "city": "Metz",
-   "venue": "Centre culturel Saint Denis de la Réunion",
-   "address": null,
-   "speakers": [
-    "Mathilde Panot",
-    "Louis Boyard",
-    "Anaïs Belouassa Cherifi",
-    "Charlotte Leduc"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-mathilde-panot-louis-boyard-anais-belouassa-cherifi-et-charlotte-leduc/",
-   "source": "melenchon2027.fr",
-   "lat": 49.10838,
-   "lon": 6.19489,
-   "postcode": "57000",
-   "department": "Moselle",
-   "region": "Grand Est",
-   "id": "melenchon-2026-11-12-metz-1930",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
-   "changes": []
-  },
   {
    "candidate_id": "melenchon",
    "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Gabriel Amard",
@@ -200,7 +27,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -230,7 +57,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -289,7 +116,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -317,7 +144,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -346,7 +173,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -436,7 +263,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -462,8 +289,37 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Aurélie Trouvé et Aurélien Le Coq",
+   "type": "reunion",
+   "date": "2026-11-25",
+   "time": "19:00",
+   "city": "Beaurains",
+   "venue": "Beaurains",
+   "address": null,
+   "speakers": [
+    "Aurélie Trouvé",
+    "Aurélien Le Coq"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-aurelie-trouve-et-aurelien-le-coq/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 50.26289,
+   "lon": 2.79056,
+   "postcode": "62217",
+   "department": "Pas-de-Calais",
+   "region": "Hauts-de-France",
+   "verified_at": "2026-11-13T05:50:08+00:00",
+   "first_seen": "2026-11-13T05:50:08+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-25-beaurains-1900"
   },
   {
    "candidate_id": "le-pen",
@@ -520,7 +376,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -551,7 +407,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -610,7 +466,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
@@ -638,7 +494,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-12T14:51:10+00:00",
+   "verified_at": "2026-11-13T05:50:08+00:00",
    "changes": []
   },
   {
