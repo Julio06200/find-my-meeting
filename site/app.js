@@ -226,9 +226,10 @@
     }));
   }
 
-  function filtered(ignorePlace) {
-    const t = todayISO();
-    const end = state.period ? addDays(t, state.period - 1) : "9999";
+  // « Aujourd'hui » = jusqu'à ce soir ; « 7 / 30 jours » = jusqu'au même jour dans 7 / 30 jours inclus
+  const periodEnd = () => (!state.period ? "9999" : state.period === 1 ? todayISO() : addDays(todayISO(), state.period));
+  function filtered(ignorePlace, ignorePeriod) {
+    const end = ignorePeriod ? "9999" : periodEnd();
     return upcoming().filter((m) =>
       m.date <= end &&
       (!state.region || m.region === state.region) &&
@@ -289,6 +290,10 @@
   function renderMeetings(refit) {
     const items = filtered();
     const n = items.length;
+    // meetings correspondant aux mêmes filtres mais situés après la période choisie
+    const later = state.period ? filtered(false, true).length - n : 0;
+    const laterBox = later > 0
+      ? `<div class="empty"><b>${later} autre${later > 1 ? "s" : ""} meeting${later > 1 ? "s" : ""} prévu${later > 1 ? "s" : ""} après le ${esc(fmtLong(periodEnd()))}</b><button class="btn ghost" type="button" id="show-later">Voir toutes les dates</button></div>` : "";
     const where = state.place ? (state.radius ? ` à moins de ${state.radius} km de ${state.place.name}` : "") : state.region ? ` en ${state.region}` : "";
     $("#count").textContent = `${n} événement${n > 1 ? "s" : ""}${where}`;
 
@@ -296,7 +301,7 @@
       const wider = state.place && state.radius ? filtered(true).sort((a, b) => a.dist - b.dist)[0] : null;
       $("#list").innerHTML = `<div class="empty"><b>Aucun meeting avec ces filtres.</b>${
         wider ? `Le plus proche est à ${Math.round(wider.dist)} km (${esc(wider.city)}, ${esc(fmtLong(wider.date))}).<br><br><button class="btn ghost" type="button" id="widen">Élargir à ${Math.ceil(wider.dist / 50) * 50} km</button>`
-        : upcoming().length ? "Essayez d'élargir la période ou de retirer un filtre." : "L'agenda sera complété au prochain passage du robot, demain matin."}</div>`;
+        : later ? "" : upcoming().length ? "Essayez d'élargir la période ou de retirer un filtre." : "L'agenda sera complété au prochain passage du robot, demain matin."}</div>${laterBox}`;
       $("#widen")?.addEventListener("click", () => {
         const r = [10, 25, 50, 100, 200].find((x) => x >= wider.dist) || 0;
         state.radius = r; $("#radius").value = String(r); save(); renderMeetings(true);
@@ -307,8 +312,9 @@
         if (m.date !== last) { html += `<h2 class="day">${dayLabel(m.date)}</h2>`; last = m.date; }
         html += cardHTML(m);
       }
-      $("#list").innerHTML = html;
+      $("#list").innerHTML = html + laterBox;
     }
+    $("#show-later")?.addEventListener("click", () => { state.period = 0; save(); syncPeriod(); renderMeetings(true); });
     drawMap(items, refit);
   }
 

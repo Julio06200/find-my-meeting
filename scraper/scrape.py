@@ -364,6 +364,9 @@ def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set
         e.pop("last_seen", None)
         if e.get("status") not in STATUSES or not e.get("source_kind"):
             classify(e, cands[e["candidate_id"]])
+        # une info venue de la presse seule doit toujours être signalée comme telle
+        if e.get("status") == "a_confirmer" and e.get("source_kind") == "presse" and not e.get("status_note"):
+            e["status_note"] = "Annoncé par la presse, pas encore sur un agenda officiel."
     return sorted(kept, key=lambda e: (e["date"], e.get("time") or "99:99"))
 
 
