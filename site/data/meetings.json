@@ -1,94 +1,7 @@
 {
- "updated_at": "2026-11-14T05:40:02+00:00",
+ "updated_at": "2026-11-15T05:43:09+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique \"pour la planification écologique : vite, les éco-régions !\" avec Gabriel Amard",
-   "type": "reunion",
-   "date": "2026-11-14",
-   "time": "18:00",
-   "city": "Argelès-sur-Mer",
-   "venue": "Salle Ferdinand Buisson",
-   "address": null,
-   "speakers": [
-    "Gabriel Amard"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-pour-la-planification-ecologique-vite-les-eco-regions-avec-gabriel-amard/",
-   "source": "melenchon2027.fr",
-   "lat": 42.54962,
-   "lon": 3.02565,
-   "postcode": "66700",
-   "department": "Pyrénées-Orientales",
-   "region": "Occitanie",
-   "id": "melenchon-2026-11-14-argeles-sur-mer-1800",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Clémence Guetté, Manuel Bompard et François Piquemal",
-   "type": "reunion",
-   "date": "2026-11-14",
-   "time": "19:30",
-   "city": "Nice",
-   "venue": "Salle Leyrit",
-   "address": null,
-   "speakers": [
-    "Clémence Guetté",
-    "Manuel Bompard",
-    "François Piquemal"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-manuel-bompard-et-francois-piquemal/",
-   "source": "melenchon2027.fr",
-   "lat": 43.71273,
-   "lon": 7.25531,
-   "postcode": "06000",
-   "department": "Alpes-Maritimes",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "id": "melenchon-2026-11-14-nice-1930",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "philippe",
-   "title": "Réunion publique d'Édouard Philippe à Toulouse",
-   "type": "reunion",
-   "date": "2026-11-14",
-   "time": null,
-   "city": "Toulouse",
-   "venue": null,
-   "address": null,
-   "speakers": [
-    "Édouard Philippe"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://www.france24.com/fr/info-en-continu/20261106-%C3%A9douard-philippe-entame-une-tourn%C3%A9e-des-r%C3%A9gions-refusant-toujours-la-primaire",
-   "source": "France 24 (AFP)",
-   "lat": 43.60408,
-   "lon": 1.4338,
-   "postcode": "31000",
-   "department": "Haute-Garonne",
-   "region": "Occitanie",
-   "id": "philippe-2026-11-14-toulouse",
-   "first_seen": "2026-11-12T13:46:50+00:00",
-   "changes": [],
-   "verified_at": "2026-11-12T13:46:50+00:00",
-   "source_kind": "presse",
-   "status_note": "Horaire et lieu exact non encore communiqués.",
-   "status": "a_confirmer"
-  },
   {
    "candidate_id": "melenchon",
    "title": "Réunion publique avec Clémence Guetté, Mathilde Panot et Louis Boyard",
@@ -116,7 +29,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -231,7 +144,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -260,7 +173,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -350,7 +263,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -376,7 +289,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -403,7 +316,7 @@
    "postcode": "62217",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "first_seen": "2026-11-13T05:50:08+00:00",
    "changes": [],
    "id": "melenchon-2026-11-25-beaurains-1900"
@@ -492,7 +405,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -523,7 +436,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -582,7 +495,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
@@ -610,7 +523,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-14T05:39:47+00:00",
+   "verified_at": "2026-11-15T05:42:45+00:00",
    "changes": []
   },
   {
