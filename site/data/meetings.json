@@ -1,37 +1,7 @@
 {
- "updated_at": "2026-11-16T05:59:41+00:00",
+ "updated_at": "2026-11-17T05:51:09+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Clémence Guetté, Mathilde Panot et Louis Boyard",
-   "type": "reunion",
-   "date": "2026-11-16",
-   "time": "19:00",
-   "city": "Créteil",
-   "venue": "Salle Georges Duhamel",
-   "address": null,
-   "speakers": [
-    "Clémence Guetté",
-    "Mathilde Panot",
-    "Louis Boyard"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-mathilde-panot-et-louis-boyard/",
-   "source": "melenchon2027.fr",
-   "lat": 48.78451,
-   "lon": 2.45298,
-   "postcode": "94000",
-   "department": "Val-de-Marne",
-   "region": "Île-de-France",
-   "id": "melenchon-2026-11-16-creteil-1900",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
-   "changes": []
-  },
   {
    "candidate_id": "arthaud",
    "title": "Réunion publique avec Nathalie Arthaud",
@@ -144,7 +114,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
@@ -173,7 +143,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
@@ -263,19 +233,24 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique",
+   "title": "Réunion publique avec Nadège Abomangoli, Aurélie Trouvé, Bally Bagayoko et Mehmet Ozguner",
    "type": "reunion",
    "date": "2026-11-24",
    "time": "19:00",
    "city": "Bondy",
    "venue": "Espace Marcel Chauzy",
    "address": null,
-   "speakers": [],
+   "speakers": [
+    "Nadège Abomangoli",
+    "Aurélie Trouvé",
+    "Bally Bagayoko",
+    "Mehmet Ozguner"
+   ],
    "with_candidate": false,
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique/",
@@ -289,21 +264,51 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique avec Aurélie Trouvé et Aurélien Le Coq",
+   "title": "Réunion publique avec Alma Dufour et Aurélien Le Coq - Produire pour répondre aux besoins",
+   "type": "reunion",
+   "date": "2026-11-24",
+   "time": "20:00",
+   "city": "Agen",
+   "venue": "Salle du skating",
+   "address": null,
+   "speakers": [
+    "Alma Dufour",
+    "Aurélien Le Coq - Produire pour répondre aux besoins"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-alma-dufour-et-aurelien-le-coq-produire-pour-repondre-aux-besoins/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 44.2023,
+   "lon": 0.63104,
+   "postcode": "47000",
+   "department": "Lot-et-Garonne",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-24-agen-2000"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Aurélie Trouvé et Aurélien Le Coq - Faire la bifurcation écologique et alimentaire",
    "type": "reunion",
    "date": "2026-11-25",
    "time": "19:00",
    "city": "Beaurains",
-   "venue": "Beaurains",
+   "venue": "Salle Jordan Dellacherie",
    "address": null,
    "speakers": [
     "Aurélie Trouvé",
-    "Aurélien Le Coq"
+    "Aurélien Le Coq - Faire la bifurcation écologique",
+    "alimentaire"
    ],
    "with_candidate": false,
    "access": "public",
@@ -316,10 +321,46 @@
    "postcode": "62217",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "first_seen": "2026-11-13T05:50:08+00:00",
-   "changes": [],
+   "changes": [
+    {
+     "at": "2026-11-17",
+     "field": "venue",
+     "old": "Beaurains",
+     "new": "Salle Jordan Dellacherie"
+    }
+   ],
    "id": "melenchon-2026-11-25-beaurains-1900"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Sarah Legrain - Faire triompher l'égalité réelle contre le sexisme et les LGBTIphobies",
+   "type": "reunion",
+   "date": "2026-11-25",
+   "time": "19:30",
+   "city": "Clamart",
+   "venue": "Maison des Associations",
+   "address": null,
+   "speakers": [
+    "Sarah Legrain - Faire triompher l'égalité réelle contre le sexisme",
+    "les LGBTIphobies"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-sarah-legrain-faire-triompher-legalite-reelle-contre-le-sexisme-et-les-lgbtiphobies/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 48.7961,
+   "lon": 2.25475,
+   "postcode": "92140",
+   "department": "Hauts-de-Seine",
+   "region": "Île-de-France",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-25-clamart-1930"
   },
   {
    "candidate_id": "le-pen",
@@ -349,6 +390,36 @@
    "source_kind": "organisateur",
    "status_note": "Horaire et lieu exact non encore communiqués.",
    "status": "a_confirmer"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Zahia Hamdane, Aurélien Le Coq et David Guiraud",
+   "type": "reunion",
+   "date": "2026-11-27",
+   "time": "18:30",
+   "city": "Abbeville",
+   "venue": "Salle des Carmes",
+   "address": null,
+   "speakers": [
+    "Zahia Hamdane",
+    "Aurélien Le Coq",
+    "David Guiraud"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-zahia-hamdane-aurelien-le-coq-et-david-guiraud/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 50.1058,
+   "lon": 1.8289,
+   "postcode": "80100",
+   "department": "Somme",
+   "region": "Hauts-de-France",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-27-abbeville-1830"
   },
   {
    "candidate_id": "asselineau",
@@ -381,6 +452,64 @@
   },
   {
    "candidate_id": "melenchon",
+   "title": "Réunion publique sur l'Avenir en Commun - avec Manuel Bompard, Alma Dufour et Gabrielle Cathala",
+   "type": "reunion",
+   "date": "2026-11-28",
+   "time": "18:30",
+   "city": "Marseille",
+   "venue": "Le Dodu",
+   "address": null,
+   "speakers": [
+    "Manuel Bompard",
+    "Alma Dufour",
+    "Gabrielle Cathala"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-sur-lavenir-en-commun-avec-manuel-bompard-alma-dufour-et-gabrielle-cathala/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 43.282,
+   "lon": 5.405,
+   "postcode": "13001",
+   "department": "Bouches-du-Rhône",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-28-marseille-1830"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique \"Éradiquer les maladies politiques\" avec Anne Stambach-Terrenoir",
+   "type": "reunion",
+   "date": "2026-11-28",
+   "time": "19:00",
+   "city": "Preignan",
+   "venue": "Salle Maison du Temps Libre",
+   "address": null,
+   "speakers": [
+    "Anne Stambach-Terrenoir"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-eradiquer-les-maladies-politiques-avec-anne-stambach-terrenoir/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 43.71853,
+   "lon": 0.6315,
+   "postcode": "32810",
+   "department": "Gers",
+   "region": "Occitanie",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-11-28-preignan-1900"
+  },
+  {
+   "candidate_id": "melenchon",
    "title": "Réunion Publique à Vernon avec Antoine Léaument et Nadège Abomangoli",
    "type": "reunion",
    "date": "2026-11-29",
@@ -405,7 +534,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
@@ -436,7 +565,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
@@ -470,6 +599,32 @@
   },
   {
    "candidate_id": "melenchon",
+   "title": "Réunion publique - soutien à la candidature de Jean Luc Mélenchon",
+   "type": "reunion",
+   "date": "2026-12-02",
+   "time": "19:00",
+   "city": "Saint-Brieuc",
+   "venue": "Salle de Robien",
+   "address": null,
+   "speakers": [],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-soutien-a-la-candidature-de-jean-luc-melenchon/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 48.50824,
+   "lon": -2.76607,
+   "postcode": "22000",
+   "department": "Côtes-d'Armor",
+   "region": "Bretagne",
+   "verified_at": "2026-11-17T05:50:55+00:00",
+   "first_seen": "2026-11-17T05:50:55+00:00",
+   "changes": [],
+   "id": "melenchon-2026-12-02-saint-brieuc-1900"
+  },
+  {
+   "candidate_id": "melenchon",
    "title": "Réunion publique avec Mathilde Panot, Manuel Bompard et Anaïs Belouassa-Cherifi",
    "type": "reunion",
    "date": "2026-12-04",
@@ -495,7 +650,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
@@ -523,7 +678,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-16T05:59:05+00:00",
+   "verified_at": "2026-11-17T05:50:55+00:00",
    "changes": []
   },
   {
