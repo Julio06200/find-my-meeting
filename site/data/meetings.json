@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T05:54:05+00:00",
+ "updated_at": "2026-11-20T13:32:55+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -195,6 +195,37 @@
    "changes": []
   },
   {
+   "candidate_id": "lisnard",
+   "title": "Tour de la Gagne Nouvelle Énergie à Troyes",
+   "type": "reunion",
+   "date": "2026-11-21",
+   "time": "19:00",
+   "city": "Troyes",
+   "venue": "Maison de quartier des Marots",
+   "address": "23 rue Trouvassot, 10000 Troyes",
+   "speakers": [
+    "Geoffroy Boulard",
+    "Thomas Danrée",
+    "Grégory Caumes"
+   ],
+   "with_candidate": false,
+   "access": "a_verifier",
+   "url": "https://www.unenouvelleenergie.fr/event/tour-de-la-gagne-troyes/",
+   "source": "Nouvelle Énergie",
+   "status": "confirme",
+   "status_note": null,
+   "source_kind": "officiel",
+   "lat": 48.30788,
+   "lon": 4.0496,
+   "postcode": "10000",
+   "department": "Aube",
+   "region": "Grand Est",
+   "verified_at": "2026-11-20T13:32:54+00:00",
+   "first_seen": "2026-11-20T13:32:54+00:00",
+   "changes": [],
+   "id": "lisnard-2026-11-21-troyes-1900"
+  },
+  {
    "candidate_id": "arthaud",
    "title": "Réunion des jeunes avec Nathalie Arthaud",
    "type": "rencontre",
@@ -358,15 +389,15 @@
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
    "source": "Mélenchon 2027",
-   "status": "a_confirmer",
-   "status_note": "N'apparaît plus sur l'agenda officiel depuis le 2026-11-20 (modifié ou annulé ?).",
+   "status": "annule",
+   "status_note": "Revérifié le 2026-11-20 : toujours présent sur l'agenda officiel, sans mention d'annulation ni de changement (18h heure de La Réunion, fuseau non indiqué explicitement).",
    "source_kind": "officiel",
    "lat": -21.27397,
    "lon": 55.52868,
    "postcode": "97430",
    "department": "La Réunion",
    "region": "La Réunion",
-   "verified_at": "2026-11-19T13:03:58+00:00",
+   "verified_at": "2026-11-20T13:32:54+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [
     {
@@ -855,6 +886,37 @@
    "first_seen": "2026-11-20T05:53:20+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-privas-1900"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Ersilia Soudais, Danièle Obono et Anne Stambach-Terrenoir",
+   "type": "reunion",
+   "date": "2026-12-07",
+   "time": "19:00",
+   "city": "Lagny-sur-Marne",
+   "venue": "Salle Le Totem",
+   "address": "6 avenue André Malraux, 77400 Lagny-sur-Marne",
+   "speakers": [
+    "Ersilia Soudais",
+    "Danièle Obono",
+    "Anne Stambach-Terrenoir"
+   ],
+   "with_candidate": false,
+   "access": "inscription",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-ersilia-soudais-daniele-obono-et-anne-stambach-terrenoir/",
+   "source": "Mélenchon 2027",
+   "status": "confirme",
+   "status_note": null,
+   "source_kind": "officiel",
+   "lat": 48.86728,
+   "lon": 2.70838,
+   "postcode": "77400",
+   "department": "Seine-et-Marne",
+   "region": "Île-de-France",
+   "verified_at": "2026-11-20T13:32:54+00:00",
+   "first_seen": "2026-11-20T13:32:54+00:00",
+   "changes": [],
+   "id": "melenchon-2026-12-07-lagny-sur-marne-1900"
   },
   {
    "candidate_id": "arthaud",
