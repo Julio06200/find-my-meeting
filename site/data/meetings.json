@@ -1,94 +1,7 @@
 {
- "updated_at": "2026-11-19T13:04:00+00:00",
+ "updated_at": "2026-11-20T05:54:05+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Manon Aubry et Alma Dufour",
-   "type": "reunion",
-   "date": "2026-11-19",
-   "time": "19:00",
-   "city": "Niort",
-   "venue": "Salle Polyvalente du Clou Bouchet",
-   "address": null,
-   "speakers": [
-    "Manon Aubry",
-    "Alma Dufour"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-manon-aubry-et-alma-dufour/",
-   "source": "melenchon2027.fr",
-   "lat": 46.32723,
-   "lon": -0.46629,
-   "postcode": "79000",
-   "department": "Deux-Sèvres",
-   "region": "Nouvelle-Aquitaine",
-   "id": "melenchon-2026-11-19-niort-1900",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Conférence « L'enfance au coeur de la Nouvelle France » avec J.L. Melenchon jeudi 19 novembre à 19h",
-   "type": "reunion",
-   "date": "2026-11-19",
-   "time": "19:00",
-   "city": "Paris",
-   "venue": "Espace conférences",
-   "address": null,
-   "speakers": [
-    "J.L. Melenchon jeudi 19 novembre à 19h"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/conference-lenfance-au-coeur-de-la-nouvelle-france-avec-j-l-melenchon-jeudi-19-novembre-a-19h/",
-   "source": "melenchon2027.fr",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "lat": 48.859,
-   "lon": 2.347,
-   "postcode": "75001",
-   "department": "Paris",
-   "region": "Île-de-France",
-   "verified_at": "2026-11-19T05:53:08+00:00",
-   "first_seen": "2026-11-18T05:53:41+00:00",
-   "changes": [],
-   "id": "melenchon-2026-11-19-paris-1900"
-  },
-  {
-   "candidate_id": "philippe",
-   "title": "Réunion publique d'Édouard Philippe à Rillieux-la-Pape",
-   "type": "reunion",
-   "date": "2026-11-19",
-   "time": null,
-   "city": "Rillieux-la-Pape",
-   "venue": "Espace 140",
-   "address": null,
-   "speakers": [
-    "Édouard Philippe",
-    "Alexandre Vincendet"
-   ],
-   "with_candidate": true,
-   "access": "public",
-   "url": "https://mesinfos.fr/69140-rillieux-la-pape/edouard-philippe-candidat-a-la-presidentielle-2027-fera-halte-a-rillieux-la-pape-342858.html",
-   "source": "Mes Infos (Tout Lyon)",
-   "lat": 45.81839,
-   "lon": 4.89282,
-   "postcode": "69140",
-   "department": "Rhône",
-   "region": "Auvergne-Rhône-Alpes",
-   "id": "philippe-2026-11-19-rillieux-la-pape",
-   "first_seen": "2026-11-12T13:46:50+00:00",
-   "changes": [],
-   "verified_at": "2026-11-12T13:46:50+00:00",
-   "source_kind": "presse",
-   "status_note": "Horaire et lieu exact non encore communiqués.",
-   "status": "a_confirmer"
-  },
   {
    "candidate_id": "retailleau",
    "title": "Rencontre U2P (artisans & indépendants) avec Bruno Retailleau",
@@ -278,7 +191,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -338,7 +251,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -364,7 +277,7 @@
    "postcode": "34000",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-19T05:53:08+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-montpellier-1900"
@@ -393,7 +306,7 @@
    "postcode": "47000",
    "department": "Lot-et-Garonne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-agen-2000"
@@ -445,8 +358,8 @@
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
    "source": "Mélenchon 2027",
-   "status": "confirme",
-   "status_note": "Horaire et adresse désormais précisés par la page officielle : 18h (heure de La Réunion, fuseau non indiqué explicitement).",
+   "status": "a_confirmer",
+   "status_note": "N'apparaît plus sur l'agenda officiel depuis le 2026-11-20 (modifié ou annulé ?).",
    "source_kind": "officiel",
    "lat": -21.27397,
    "lon": 55.52868,
@@ -490,7 +403,7 @@
    "postcode": "62217",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-13T05:50:08+00:00",
    "changes": [
     {
@@ -526,7 +439,7 @@
    "postcode": "92140",
    "department": "Hauts-de-Seine",
    "region": "Île-de-France",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-25-clamart-1930"
@@ -585,7 +498,7 @@
    "postcode": "80100",
    "department": "Somme",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-27-abbeville-1830"
@@ -621,12 +534,12 @@
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion publique sur l'Avenir en Commun - avec Manuel Bompard, Alma Dufour et Gabrielle Cathala",
+   "title": "Café populaire - faire triompher l'égalité réelle contre le sexisme et les LGBTIphobies",
    "type": "reunion",
    "date": "2026-11-28",
    "time": "18:30",
    "city": "Marseille",
-   "venue": "Le Dodu",
+   "venue": "Les Rigoles",
    "address": null,
    "speakers": [
     "Manuel Bompard",
@@ -635,7 +548,7 @@
    ],
    "with_candidate": false,
    "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-sur-lavenir-en-commun-avec-manuel-bompard-alma-dufour-et-gabrielle-cathala/",
+   "url": "https://melenchon2027.fr/evenement/campagne/cafe-populaire-faire-triompher-legalite-reelle-contre-le-sexisme-et-les-lgbtiphobies/",
    "source": "melenchon2027.fr",
    "source_kind": "officiel",
    "status": "confirme",
@@ -644,9 +557,16 @@
    "postcode": "13001",
    "department": "Bouches-du-Rhône",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
-   "changes": [],
+   "changes": [
+    {
+     "at": "2026-11-20",
+     "field": "venue",
+     "old": "Le Dodu",
+     "new": "Les Rigoles"
+    }
+   ],
    "id": "melenchon-2026-11-28-marseille-1830"
   },
   {
@@ -672,14 +592,14 @@
    "postcode": "32810",
    "department": "Gers",
    "region": "Occitanie",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-28-preignan-1900"
   },
   {
    "candidate_id": "melenchon",
-   "title": "Réunion Publique à Vernon avec Antoine Léaument et Nadège Abomangoli",
+   "title": "Réunion publique avec Antoine Léaument et Nadège Abomangoli",
    "type": "reunion",
    "date": "2026-11-29",
    "time": "16:00",
@@ -703,7 +623,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -734,7 +654,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -787,7 +707,7 @@
    "postcode": "22000",
    "department": "Côtes-d'Armor",
    "region": "Bretagne",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-12-02-saint-brieuc-1900"
@@ -819,7 +739,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -847,7 +767,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-19T05:53:08+00:00",
+   "verified_at": "2026-11-20T05:53:20+00:00",
    "changes": []
   },
   {
@@ -906,6 +826,35 @@
    "source_kind": "presse",
    "status_note": "Salle Jorion selon la presse ; horaire non communiqué, pas encore sur un agenda officiel.",
    "status": "a_confirmer"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Manuel Bompard et Elisa Martin",
+   "type": "reunion",
+   "date": "2026-12-07",
+   "time": "19:00",
+   "city": "Privas",
+   "venue": "Salle Ouvère",
+   "address": null,
+   "speakers": [
+    "Manuel Bompard",
+    "Elisa Martin"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-manuel-bompard-et-elisa-martin/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 44.72604,
+   "lon": 4.59492,
+   "postcode": "07000",
+   "department": "Ardèche",
+   "region": "Auvergne-Rhône-Alpes",
+   "verified_at": "2026-11-20T05:53:20+00:00",
+   "first_seen": "2026-11-20T05:53:20+00:00",
+   "changes": [],
+   "id": "melenchon-2026-12-07-privas-1900"
   },
   {
    "candidate_id": "arthaud",
