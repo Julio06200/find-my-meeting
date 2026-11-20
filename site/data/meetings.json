@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T13:32:55+00:00",
+ "updated_at": "2026-11-20T13:33:25+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -220,7 +220,7 @@
    "postcode": "10000",
    "department": "Aube",
    "region": "Grand Est",
-   "verified_at": "2026-11-20T13:32:54+00:00",
+   "verified_at": "2026-11-20T13:33:24+00:00",
    "first_seen": "2026-11-20T13:32:54+00:00",
    "changes": [],
    "id": "lisnard-2026-11-21-troyes-1900"
@@ -389,15 +389,15 @@
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
    "source": "Mélenchon 2027",
-   "status": "annule",
-   "status_note": "Revérifié le 2026-11-20 : toujours présent sur l'agenda officiel, sans mention d'annulation ni de changement (18h heure de La Réunion, fuseau non indiqué explicitement).",
+   "status": "confirme",
+   "status_note": "Revérifié le 2026-11-20 : toujours présent et inchangé sur l'agenda officiel (18h heure de La Réunion, fuseau non indiqué explicitement).",
    "source_kind": "officiel",
    "lat": -21.27397,
    "lon": 55.52868,
    "postcode": "97430",
    "department": "La Réunion",
    "region": "La Réunion",
-   "verified_at": "2026-11-20T13:32:54+00:00",
+   "verified_at": "2026-11-20T13:33:24+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [
     {
@@ -913,7 +913,7 @@
    "postcode": "77400",
    "department": "Seine-et-Marne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-20T13:32:54+00:00",
+   "verified_at": "2026-11-20T13:33:24+00:00",
    "first_seen": "2026-11-20T13:32:54+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-lagny-sur-marne-1900"
