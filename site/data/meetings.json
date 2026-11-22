@@ -1,159 +1,7 @@
 {
- "updated_at": "2026-11-21T11:04:27+00:00",
+ "updated_at": "2026-11-22T05:47:57+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "arthaud",
-   "title": "Fête de Lutte ouvrière de Rouen avec Nathalie Arthaud",
-   "type": "rencontre",
-   "date": "2026-11-21",
-   "time": "15:00",
-   "city": "Oissel",
-   "venue": "Palais des Congrès de Oissel",
-   "address": "14 avenue Saint Julien, Oissel",
-   "speakers": [
-    "Nathalie Arthaud"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://www.lutte-ouvriere.org/portail/agenda/rouen-197815.html",
-   "source": "Lutte ouvrière",
-   "status": "confirme",
-   "status_note": null,
-   "source_kind": "officiel",
-   "lat": 49.35184,
-   "lon": 1.09298,
-   "postcode": "76350",
-   "department": "Seine-Maritime",
-   "region": "Normandie",
-   "verified_at": "2026-11-21T11:04:19+00:00",
-   "first_seen": "2026-11-21T11:04:19+00:00",
-   "changes": [],
-   "id": "arthaud-2026-11-21-oissel-1500"
-  },
-  {
-   "candidate_id": "kazib",
-   "title": "Grand meeting de lancement de campagne d'Anasse Kazib",
-   "type": "meeting",
-   "date": "2026-11-21",
-   "time": "18:00",
-   "city": "Paris",
-   "venue": "Espace Charenton",
-   "address": "327 rue de Charenton, 75012 Paris",
-   "speakers": [
-    "Anasse Kazib",
-    "Elsa Marcel",
-    "Alexis Durey",
-    "Vanessa Pedinotti"
-   ],
-   "with_candidate": true,
-   "access": "inscription",
-   "url": "https://www.revolutionpermanente.fr/Lyceens-docker-Elsa-Marcel-Alexis-Durey-le-programme-du-meeting-de-RP-le-21-novembre",
-   "source": "Révolution Permanente",
-   "status": "confirme",
-   "status_note": null,
-   "source_kind": "officiel",
-   "lat": 48.83275,
-   "lon": 2.39658,
-   "postcode": "75012",
-   "department": "Paris",
-   "region": "Île-de-France",
-   "verified_at": "2026-11-18T08:10:03+00:00",
-   "first_seen": "2026-11-18T08:10:03+00:00",
-   "changes": [],
-   "id": "kazib-2026-11-21-paris-1800"
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Mathilde Panot, Christophe Bex, Anne Stambach-Terrenoir et Hadrien Clouet",
-   "type": "reunion",
-   "date": "2026-11-21",
-   "time": "19:00",
-   "city": "Carbonne",
-   "venue": "Centre socio culturel du Bois de Castre",
-   "address": null,
-   "speakers": [
-    "Mathilde Panot",
-    "Christophe Bex",
-    "Anne Stambach-Terrenoir",
-    "Hadrien Clouet"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-mathilde-panot-hadrien-clouet-anne-stambach-terrenoir-francois-piquemal-et-christophe-bex/",
-   "source": "melenchon2027.fr",
-   "lat": 43.31084,
-   "lon": 1.21895,
-   "postcode": "31390",
-   "department": "Haute-Garonne",
-   "region": "Occitanie",
-   "id": "melenchon-2026-11-21-carbonne-1900",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
-   "changes": []
-  },
-  {
-   "candidate_id": "lisnard",
-   "title": "Tour de la Gagne Nouvelle Énergie à Troyes",
-   "type": "reunion",
-   "date": "2026-11-21",
-   "time": "19:00",
-   "city": "Troyes",
-   "venue": "Maison de quartier des Marots",
-   "address": "23 rue Trouvassot, 10000 Troyes",
-   "speakers": [
-    "Geoffroy Boulard",
-    "Thomas Danrée",
-    "Grégory Caumes"
-   ],
-   "with_candidate": false,
-   "access": "a_verifier",
-   "url": "https://www.unenouvelleenergie.fr/event/tour-de-la-gagne-troyes/",
-   "source": "Nouvelle Énergie",
-   "status": "confirme",
-   "status_note": null,
-   "source_kind": "officiel",
-   "lat": 48.30788,
-   "lon": 4.0496,
-   "postcode": "10000",
-   "department": "Aube",
-   "region": "Grand Est",
-   "verified_at": "2026-11-20T13:33:24+00:00",
-   "first_seen": "2026-11-20T13:32:54+00:00",
-   "changes": [],
-   "id": "lisnard-2026-11-21-troyes-1900"
-  },
-  {
-   "candidate_id": "zemmour",
-   "title": "Meeting de lancement de campagne d'Éric Zemmour à Toulon",
-   "type": "meeting",
-   "date": "2026-11-21",
-   "time": null,
-   "city": "Toulon",
-   "venue": null,
-   "address": null,
-   "speakers": [
-    "Éric Zemmour"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://www.parti-reconquete.fr/",
-   "source": "Reconquête",
-   "status": "a_confirmer",
-   "status_note": "Annoncé par Éric Zemmour (message relayé sur le site de Reconquête) pour l'après-midi ; salle et horaire exact non communiqués.",
-   "source_kind": "officiel",
-   "lat": 43.1367,
-   "lon": 5.9338,
-   "postcode": "83000",
-   "department": "Var",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-21T11:04:19+00:00",
-   "first_seen": "2026-11-21T11:04:19+00:00",
-   "changes": [],
-   "id": "zemmour-2026-11-21-toulon"
-  },
   {
    "candidate_id": "arthaud",
    "title": "Réunion des jeunes avec Nathalie Arthaud",
@@ -211,7 +59,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "changes": []
   },
   {
@@ -237,7 +85,7 @@
    "postcode": "34000",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-19T05:53:08+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-montpellier-1900"
@@ -295,7 +143,7 @@
    "postcode": "47000",
    "department": "Lot-et-Garonne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-agen-2000"
@@ -376,8 +224,8 @@
    "access": "inscription",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
    "source": "Mélenchon 2027",
-   "status": "confirme",
-   "status_note": "De nouveau affiché sur l'agenda officiel le 2026-11-21 ; date, heure et lieu inchangés.",
+   "status": "a_confirmer",
+   "status_note": "N'apparaît plus sur l'agenda officiel depuis le 2026-11-22 (modifié ou annulé ?).",
    "source_kind": "officiel",
    "lat": -21.27397,
    "lon": 55.52868,
@@ -450,7 +298,7 @@
    "postcode": "62217",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-13T05:50:08+00:00",
    "changes": [
     {
@@ -486,7 +334,7 @@
    "postcode": "92140",
    "department": "Hauts-de-Seine",
    "region": "Île-de-France",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-25-clamart-1930"
@@ -577,7 +425,7 @@
    "postcode": "80100",
    "department": "Somme",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -794,7 +642,7 @@
    "postcode": "13001",
    "department": "Bouches-du-Rhône",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -829,7 +677,7 @@
    "postcode": "32810",
    "department": "Gers",
    "region": "Occitanie",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-28-preignan-1900"
@@ -860,7 +708,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "changes": []
   },
   {
@@ -1042,7 +890,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "changes": []
   },
   {
@@ -1124,7 +972,7 @@
    "postcode": "22000",
    "department": "Côtes-d'Armor",
    "region": "Bretagne",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-12-02-saint-brieuc-1900"
@@ -1274,7 +1122,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "changes": []
   },
   {
@@ -1362,7 +1210,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "changes": []
   },
   {
@@ -1446,7 +1294,7 @@
    "postcode": "07000",
    "department": "Ardèche",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-20T05:53:20+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-privas-1900"
@@ -1477,7 +1325,7 @@
    "postcode": "77400",
    "department": "Seine-et-Marne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-20T13:32:54+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-lagny-sur-marne-1900"
@@ -1808,7 +1656,7 @@
    "postcode": "59000",
    "department": "Nord",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-21T05:46:51+00:00",
+   "verified_at": "2026-11-22T05:47:29+00:00",
    "first_seen": "2026-11-21T05:46:51+00:00",
    "changes": [],
    "id": "melenchon-2026-12-15-lille-1830"
