@@ -19,7 +19,7 @@ run_daily.bat         alternative : exécution locale (Planificateur de tâches 
 
 ## Comment marche la mise à jour (gratuite)
 
-1. **Robot GitHub, chaque jour à 6h (gratuit)** : `scrape.py` lit les agendas de campagne structurés avec les lecteurs de `scraper/parsers.py` (aujourd'hui : melenchon2027.fr). Pour ajouter un site, écrivez une fonction dans `parsers.py` et ajoutez-la à `PARSERS`.
+1. **Robot GitHub, chaque jour à 6h (gratuit)** : `scrape.py` lit les agendas de campagne structurés avec les lecteurs de `scraper/parsers.py` : Mélenchon (melenchon2027.fr), Arthaud (lutte-ouvriere.org), Lisnard (unenouvelleenergie.fr), Asselineau (upr.fr), Philippe (action.edouardphilippe.fr), Ruffin (action.debout.fr), Glucksmann (glucks2027.fr), Kazib (anasse2027.fr) et Lassalle (resistons-france.fr). Les autres candidats n'ont pas d'agenda public lisible automatiquement : la veille Claude du matin les couvre. Pour ajouter un site, écrivez une fonction dans `parsers.py` et ajoutez-la à `PARSERS`.
 2. **Tâche Claude, chaque jour à 7h30** (application Claude sur le PC, incluse dans l'abonnement) : Claude cherche sur le web les meetings de tous les candidats, les écrit dans `scraper/claude_events.json`, les importe, puis pousse sur GitHub. Ne tourne que si le PC est allumé et l'application ouverte.
 3. **Option payante** : si un secret `ANTHROPIC_API_KEY` est ajouté au dépôt, le robot GitHub ajoute aussi une recherche web par l'API Claude (`--ai`).
 
