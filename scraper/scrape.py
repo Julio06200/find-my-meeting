@@ -100,7 +100,14 @@ def geocode(city: str, venue: Optional[str], address: Optional[str]) -> Optional
                 params["type"] = kind
             url = "https://api-adresse.data.gouv.fr/search/?" + urllib.parse.urlencode(params)
             try:
-                data = http_json(url)
+                for attempt in range(3):  # l'API est parfois indisponible quelques secondes
+                    try:
+                        data = http_json(url)
+                        break
+                    except Exception:
+                        if attempt == 2:
+                            raise
+                        time.sleep(1.5 * (attempt + 1))
                 feats = data.get("features") or []
                 if feats and feats[0]["properties"].get("score", 0) > 0.4:
                     f = feats[0]
@@ -317,7 +324,9 @@ def find_match(pool: List[dict], e: dict) -> Optional[dict]:
 RANK = {"officiel": 3, "organisateur": 2, "presse": 1}
 
 
-def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set, cands: Dict[str, dict]) -> List[dict]:
+def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set, cands: Dict[str, dict],
+          raw_urls: Optional[set] = None) -> List[dict]:
+    raw_urls = raw_urls or set()
     pool = [dict(x) for x in existing]
     seen_ids = set()
     for e in fresh:
@@ -342,6 +351,8 @@ def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set
                 a, b = slug(str(old)), slug(str(new))
                 if a == b or (f == "venue" and (a in b or b in a)):
                     continue
+                if f == "venue" and re.search(r"nouveau lieu|à venir|à définir|à préciser", f"{old} {new}", re.I):
+                    continue  # « Attention nouveau lieu » n'est pas un lieu
                 x.setdefault("changes", []).append({"at": now_iso[:10], "field": f, "old": old, "new": new})
             for k, v in e.items():
                 if k in ("id", "first_seen", "changes"):
@@ -358,6 +369,9 @@ def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set
     # Un événement qui disparaît d'un agenda officiel lu avec succès aujourd'hui n'est plus « confirmé »
     for x in pool:
         if x.get("id") in seen_ids or x.get("status") == "annule":
+            continue
+        if x.get("url") in raw_urls:  # vu sur la page officielle (même si le géocodage a échoué aujourd'hui)
+            x["verified_at"] = now_iso
             continue
         if domain(x.get("url", "")) in ok_sources and x.get("status") == "confirme":
             x["status"] = "a_confirmer"
@@ -462,7 +476,8 @@ def main() -> int:
     known = {c["id"] for c in candidates}
     fresh = [n for ev in raw if ev["candidate_id"] in known and (n := normalize(ev, now_iso, cands))]
     print(f"{len(fresh)} événements valides trouvés")
-    meetings = merge(existing, fresh, now_iso, ok_sources, cands)
+    raw_urls = {ev.get("url") for ev in raw if ev.get("url")}
+    meetings = merge(existing, fresh, now_iso, ok_sources, cands, raw_urls)
     write_outputs(meetings, "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.")
     return 0
 
