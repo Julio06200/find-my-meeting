@@ -332,10 +332,17 @@ def merge(existing: List[dict], fresh: List[dict], now_iso: str, ok_sources: set
         # la source la plus fiable l'emporte ; la presse ne peut pas écraser un agenda officiel
         stronger = RANK.get(e.get("source_kind"), 0) >= RANK.get(x.get("source_kind"), 0)
         if stronger:
+            # On ne parle de « modification » que si la MÊME page source a changé ce champ,
+            # et pas pour une simple différence d'écriture (casse, ponctuation, précision du lieu).
+            same_source = x.get("url") == e.get("url")
             for f in TRACKED:
                 old, new = x.get(f), e.get(f)
-                if new and old and new != old:
-                    x.setdefault("changes", []).append({"at": now_iso[:10], "field": f, "old": old, "new": new})
+                if not (same_source and new and old and new != old):
+                    continue
+                a, b = slug(str(old)), slug(str(new))
+                if a == b or (f == "venue" and (a in b or b in a)):
+                    continue
+                x.setdefault("changes", []).append({"at": now_iso[:10], "field": f, "old": old, "new": new})
             for k, v in e.items():
                 if k in ("id", "first_seen", "changes"):
                     continue
