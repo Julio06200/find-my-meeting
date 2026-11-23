@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T13:46:09+00:00",
+ "updated_at": "2026-11-23T05:55:46+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -59,7 +59,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "changes": []
   },
   {
@@ -85,7 +85,7 @@
    "postcode": "34000",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-19T05:53:08+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-montpellier-1900"
@@ -172,7 +172,7 @@
    "postcode": "47000",
    "department": "Lot-et-Garonne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-24-agen-2000"
@@ -253,8 +253,8 @@
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
    "source": "Mélenchon 2027",
-   "status": "confirme",
-   "status_note": "De nouveau affiché sur l'agenda officiel le 2026-11-22, date, horaire et lieu inchangés.",
+   "status": "a_confirmer",
+   "status_note": "N'apparaît plus sur l'agenda officiel depuis le 2026-11-23 (modifié ou annulé ?).",
    "source_kind": "officiel",
    "lat": -21.27397,
    "lon": 55.52868,
@@ -327,7 +327,7 @@
    "postcode": "62217",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-13T05:50:08+00:00",
    "changes": [
     {
@@ -363,7 +363,7 @@
    "postcode": "92140",
    "department": "Hauts-de-Seine",
    "region": "Île-de-France",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-25-clamart-1930"
@@ -446,15 +446,15 @@
    "with_candidate": false,
    "access": "public",
    "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-zahia-hamdane-aurelien-le-coq-et-david-guiraud/",
-   "source": "Mélenchon 2027",
+   "source": "melenchon2027.fr",
    "source_kind": "officiel",
-   "status": "a_confirmer",
+   "status": "confirme",
    "lat": 50.1058,
    "lon": 1.8289,
    "postcode": "80100",
    "department": "Somme",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-22T13:45:56+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -728,7 +728,7 @@
    "postcode": "13001",
    "department": "Bouches-du-Rhône",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -763,7 +763,7 @@
    "postcode": "32810",
    "department": "Gers",
    "region": "Occitanie",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-28-preignan-1900"
@@ -794,7 +794,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "changes": []
   },
   {
@@ -1037,7 +1037,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "changes": []
   },
   {
@@ -1119,7 +1119,7 @@
    "postcode": "22000",
    "department": "Côtes-d'Armor",
    "region": "Bretagne",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-12-02-saint-brieuc-1900"
@@ -1300,7 +1300,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "changes": []
   },
   {
@@ -1442,7 +1442,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "changes": []
   },
   {
@@ -1526,7 +1526,7 @@
    "postcode": "07000",
    "department": "Ardèche",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-20T05:53:20+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-privas-1900"
@@ -1557,7 +1557,7 @@
    "postcode": "77400",
    "department": "Seine-et-Marne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-20T13:32:54+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-lagny-sur-marne-1900"
@@ -1737,6 +1737,35 @@
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-09-saint-alban-leysse-1900"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Réunion publique avec Alma Dufour et Pierre-Yves Cadelen",
+   "type": "reunion",
+   "date": "2026-12-09",
+   "time": "20:30",
+   "city": "Lanester",
+   "venue": "Quai 9",
+   "address": null,
+   "speakers": [
+    "Alma Dufour",
+    "Pierre-Yves Cadelen"
+   ],
+   "with_candidate": false,
+   "access": "public",
+   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-alma-dufour-et-pierre-yves-cadelen/",
+   "source": "melenchon2027.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "lat": 47.76878,
+   "lon": -3.33086,
+   "postcode": "56600",
+   "department": "Morbihan",
+   "region": "Bretagne",
+   "verified_at": "2026-11-23T05:55:18+00:00",
+   "first_seen": "2026-11-23T05:55:18+00:00",
+   "changes": [],
+   "id": "melenchon-2026-12-09-lanester-2030"
   },
   {
    "candidate_id": "arthaud",
@@ -1944,7 +1973,7 @@
    "postcode": "59000",
    "department": "Nord",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-22T05:47:29+00:00",
+   "verified_at": "2026-11-23T05:55:18+00:00",
    "first_seen": "2026-11-21T05:46:51+00:00",
    "changes": [],
    "id": "melenchon-2026-12-15-lille-1830"
