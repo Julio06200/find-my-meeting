@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T08:07:20+00:00",
+ "updated_at": "2026-11-24T10:16:12+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -370,6 +370,35 @@
    "id": "melenchon-2026-11-25-clamart-1930"
   },
   {
+   "candidate_id": "zemmour",
+   "title": "Éric Zemmour à la foire de la Sainte-Catherine de Vesoul",
+   "type": "rencontre",
+   "date": "2026-11-25",
+   "time": null,
+   "city": "Vesoul",
+   "venue": "Foire de la Sainte-Catherine",
+   "address": null,
+   "speakers": [
+    "Éric Zemmour"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://www.titrespresse.com/30293212603/sainte-catherine-vesoul",
+   "source": "France Bleu / ici (via titrespresse.com)",
+   "status": "a_confirmer",
+   "status_note": "Visite de la foire annoncée par la presse, pas une réunion publique ; horaire non communiqué.",
+   "source_kind": "presse",
+   "lat": 47.62869,
+   "lon": 6.15798,
+   "postcode": "70000",
+   "department": "Haute-Saône",
+   "region": "Bourgogne-Franche-Comté",
+   "verified_at": "2026-11-24T10:16:11+00:00",
+   "first_seen": "2026-11-24T10:16:11+00:00",
+   "changes": [],
+   "id": "zemmour-2026-11-25-vesoul"
+  },
+  {
    "candidate_id": "lisnard",
    "title": "Réunion Publique Nouvelle Énergie Gironde : Libourne",
    "type": "reunion",
@@ -733,6 +762,64 @@
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-27-saint-alban-1900"
+  },
+  {
+   "candidate_id": "retailleau",
+   "title": "Réunion publique de Bruno Retailleau à Châteauroux",
+   "type": "reunion",
+   "date": "2026-11-27",
+   "time": null,
+   "city": "Châteauroux",
+   "venue": "Centre aquatique Balsan'éo",
+   "address": null,
+   "speakers": [
+    "Bruno Retailleau"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://www.titrespresse.com/30291232603/bruno-retailleau-chateauroux",
+   "source": "La Nouvelle République (via titrespresse.com)",
+   "status": "a_confirmer",
+   "status_note": "Réunion publique ouverte à tous annoncée par la presse ; horaire non communiqué.",
+   "source_kind": "presse",
+   "lat": 46.80436,
+   "lon": 1.69299,
+   "postcode": "36000",
+   "department": "Indre",
+   "region": "Centre-Val de Loire",
+   "verified_at": "2026-11-24T10:16:11+00:00",
+   "first_seen": "2026-11-24T10:16:11+00:00",
+   "changes": [],
+   "id": "retailleau-2026-11-27-chateauroux"
+  },
+  {
+   "candidate_id": "retailleau",
+   "title": "« À vous la parole ! » : rencontre avec Bruno Retailleau à Bressuire",
+   "type": "rencontre",
+   "date": "2026-11-27",
+   "time": null,
+   "city": "Bressuire",
+   "venue": null,
+   "address": null,
+   "speakers": [
+    "Bruno Retailleau"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.titrespresse.com/29912312603/bruno-retailleau-bressuire",
+   "source": "La Nouvelle République (via titrespresse.com)",
+   "status": "a_confirmer",
+   "status_note": "Annoncé par la presse ; lieu et horaire non communiqués.",
+   "source_kind": "presse",
+   "lat": 46.85769,
+   "lon": -0.47837,
+   "postcode": "79300",
+   "department": "Deux-Sèvres",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-24T10:16:11+00:00",
+   "first_seen": "2026-11-24T10:16:11+00:00",
+   "changes": [],
+   "id": "retailleau-2026-11-27-bressuire"
   },
   {
    "candidate_id": "lisnard",

@@ -261,36 +261,6 @@
    "service_national": null,
    "uniforme": null
   },
-  "ruffin": {
-   "retraite": 2,
-   "smic": 2,
-   "isf": 2,
-   "immigration": -1,
-   "europe": -1,
-   "nucleaire": 0,
-   "entreprises": -2,
-   "ukraine": 1,
-   "depense": -2,
-   "fonctionnaires": 2,
-   "securite": 0,
-   "ric": 1,
-   "ecologie": 2,
-   "frexit": -2,
-   "otan": 1,
-   "droit_du_sol": -2,
-   "ame": -2,
-   "succession": 2,
-   "capitalisation": -2,
-   "temps_travail": -2,
-   "nationalisations": 2,
-   "loyers": 2,
-   "pesticides": 2,
-   "voiture_2035": 0,
-   "fin_de_vie": 0,
-   "cannabis": 1,
-   "service_national": null,
-   "uniforme": -1
-  },
   "glucksmann": {
    "retraite": 0,
    "smic": 1,
@@ -742,7 +712,7 @@
    "uniforme": null
   }
  },
- "updated": "2026-11-13",
+ "updated": "2026-11-24",
  "sources": {},
  "to_verify": "Positions estimées à partir des programmes et déclarations connus ; à faire relire et sourcer question par question avant le lancement. « null » = position non établie (question ignorée pour ce candidat).",
  "min_positions": 10

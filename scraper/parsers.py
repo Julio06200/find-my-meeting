@@ -527,7 +527,7 @@ PARSERS: Dict[str, Callable[[], List[dict]]] = {
     "unenouvelleenergie.fr": parse_lisnard,
     "upr.fr": parse_asselineau,
     "action.edouardphilippe.fr": parse_philippe,
-    "action.debout.fr": parse_ruffin,
+    # "action.debout.fr": parse_ruffin,  # Ruffin a renoncé le 21/11/2026
     "glucks2027.fr": parse_glucksmann,
     "anasse2027.fr": parse_kazib,
     "resistons-france.fr": tribe("https://resistons-france.fr", "lassalle", "Jean Lassalle"),
