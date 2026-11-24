@@ -218,5 +218,19 @@
   "family": "Société civile",
   "color": "#457B9D",
   "site": ""
+ },
+ {
+  "id": "villepin",
+  "name": "Dominique de Villepin",
+  "surname": "de Villepin",
+  "party": "La France humaniste",
+  "family": "Divers",
+  "color": "#7A6C5D",
+  "site": "https://lafrancehumaniste.fr",
+  "domains": [
+   "lafrancehumaniste.fr",
+   "dominiquedevillepin.fr"
+  ],
+  "note": "Candidature officialisée le 20 novembre 2026."
  }
 ]
