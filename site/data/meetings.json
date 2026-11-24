@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T05:53:11+00:00",
+ "updated_at": "2026-11-24T08:07:20+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -231,7 +231,7 @@
    "id": "le-pen-2026-11-25-reims",
    "first_seen": "2026-11-12T13:02:27+00:00",
    "changes": [],
-   "verified_at": "2026-11-22T13:45:17+00:00",
+   "verified_at": "2026-11-24T08:07:19+00:00",
    "source_kind": "organisateur",
    "status_note": "Programme U2P : visites le matin, débat avec les chefs d'entreprise à 14h30 (diffusé sur LCI à 21h). Lieu exact non communiqué ; accès du public non précisé.",
    "status": "a_confirmer"
@@ -429,6 +429,35 @@
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-26-sorigny-1900"
+  },
+  {
+   "candidate_id": "labib",
+   "title": "Meeting du NPA-R à Montpellier avec Selma Labib",
+   "type": "meeting",
+   "date": "2026-11-26",
+   "time": "19:00",
+   "city": "Montpellier",
+   "venue": "La Carmagnole",
+   "address": "10 rue de la Palissade, Montpellier",
+   "speakers": [
+    "Selma Labib"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://npa-revolutionnaires.org/articles/meeting-du-npa-r-a-montpellier",
+   "source": "NPA Révolutionnaires",
+   "status": "confirme",
+   "status_note": null,
+   "source_kind": "officiel",
+   "lat": 43.60732,
+   "lon": 3.86808,
+   "postcode": "34000",
+   "department": "Hérault",
+   "region": "Occitanie",
+   "verified_at": "2026-11-24T08:07:19+00:00",
+   "first_seen": "2026-11-24T08:07:19+00:00",
+   "changes": [],
+   "id": "labib-2026-11-26-montpellier-1900"
   },
   {
    "candidate_id": "philippe",
@@ -760,6 +789,36 @@
    "first_seen": "2026-11-13T08:34:29+00:00",
    "changes": [],
    "id": "asselineau-2026-11-28-carros-1600"
+  },
+  {
+   "candidate_id": "labib",
+   "title": "Meeting national de lancement de campagne de Selma Labib",
+   "type": "meeting",
+   "date": "2026-11-28",
+   "time": "18:00",
+   "city": "Paris",
+   "venue": "Espace Charenton",
+   "address": "327 rue de Charenton, 75012 Paris",
+   "speakers": [
+    "Selma Labib",
+    "Gaël Quirante"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://npa-revolutionnaires.org/articles/meeting-national-a-paris-le-28-novembre",
+   "source": "NPA Révolutionnaires",
+   "status": "confirme",
+   "status_note": "Ouverture des portes à 17h30, début du meeting à 18h selon le communiqué du NPA-R.",
+   "source_kind": "officiel",
+   "lat": 48.83275,
+   "lon": 2.39658,
+   "postcode": "75012",
+   "department": "Paris",
+   "region": "Île-de-France",
+   "verified_at": "2026-11-24T08:07:19+00:00",
+   "first_seen": "2026-11-24T08:07:19+00:00",
+   "changes": [],
+   "id": "labib-2026-11-28-paris-1800"
   },
   {
    "candidate_id": "melenchon",
@@ -1128,35 +1187,6 @@
    "status": "confirme",
    "verified_at": "2026-11-24T05:51:34+00:00",
    "changes": []
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Rencontre U2P (artisans & indépendants) avec Jean-Luc Mélenchon",
-   "type": "rencontre",
-   "date": "2026-12-01",
-   "time": null,
-   "city": "Brétigny-sur-Orge",
-   "venue": null,
-   "address": null,
-   "speakers": [
-    "Jean-Luc Mélenchon"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://u2p-france.fr/2027",
-   "source": "U2P",
-   "lat": 48.60356,
-   "lon": 2.29631,
-   "postcode": "91220",
-   "department": "Essonne",
-   "region": "Île-de-France",
-   "id": "melenchon-2026-12-01-bretigny-sur-orge",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "changes": [],
-   "verified_at": "2026-11-12T13:02:27+00:00",
-   "source_kind": "organisateur",
-   "status_note": "Horaire et lieu exact non encore communiqués.",
-   "status": "a_confirmer"
   },
   {
    "candidate_id": "arthaud",
@@ -2245,6 +2275,36 @@
    "id": "lisnard-2026-12-11-marcilly-sur-tille-1900"
   },
   {
+   "candidate_id": "labib",
+   "title": "Réunion publique à Lille avec Selma Labib et Gaël Quirante",
+   "type": "reunion",
+   "date": "2026-12-11",
+   "time": "19:00",
+   "city": "Lille",
+   "venue": "Moulin de Wazemmes",
+   "address": "30 rue des Meuniers, Lille",
+   "speakers": [
+    "Selma Labib",
+    "Gaël Quirante"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://npa-revolutionnaires.org/articles/reunion-publique-a-lille-avec-selma-labib-et-gael-quirante",
+   "source": "NPA Révolutionnaires",
+   "status": "confirme",
+   "status_note": null,
+   "source_kind": "officiel",
+   "lat": 50.62475,
+   "lon": 3.05723,
+   "postcode": "59000",
+   "department": "Nord",
+   "region": "Hauts-de-France",
+   "verified_at": "2026-11-24T08:07:19+00:00",
+   "first_seen": "2026-11-24T08:07:19+00:00",
+   "changes": [],
+   "id": "labib-2026-12-11-lille-1900"
+  },
+  {
    "candidate_id": "philippe",
    "title": "Réunion publique avec Édouard Philippe à Cesson-Sévigné",
    "type": "reunion",
@@ -2892,6 +2952,42 @@
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-18-rouen-1900"
+  },
+  {
+   "candidate_id": "melenchon",
+   "title": "Rencontre U2P (artisans & indépendants) avec Jean-Luc Mélenchon",
+   "type": "rencontre",
+   "date": "2027-02-23",
+   "time": null,
+   "city": "Brétigny-sur-Orge",
+   "venue": null,
+   "address": null,
+   "speakers": [
+    "Jean-Luc Mélenchon"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://u2p-france.fr/2027",
+   "source": "U2P",
+   "lat": 48.60356,
+   "lon": 2.29631,
+   "postcode": "91220",
+   "department": "Essonne",
+   "region": "Île-de-France",
+   "id": "melenchon-2026-12-01-bretigny-sur-orge",
+   "first_seen": "2026-11-12T13:02:27+00:00",
+   "changes": [
+    {
+     "at": "2026-11-24",
+     "field": "date",
+     "old": "2026-12-01",
+     "new": "2027-02-23"
+    }
+   ],
+   "verified_at": "2026-11-24T08:07:19+00:00",
+   "source_kind": "organisateur",
+   "status_note": "Déplacée : la page U2P (mise à jour du 16/11/2026) annonce désormais le 23 février 2027 au lieu du 1er décembre 2026 ; horaire et lieu exact non communiqués, accès du public non précisé.",
+   "status": "a_confirmer"
   },
   {
    "candidate_id": "arthaud",
