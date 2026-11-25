@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T05:53:25+00:00",
+ "updated_at": "2026-11-25T13:08:03+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -601,17 +601,17 @@
    ],
    "with_candidate": true,
    "access": "public",
-   "url": "https://www.titrespresse.com/30291232603/bruno-retailleau-chateauroux",
-   "source": "La Nouvelle République (via titrespresse.com)",
+   "url": "https://www.lanouvellerepublique.fr/chateauroux/presidentielle-2027-bruno-retailleau-en-deplacement-a-chateauroux-pour-echanger-avec-les-habitants-1795457053",
+   "source": "La Nouvelle République",
    "status": "a_confirmer",
-   "status_note": "Réunion publique ouverte à tous annoncée par la presse ; horaire non communiqué.",
+   "status_note": "Réunion publique ouverte à tous annoncée par la presse au centre aquatique Balsan'éo ; horaire non communiqué.",
    "source_kind": "presse",
    "lat": 46.80436,
    "lon": 1.69299,
    "postcode": "36000",
    "department": "Indre",
    "region": "Centre-Val de Loire",
-   "verified_at": "2026-11-24T10:16:11+00:00",
+   "verified_at": "2026-11-25T13:08:02+00:00",
    "first_seen": "2026-11-24T10:16:11+00:00",
    "changes": [],
    "id": "retailleau-2026-11-27-chateauroux"
@@ -824,6 +824,35 @@
    "status": "confirme",
    "verified_at": "2026-11-25T05:52:03+00:00",
    "changes": []
+  },
+  {
+   "candidate_id": "le-pen",
+   "title": "Marine Le Pen à la foire des Hérolles",
+   "type": "rencontre",
+   "date": "2026-11-29",
+   "time": null,
+   "city": "Coulonges",
+   "venue": "Foire des Hérolles",
+   "address": null,
+   "speakers": [
+    "Marine Le Pen"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://www.lanouvellerepublique.fr/vienne/commune/coulonges/marine-le-pen-annoncee-a-la-foire-des-herolles-dans-la-vienne-ce-dimanche-29-novembre-1795454533",
+   "source": "La Nouvelle République",
+   "status": "a_confirmer",
+   "status_note": "Visite de foire, pas une réunion publique. Venue annoncée par le maire de la commune, non confirmée par le RN ; horaire non communiqué.",
+   "source_kind": "presse",
+   "lat": 45.60681,
+   "lon": -0.42682,
+   "postcode": "17800",
+   "department": "Charente-Maritime",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-25T13:08:02+00:00",
+   "first_seen": "2026-11-25T13:08:02+00:00",
+   "changes": [],
+   "id": "le-pen-2026-11-29-coulonges"
   },
   {
    "candidate_id": "lisnard",
