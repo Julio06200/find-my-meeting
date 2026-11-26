@@ -1,227 +1,7 @@
 {
- "updated_at": "2026-11-25T13:08:03+00:00",
+ "updated_at": "2026-11-26T05:52:51+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
-  {
-   "candidate_id": "arthaud",
-   "title": "Rencontre lycéens-étudiants avec Nathalie Arthaud à Toulouse",
-   "type": "reunion",
-   "date": "2026-11-25",
-   "time": "12:30",
-   "city": "Toulouse",
-   "venue": "Salle Castelbou",
-   "address": "22 rue Léonce Castelbou, Toulouse",
-   "speakers": [
-    "Nathalie Arthaud"
-   ],
-   "with_candidate": true,
-   "access": "public",
-   "url": "https://www.lutte-ouvriere.org/portail/agenda/toulouse-209889.html",
-   "source": "lutte-ouvriere.org",
-   "status": "confirme",
-   "status_note": null,
-   "source_kind": "officiel",
-   "lat": 43.60408,
-   "lon": 1.4338,
-   "postcode": "31000",
-   "department": "Haute-Garonne",
-   "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
-   "first_seen": "2026-11-17T08:07:53+00:00",
-   "changes": [],
-   "id": "arthaud-2026-11-25-toulouse-1230"
-  },
-  {
-   "candidate_id": "le-pen",
-   "title": "Rencontre U2P (artisans & indépendants) avec Marine Le Pen",
-   "type": "rencontre",
-   "date": "2026-11-25",
-   "time": "14:30",
-   "city": "Reims",
-   "venue": null,
-   "address": null,
-   "speakers": [
-    "Marine Le Pen"
-   ],
-   "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://u2p-france.fr/2027",
-   "source": "U2P",
-   "lat": 49.25095,
-   "lon": 4.0556,
-   "postcode": "51100",
-   "department": "Marne",
-   "region": "Grand Est",
-   "id": "le-pen-2026-11-25-reims",
-   "first_seen": "2026-11-12T13:02:27+00:00",
-   "changes": [],
-   "verified_at": "2026-11-24T08:07:19+00:00",
-   "source_kind": "organisateur",
-   "status_note": "Programme U2P : visites le matin, débat avec les chefs d'entreprise à 14h30 (diffusé sur LCI à 21h). Lieu exact non communiqué ; accès du public non précisé.",
-   "status": "a_confirmer"
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Clémence Guetté, Perceval Gaillard et Alexis Chaussalet",
-   "type": "reunion",
-   "date": "2026-11-25",
-   "time": "18:00",
-   "city": "Le Tampon",
-   "venue": "Le Tampon - Salle des fêtes du 12ème km",
-   "address": "53 rue Lacaussade, 97430 Le Tampon",
-   "speakers": [
-    "Clémence Guetté",
-    "Perceval Gaillard",
-    "Alexis Chaussalet"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-clemence-guette-perceval-gaillard-et-alexis-chaussalet/",
-   "source": "melenchon2027.fr",
-   "status": "confirme",
-   "status_note": "Vérifié le 2026-11-23 : la page et l'agenda officiel affichent toujours l'événement, date, horaire et lieu inchangés.",
-   "source_kind": "officiel",
-   "lat": -21.24352,
-   "lon": 55.54261,
-   "postcode": "97418",
-   "department": "La Réunion",
-   "region": "La Réunion",
-   "verified_at": "2026-11-25T05:52:03+00:00",
-   "first_seen": "2026-11-17T08:07:53+00:00",
-   "changes": [
-    {
-     "at": "2026-11-19",
-     "field": "time",
-     "old": "15:00",
-     "new": "18:00"
-    }
-   ],
-   "id": "melenchon-2026-11-25-le-tampon-1500"
-  },
-  {
-   "candidate_id": "arthaud",
-   "title": "Réunion publique à Perpignan",
-   "type": "reunion",
-   "date": "2026-11-25",
-   "time": "18:30",
-   "city": "Perpignan",
-   "venue": "Annexe Mairie Béranger",
-   "address": "4 rue Pierre-Jean de Béranger, Perpignan",
-   "speakers": [
-    "Nathalie Arthaud"
-   ],
-   "with_candidate": true,
-   "access": "public",
-   "url": "https://www.lutte-ouvriere.org/portail/agenda/perpignan-209888.html",
-   "source": "lutte-ouvriere.org",
-   "status": "confirme",
-   "status_note": null,
-   "source_kind": "officiel",
-   "lat": 42.70151,
-   "lon": 2.90281,
-   "postcode": "66000",
-   "department": "Pyrénées-Orientales",
-   "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
-   "first_seen": "2026-11-21T11:04:19+00:00",
-   "changes": [],
-   "id": "arthaud-2026-11-25-perpignan-1830"
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Aurélie Trouvé et Aurélien Le Coq - Faire la bifurcation écologique et alimentaire",
-   "type": "reunion",
-   "date": "2026-11-25",
-   "time": "19:00",
-   "city": "Beaurains",
-   "venue": "Salle Jordan Dellacherie",
-   "address": null,
-   "speakers": [
-    "Aurélie Trouvé",
-    "Aurélien Le Coq - Faire la bifurcation écologique",
-    "alimentaire"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-aurelie-trouve-et-aurelien-le-coq/",
-   "source": "melenchon2027.fr",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "lat": 50.26289,
-   "lon": 2.79056,
-   "postcode": "62217",
-   "department": "Pas-de-Calais",
-   "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
-   "first_seen": "2026-11-13T05:50:08+00:00",
-   "changes": [
-    {
-     "at": "2026-11-17",
-     "field": "venue",
-     "old": "Beaurains",
-     "new": "Salle Jordan Dellacherie"
-    }
-   ],
-   "id": "melenchon-2026-11-25-beaurains-1900"
-  },
-  {
-   "candidate_id": "melenchon",
-   "title": "Réunion publique avec Sarah Legrain - Faire triompher l'égalité réelle contre le sexisme et les LGBTIphobies",
-   "type": "reunion",
-   "date": "2026-11-25",
-   "time": "19:30",
-   "city": "Clamart",
-   "venue": "Maison des Associations",
-   "address": null,
-   "speakers": [
-    "Sarah Legrain - Faire triompher l'égalité réelle contre le sexisme",
-    "les LGBTIphobies"
-   ],
-   "with_candidate": false,
-   "access": "public",
-   "url": "https://melenchon2027.fr/evenement/campagne/reunion-publique-avec-sarah-legrain-faire-triompher-legalite-reelle-contre-le-sexisme-et-les-lgbtiphobies/",
-   "source": "melenchon2027.fr",
-   "source_kind": "officiel",
-   "status": "confirme",
-   "lat": 48.7961,
-   "lon": 2.25475,
-   "postcode": "92140",
-   "department": "Hauts-de-Seine",
-   "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
-   "first_seen": "2026-11-17T05:50:55+00:00",
-   "changes": [],
-   "id": "melenchon-2026-11-25-clamart-1930"
-  },
-  {
-   "candidate_id": "zemmour",
-   "title": "Éric Zemmour à la foire de la Sainte-Catherine de Vesoul",
-   "type": "rencontre",
-   "date": "2026-11-25",
-   "time": null,
-   "city": "Vesoul",
-   "venue": "Foire de la Sainte-Catherine",
-   "address": null,
-   "speakers": [
-    "Éric Zemmour"
-   ],
-   "with_candidate": true,
-   "access": "public",
-   "url": "https://www.titrespresse.com/30293212603/sainte-catherine-vesoul",
-   "source": "France Bleu / ici (via titrespresse.com)",
-   "status": "a_confirmer",
-   "status_note": "Visite de la foire annoncée par la presse, pas une réunion publique ; horaire non communiqué.",
-   "source_kind": "presse",
-   "lat": 47.62869,
-   "lon": 6.15798,
-   "postcode": "70000",
-   "department": "Haute-Saône",
-   "region": "Bourgogne-Franche-Comté",
-   "verified_at": "2026-11-24T10:16:11+00:00",
-   "first_seen": "2026-11-24T10:16:11+00:00",
-   "changes": [],
-   "id": "zemmour-2026-11-25-vesoul"
-  },
   {
    "candidate_id": "lisnard",
    "title": "Réunion Publique Nouvelle Énergie Gironde : Libourne",
@@ -248,7 +28,7 @@
    "postcode": "33500",
    "department": "Gironde",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-26-libourne-1830"
@@ -278,7 +58,7 @@
    "postcode": "37250",
    "department": "Indre-et-Loire",
    "region": "Centre-Val de Loire",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-26-sorigny-1900"
@@ -336,7 +116,7 @@
    "postcode": "50000",
    "department": "Manche",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "philippe-2026-11-27-saint-lo"
@@ -366,7 +146,7 @@
    "postcode": "80100",
    "department": "Somme",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -434,7 +214,7 @@
    "postcode": "38510",
    "department": "Isère",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-27-morestel-1830"
@@ -465,7 +245,7 @@
    "postcode": "40510",
    "department": "Landes",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-27-seignosse-1830"
@@ -494,7 +274,7 @@
    "postcode": "94600",
    "department": "Val-de-Marne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "arthaud-2026-11-27-choisy-le-roi-1830"
@@ -521,7 +301,7 @@
    "postcode": "45000",
    "department": "Loiret",
    "region": "Centre-Val de Loire",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "arthaud-2026-11-27-orleans-1830"
@@ -552,7 +332,7 @@
    "postcode": "34340",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-27-marseillan-1900"
@@ -582,7 +362,7 @@
    "postcode": "31140",
    "department": "Haute-Garonne",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-27-saint-alban-1900"
@@ -667,7 +447,7 @@
    "postcode": "67210",
    "department": "Bas-Rhin",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-11-28-obernai-1030"
@@ -696,7 +476,7 @@
    "postcode": "06510",
    "department": "Alpes-Maritimes",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-13T08:34:29+00:00",
    "changes": [],
    "id": "asselineau-2026-11-28-carros-1600"
@@ -755,7 +535,7 @@
    "postcode": "13001",
    "department": "Bouches-du-Rhône",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [
     {
@@ -790,7 +570,7 @@
    "postcode": "32810",
    "department": "Gers",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-11-28-preignan-1900"
@@ -822,7 +602,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "changes": []
   },
   {
@@ -878,7 +658,7 @@
    "postcode": "30500",
    "department": "Gard",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-30-saint-ambroix-1830"
@@ -909,7 +689,7 @@
    "postcode": "03190",
    "department": "Allier",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-11-30-vallon-en-sully-1830"
@@ -938,7 +718,7 @@
    "postcode": "91300",
    "department": "Essonne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [
     {
@@ -975,7 +755,7 @@
    "postcode": "33340",
    "department": "Gironde",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-30-gaillan-en-medoc-1900"
@@ -1007,7 +787,7 @@
    "postcode": "75001",
    "department": "Paris",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-11-30-paris-1900"
@@ -1037,7 +817,7 @@
    "postcode": "14320",
    "department": "Calvados",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-11-30-may-sur-orne-1930"
@@ -1069,7 +849,7 @@
    "postcode": "33400",
    "department": "Gironde",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-01-talence-1830"
@@ -1099,7 +879,7 @@
    "postcode": "92380",
    "department": "Hauts-de-Seine",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-01-garches-1830"
@@ -1132,8 +912,62 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "changes": []
+  },
+  {
+   "candidate_id": "lisnard",
+   "title": "Tour du Lot-et-Garonne Nouvelle Énergie : Villeneuve-sur-Lot",
+   "date": "2026-12-01",
+   "time": "19:00",
+   "city": "Villeneuve-sur-Lot",
+   "venue": "Maison de la Vie Associative - Espace François Mitterrand",
+   "address": null,
+   "speakers": [],
+   "with_candidate": false,
+   "type": "reunion",
+   "access": "public",
+   "url": "https://www.unenouvelleenergie.fr/event/tour-du-lot-et-garonne-nouvelle-energie-villeneuve-sur-lot/",
+   "source": "unenouvelleenergie.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "status_note": null,
+   "lat": 44.41615,
+   "lon": 0.74705,
+   "postcode": "47300",
+   "department": "Lot-et-Garonne",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-26T05:51:09+00:00",
+   "first_seen": "2026-11-26T05:51:09+00:00",
+   "changes": [],
+   "id": "lisnard-2026-12-01-villeneuve-sur-lot-1900"
+  },
+  {
+   "candidate_id": "lisnard",
+   "title": "Réunion publique Nouvelle Energie Val de Marne",
+   "date": "2026-12-01",
+   "time": "19:30",
+   "city": "Saint-Maur-des-Fossés",
+   "venue": "Maison des associations",
+   "address": null,
+   "speakers": [],
+   "with_candidate": false,
+   "type": "reunion",
+   "access": "public",
+   "url": "https://www.unenouvelleenergie.fr/event/reunion-publique-nouvelle-energie-val-de-marne-saint-maur-des-fosses-2026-12-01/",
+   "source": "unenouvelleenergie.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "status_note": null,
+   "lat": 48.79994,
+   "lon": 2.4918,
+   "postcode": "94100",
+   "department": "Val-de-Marne",
+   "region": "Île-de-France",
+   "verified_at": "2026-11-26T05:51:09+00:00",
+   "first_seen": "2026-11-26T05:51:09+00:00",
+   "changes": [],
+   "id": "lisnard-2026-12-01-saint-maur-des-fosses-1930"
   },
   {
    "candidate_id": "arthaud",
@@ -1159,7 +993,7 @@
    "postcode": "33000",
    "department": "Gironde",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-02-pessac-1330"
@@ -1189,7 +1023,7 @@
    "postcode": "22000",
    "department": "Côtes-d'Armor",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T05:50:55+00:00",
    "changes": [],
    "id": "melenchon-2026-12-02-saint-brieuc-1900"
@@ -1218,7 +1052,7 @@
    "postcode": "24000",
    "department": "Dordogne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-02-perigueux-1900"
@@ -1249,7 +1083,7 @@
    "postcode": "01400",
    "department": "Ain",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-12-02-chatillon-sur-chalaronne-1900"
@@ -1279,7 +1113,7 @@
    "postcode": "25300",
    "department": "Doubs",
    "region": "Bourgogne-Franche-Comté",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-02-pontarlier-1900"
@@ -1311,7 +1145,7 @@
    "postcode": "51100",
    "department": "Marne",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-02-reims-1900"
@@ -1330,7 +1164,7 @@
    ],
    "with_candidate": true,
    "access": "public",
-   "url": "https://www.lutte-ouvriere.org/portail/agenda/angouleme-209850.html",
+   "url": "https://www.lutte-ouvriere.org/portail/agenda/angouleme-210250.html",
    "source": "lutte-ouvriere.org",
    "status": "confirme",
    "status_note": null,
@@ -1340,7 +1174,7 @@
    "postcode": "16000",
    "department": "Charente",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-03-angouleme-1800"
@@ -1369,7 +1203,7 @@
    "postcode": "50000",
    "department": "Manche",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-03-saint-lo-1800"
@@ -1380,8 +1214,8 @@
    "date": "2026-12-03",
    "time": "18:00",
    "city": "Ajaccio",
-   "venue": null,
-   "address": null,
+   "venue": "Palais des congrès d'Ajaccio",
+   "address": "Quai L'Herminier, 20000 Ajaccio",
    "speakers": [
     "Édouard Philippe"
    ],
@@ -1391,14 +1225,14 @@
    "url": "https://action.edouardphilippe.fr/online-form/d2b88158-reunion-publique-ep-ajaccio",
    "source": "edouardphilippe.fr",
    "source_kind": "officiel",
-   "status": "a_confirmer",
+   "status": "confirme",
    "status_note": "Date et ville annoncées par l'équipe d'Édouard Philippe ; lieu et horaire à venir.",
-   "lat": 41.93368,
-   "lon": 8.71532,
+   "lat": 41.9214,
+   "lon": 8.73936,
    "postcode": "20000",
    "department": "Corse-du-Sud",
    "region": "Corse",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "philippe-2026-12-03-ajaccio-1800"
@@ -1428,7 +1262,7 @@
    "postcode": "73210",
    "department": "Savoie",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-03-landry-1900"
@@ -1455,7 +1289,7 @@
    "postcode": "74330",
    "department": "Haute-Savoie",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "lisnard-2026-12-03-poisy-2000"
@@ -1485,19 +1319,19 @@
    "postcode": "29800",
    "department": "Finistère",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-03-landerneau-2030"
   },
   {
    "candidate_id": "lisnard",
-   "title": "Réunion publique",
+   "title": "Réunion Publique Nouvelle Énergie Ille-et-Vilaine : Pacé",
    "type": "reunion",
    "date": "2026-12-04",
    "time": "18:30",
    "city": "Pacé",
-   "venue": "Salle Hermine au Ponant",
+   "venue": "Le Ponant - Salle Hermine",
    "address": "2 boulevard Dumaine de la Josserie, Pacé",
    "speakers": [
     "Victor Roulet",
@@ -1505,7 +1339,7 @@
    ],
    "with_candidate": false,
    "access": "public",
-   "url": "https://www.unenouvelleenergie.fr/event/reunion-publique-pace-2026-12-04/",
+   "url": "https://www.unenouvelleenergie.fr/event/reunion-publique-nouvelle-energie-ille-et-vilaine-pace/",
    "source": "unenouvelleenergie.fr",
    "status": "confirme",
    "status_note": null,
@@ -1515,7 +1349,7 @@
    "postcode": "35740",
    "department": "Ille-et-Vilaine",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-04-pace-1830"
@@ -1547,7 +1381,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "changes": []
   },
   {
@@ -1576,7 +1410,7 @@
    "postcode": "34200",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-04-sete-1900"
@@ -1603,7 +1437,7 @@
    "postcode": "67250",
    "department": "Bas-Rhin",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-12-04-soultz-sous-forets-1900"
@@ -1635,7 +1469,7 @@
    "postcode": "06000",
    "department": "Alpes-Maritimes",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-04-nice-1900"
@@ -1666,10 +1500,37 @@
    "postcode": "92000",
    "department": "Hauts-de-Seine",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "melenchon-2026-12-04-nanterre-1900"
+  },
+  {
+   "candidate_id": "lisnard",
+   "title": "Réunion Publique Nouvelle Énergie Puy-de-Dôme : Châtel-Guyon",
+   "date": "2026-12-04",
+   "time": "19:00",
+   "city": "Châtel-Guyon",
+   "venue": "Salle des fêtes",
+   "address": null,
+   "speakers": [],
+   "with_candidate": false,
+   "type": "reunion",
+   "access": "public",
+   "url": "https://www.unenouvelleenergie.fr/event/reunion-publique-nouvelle-energie-puy-de-dome-chatel-guyon/",
+   "source": "unenouvelleenergie.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "status_note": null,
+   "lat": 45.922,
+   "lon": 3.06097,
+   "postcode": "63140",
+   "department": "Puy-de-Dôme",
+   "region": "Auvergne-Rhône-Alpes",
+   "verified_at": "2026-11-26T05:51:09+00:00",
+   "first_seen": "2026-11-26T05:51:09+00:00",
+   "changes": [],
+   "id": "lisnard-2026-12-04-chatel-guyon-1900"
   },
   {
    "candidate_id": "lisnard",
@@ -1695,7 +1556,7 @@
    "postcode": "30120",
    "department": "Gard",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-05-le-vigan-0930"
@@ -1722,7 +1583,7 @@
    "postcode": "76600",
    "department": "Seine-Maritime",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-24T05:51:34+00:00",
    "changes": [],
    "id": "lisnard-2026-12-05-le-havre-0930"
@@ -1749,7 +1610,7 @@
    "postcode": "67700",
    "department": "Bas-Rhin",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-12-05-saverne-1030"
@@ -1779,7 +1640,7 @@
    "first_seen": "2026-11-12T13:02:27+00:00",
    "source_kind": "officiel",
    "status": "confirme",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "changes": []
   },
   {
@@ -1806,7 +1667,7 @@
    "id": "glucksmann-2026-12-06-paris-1430",
    "first_seen": "2026-11-12T13:46:50+00:00",
    "changes": [],
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "source_kind": "officiel",
    "status": "confirme"
   },
@@ -1863,7 +1724,7 @@
    "postcode": "07000",
    "department": "Ardèche",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-20T05:53:20+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-privas-1900"
@@ -1894,7 +1755,7 @@
    "postcode": "77400",
    "department": "Seine-et-Marne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-20T13:32:54+00:00",
    "changes": [],
    "id": "melenchon-2026-12-07-lagny-sur-marne-1900"
@@ -1921,7 +1782,7 @@
    "postcode": "50180",
    "department": "Manche",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "lisnard-2026-12-08-50180-agneaux-1800"
@@ -1950,7 +1811,7 @@
    "id": "arthaud-2026-12-08-chambery-1830",
    "first_seen": "2026-11-12T13:46:50+00:00",
    "changes": [],
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "source_kind": "officiel",
    "status": "confirme"
   },
@@ -1980,7 +1841,7 @@
    "postcode": "78600",
    "department": "Yvelines",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-08-maisons-laffitte-1900"
@@ -2009,7 +1870,7 @@
    "postcode": "69001",
    "department": "Rhône",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-09-lyon-1430"
@@ -2038,7 +1899,7 @@
    "id": "arthaud-2026-12-09-annonay-1800",
    "first_seen": "2026-11-12T13:46:50+00:00",
    "changes": [],
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "source_kind": "officiel",
    "status": "confirme"
   },
@@ -2066,7 +1927,7 @@
    "postcode": "87000",
    "department": "Haute-Vienne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-09-limoges-1900"
@@ -2097,7 +1958,7 @@
    "postcode": "73230",
    "department": "Savoie",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-09-saint-alban-leysse-1900"
@@ -2124,10 +1985,37 @@
    "postcode": "49100",
    "department": "Maine-et-Loire",
    "region": "Pays de la Loire",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "arthaud-2026-12-09-angers-1900"
+  },
+  {
+   "candidate_id": "lisnard",
+   "title": "Réunion Publique Nouvelle Énergie Pyrénées-Atlantiques : Pau",
+   "date": "2026-12-09",
+   "time": "19:00",
+   "city": "Pau",
+   "venue": "Complexe de la République",
+   "address": null,
+   "speakers": [],
+   "with_candidate": false,
+   "type": "reunion",
+   "access": "public",
+   "url": "https://www.unenouvelleenergie.fr/event/reunion-publique-nouvelle-energie-pyrenees-atlantiques-pau/",
+   "source": "unenouvelleenergie.fr",
+   "source_kind": "officiel",
+   "status": "confirme",
+   "status_note": null,
+   "lat": 43.31603,
+   "lon": -0.34311,
+   "postcode": "64000",
+   "department": "Pyrénées-Atlantiques",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-26T05:51:09+00:00",
+   "first_seen": "2026-11-26T05:51:09+00:00",
+   "changes": [],
+   "id": "lisnard-2026-12-09-pau-1900"
   },
   {
    "candidate_id": "melenchon",
@@ -2153,7 +2041,7 @@
    "postcode": "56600",
    "department": "Morbihan",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T05:55:18+00:00",
    "changes": [],
    "id": "melenchon-2026-12-09-lanester-2030"
@@ -2182,7 +2070,7 @@
    "postcode": "26000",
    "department": "Drôme",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-10-valence-1800"
@@ -2212,7 +2100,7 @@
    "postcode": "40160",
    "department": "Landes",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-10-parentis-en-born-1900"
@@ -2244,7 +2132,7 @@
    "postcode": "87200",
    "department": "Haute-Vienne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "melenchon-2026-12-10-saint-junien-1900"
@@ -2275,7 +2163,7 @@
    "postcode": "95000",
    "department": "Val-d'Oise",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-10-pontoise-2000"
@@ -2304,7 +2192,7 @@
    "postcode": "01000",
    "department": "Ain",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "arthaud-2026-12-11-bourg-en-bresse-1800"
@@ -2331,7 +2219,7 @@
    "postcode": "67170",
    "department": "Bas-Rhin",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "lisnard-2026-12-11-brumath-1900"
@@ -2362,7 +2250,7 @@
    "postcode": "21120",
    "department": "Côte-d'Or",
    "region": "Bourgogne-Franche-Comté",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T08:06:05+00:00",
    "changes": [],
    "id": "lisnard-2026-12-11-marcilly-sur-tille-1900"
@@ -2424,7 +2312,7 @@
    "postcode": "91700",
    "department": "Essonne",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "melenchon-2026-12-11-fleury-merogis-1900"
@@ -2453,7 +2341,7 @@
    "postcode": "35510",
    "department": "Ille-et-Vilaine",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "philippe-2026-12-12-cesson-sevigne"
@@ -2489,7 +2377,7 @@
      "new": "Eurexpo Lyon"
     }
    ],
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "source_kind": "officiel",
    "status": "confirme",
    "status_note": "Lieu et horaire confirmés par la billetterie officielle ; entrée gratuite sur inscription, mais les inscriptions sont annoncées comme closes."
@@ -2499,7 +2387,7 @@
    "title": "Réunion publique et dédicaces - Saint Jean Le Blanc",
    "date": "2026-12-14",
    "time": "18:30",
-   "city": "Saint Jean Le Blanc",
+   "city": "Saint-Jean-le-Blanc",
    "venue": "Salle de Montission",
    "address": null,
    "speakers": [],
@@ -2516,7 +2404,7 @@
    "postcode": "45650",
    "department": "Loiret",
    "region": "Centre-Val de Loire",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "lisnard-2026-12-14-saint-jean-le-blanc-1830"
@@ -2547,7 +2435,7 @@
    "postcode": "59000",
    "department": "Nord",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T05:46:51+00:00",
    "changes": [],
    "id": "melenchon-2026-12-15-lille-1830"
@@ -2577,7 +2465,7 @@
    "postcode": "10100",
    "department": "Aube",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-21T11:04:19+00:00",
    "changes": [],
    "id": "lisnard-2026-12-15-saint-loup-de-buffigny-1830"
@@ -2606,7 +2494,7 @@
    "postcode": "29000",
    "department": "Finistère",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [],
    "id": "arthaud-2026-12-15-quimper-1900"
@@ -2635,7 +2523,7 @@
    "postcode": "40100",
    "department": "Landes",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "philippe-2026-12-15-dax"
@@ -2664,7 +2552,7 @@
    "postcode": "56600",
    "department": "Morbihan",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [],
    "id": "arthaud-2026-12-16-lanester-1800"
@@ -2693,7 +2581,7 @@
    "postcode": "33600",
    "department": "Gironde",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "philippe-2026-12-16-pessac"
@@ -2722,7 +2610,7 @@
    "postcode": "22000",
    "department": "Côtes-d'Armor",
    "region": "Bretagne",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [],
    "id": "arthaud-2026-12-17-saint-brieuc-1900"
@@ -2749,7 +2637,7 @@
    "postcode": "57000",
    "department": "Moselle",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "lisnard-2026-12-18-metz-1830"
@@ -2778,7 +2666,7 @@
    "postcode": "34470",
    "department": "Hérault",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "melenchon-2027-01-09-perols-1500"
@@ -2807,7 +2695,7 @@
    "postcode": "80000",
    "department": "Somme",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-19T13:03:58+00:00",
    "changes": [],
    "id": "arthaud-2027-01-12-amiens-1830"
@@ -2836,7 +2724,7 @@
    "postcode": "10000",
    "department": "Aube",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-17T08:07:53+00:00",
    "changes": [],
    "id": "arthaud-2027-01-13-troyes-1800"
@@ -2865,7 +2753,7 @@
    "postcode": "76600",
    "department": "Seine-Maritime",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-24T05:51:34+00:00",
    "changes": [],
    "id": "arthaud-2027-01-19-le-havre-1830"
@@ -2894,7 +2782,7 @@
    "postcode": "67000",
    "department": "Bas-Rhin",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-22T13:45:56+00:00",
    "changes": [],
    "id": "arthaud-2027-01-21-strasbourg-1800"
@@ -2924,7 +2812,7 @@
    "postcode": "75001",
    "department": "Paris",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-01-24-paris-1500"
@@ -2953,7 +2841,7 @@
    "postcode": "62223",
    "department": "Pas-de-Calais",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "philippe-2027-01-24-arras"
@@ -2982,7 +2870,7 @@
    "postcode": "69200",
    "department": "Rhône",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-01-30-lyon-1500"
@@ -3011,7 +2899,7 @@
    "postcode": "25000",
    "department": "Doubs",
    "region": "Bourgogne-Franche-Comté",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-03-besancon-1800"
@@ -3040,7 +2928,7 @@
    "postcode": "44000",
    "department": "Loire-Atlantique",
    "region": "Pays de la Loire",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-06-nantes-1500"
@@ -3069,7 +2957,7 @@
    "postcode": "87000",
    "department": "Haute-Vienne",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-08-limoges-1900"
@@ -3098,7 +2986,7 @@
    "postcode": "42000",
    "department": "Loire",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-10-saint-etienne-1930"
@@ -3127,7 +3015,7 @@
    "postcode": "63000",
    "department": "Puy-de-Dôme",
    "region": "Auvergne-Rhône-Alpes",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-11-clermont-ferrand-1830"
@@ -3156,7 +3044,7 @@
    "postcode": "06000",
    "department": "Alpes-Maritimes",
    "region": "Provence-Alpes-Côte d'Azur",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "arthaud-2027-02-13-nice-1530"
@@ -3185,7 +3073,7 @@
    "postcode": "76000",
    "department": "Seine-Maritime",
    "region": "Normandie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-02-18-rouen-1900"
@@ -3250,7 +3138,7 @@
    "postcode": "17000",
    "department": "Charente-Maritime",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-03-04-la-rochelle-1830"
@@ -3277,7 +3165,7 @@
    "postcode": "25200",
    "department": "Doubs",
    "region": "Bourgogne-Franche-Comté",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-03-13-montbeliard-1500"
@@ -3306,7 +3194,7 @@
    "postcode": "57000",
    "department": "Moselle",
    "region": "Grand Est",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-03-21-metz-1130"
@@ -3335,7 +3223,7 @@
    "postcode": "31000",
    "department": "Haute-Garonne",
    "region": "Occitanie",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-24T05:51:34+00:00",
    "changes": [],
    "id": "arthaud-2027-03-24-toulouse-1900"
@@ -3365,7 +3253,7 @@
    "postcode": "75001",
    "department": "Paris",
    "region": "Île-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-23T15:52:17+00:00",
    "changes": [],
    "id": "arthaud-2027-04-04-paris-1500"
@@ -3394,7 +3282,7 @@
    "postcode": "59000",
    "department": "Nord",
    "region": "Hauts-de-France",
-   "verified_at": "2026-11-25T05:52:03+00:00",
+   "verified_at": "2026-11-26T05:51:09+00:00",
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "arthaud-2027-04-16-lille-1930"
