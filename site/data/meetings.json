@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T05:52:51+00:00",
+ "updated_at": "2026-11-26T08:35:14+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -91,6 +91,36 @@
    "first_seen": "2026-11-24T08:07:19+00:00",
    "changes": [],
    "id": "labib-2026-11-26-montpellier-1900"
+  },
+  {
+   "candidate_id": "lalanne",
+   "title": "Meeting de Francis Lalanne à Moulins",
+   "type": "meeting",
+   "date": "2026-11-26",
+   "time": null,
+   "city": "Moulins",
+   "venue": null,
+   "address": null,
+   "speakers": [
+    "Francis Lalanne",
+    "Dieudonné"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.titrespresse.com/30557922603/allier-prefecture-arrete",
+   "source": "titrespresse.com (presse régionale)",
+   "status": "a_confirmer",
+   "status_note": "Annoncé par la presse pour jeudi soir ; la préfecture de l'Allier a interdit toute intervention de Dieudonné dans le département, tenue du meeting et salle non confirmées.",
+   "source_kind": "presse",
+   "lat": 46.55951,
+   "lon": 3.32776,
+   "postcode": "03000",
+   "department": "Allier",
+   "region": "Auvergne-Rhône-Alpes",
+   "verified_at": "2026-11-26T08:35:13+00:00",
+   "first_seen": "2026-11-26T08:35:13+00:00",
+   "changes": [],
+   "id": "lalanne-2026-11-26-moulins"
   },
   {
    "candidate_id": "philippe",
@@ -391,7 +421,7 @@
    "postcode": "36000",
    "department": "Indre",
    "region": "Centre-Val de Loire",
-   "verified_at": "2026-11-25T13:08:02+00:00",
+   "verified_at": "2026-11-26T08:34:57+00:00",
    "first_seen": "2026-11-24T10:16:11+00:00",
    "changes": [],
    "id": "retailleau-2026-11-27-chateauroux"
@@ -629,7 +659,7 @@
    "postcode": "17800",
    "department": "Charente-Maritime",
    "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-25T13:08:02+00:00",
+   "verified_at": "2026-11-26T08:34:57+00:00",
    "first_seen": "2026-11-25T13:08:02+00:00",
    "changes": [],
    "id": "le-pen-2026-11-29-coulonges"
@@ -1676,7 +1706,7 @@
    "title": "Premier grand meeting de Fabien Roussel",
    "type": "meeting",
    "date": "2026-12-06",
-   "time": null,
+   "time": "14:30",
    "city": "Avion",
    "venue": "Salle Jorion",
    "address": null,
@@ -1684,9 +1714,9 @@
     "Fabien Roussel"
    ],
    "with_candidate": true,
-   "access": "a_verifier",
-   "url": "https://www.horizonactu.fr/actualite-50403-presidentielles-2027-le-candidat-communiste-fabien-roussel-tiendra-son-premier-grand-meeting-a-avion-le-6-decembre",
-   "source": "Horizon Actu",
+   "access": "public",
+   "url": "https://assets.nationbuilder.com/pcf/pages/45896/attachments/original/1795092820/document_1109_CommunisteS.pdf",
+   "source": "PCF - bulletin CommunisteS n°1109",
    "lat": 50.40801,
    "lon": 2.82913,
    "postcode": "62210",
@@ -1695,10 +1725,10 @@
    "id": "roussel-2026-12-06-avion",
    "first_seen": "2026-11-12T13:46:50+00:00",
    "changes": [],
-   "verified_at": "2026-11-13T08:34:29+00:00",
-   "source_kind": "presse",
+   "verified_at": "2026-11-26T08:35:13+00:00",
+   "source_kind": "officiel",
    "status_note": "Salle Jorion selon la presse ; horaire non communiqué, pas encore sur un agenda officiel.",
-   "status": "a_confirmer"
+   "status": "confirme"
   },
   {
    "candidate_id": "melenchon",
@@ -2408,6 +2438,35 @@
    "first_seen": "2026-11-25T05:52:03+00:00",
    "changes": [],
    "id": "lisnard-2026-12-14-saint-jean-le-blanc-1830"
+  },
+  {
+   "candidate_id": "roussel",
+   "title": "Présentation du plan climat V2 du PCF en présence de Fabien Roussel",
+   "type": "rencontre",
+   "date": "2026-12-14",
+   "time": null,
+   "city": "Paris",
+   "venue": "Siège du PCF",
+   "address": "2 place du Colonel-Fabien, 75019 Paris",
+   "speakers": [
+    "Fabien Roussel"
+   ],
+   "with_candidate": true,
+   "access": "inscription",
+   "url": "https://assets.nationbuilder.com/pcf/pages/45896/attachments/original/1795092820/document_1109_CommunisteS.pdf",
+   "source": "PCF - bulletin CommunisteS n°1109",
+   "status": "confirme",
+   "status_note": "Inscription en présentiel ou en visio auprès du PCF (contact@ecologie.pcf.fr) ; horaire non précisé.",
+   "source_kind": "officiel",
+   "lat": 48.8778,
+   "lon": 2.37091,
+   "postcode": "75019",
+   "department": "Paris",
+   "region": "Île-de-France",
+   "verified_at": "2026-11-26T08:35:13+00:00",
+   "first_seen": "2026-11-26T08:35:13+00:00",
+   "changes": [],
+   "id": "roussel-2026-12-14-paris"
   },
   {
    "candidate_id": "melenchon",
