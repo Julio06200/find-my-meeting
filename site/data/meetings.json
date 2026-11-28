@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-28T05:51:46+00:00",
+ "updated_at": "2026-11-28T11:18:52+00:00",
  "note": "Sources : sites de campagne, agendas des partis et presse. Vérifiez toujours auprès de l'organisateur.",
  "meetings": [
   {
@@ -153,6 +153,35 @@
    "id": "melenchon-2026-11-28-preignan-1900"
   },
   {
+   "candidate_id": "le-pen",
+   "title": "Marine Le Pen à la foire des Hérolles",
+   "type": "rencontre",
+   "date": "2026-11-29",
+   "time": "10:00",
+   "city": "Coulonges",
+   "venue": "Foire des Hérolles",
+   "address": null,
+   "speakers": [
+    "Marine Le Pen"
+   ],
+   "with_candidate": true,
+   "access": "public",
+   "url": "https://titrespresse.com/30882382603/pen-vienne-jean",
+   "source": "Titres Presse",
+   "status": "a_confirmer",
+   "status_note": "Visite de foire, pas une réunion publique. Déplacement évoqué par Marine Le Pen elle-même selon la presse, à partir de 10h ; pas d'annonce sur un agenda officiel du RN.",
+   "source_kind": "presse",
+   "lat": 45.60681,
+   "lon": -0.42682,
+   "postcode": "17800",
+   "department": "Charente-Maritime",
+   "region": "Nouvelle-Aquitaine",
+   "verified_at": "2026-11-28T11:18:52+00:00",
+   "first_seen": "2026-11-25T13:08:02+00:00",
+   "changes": [],
+   "id": "le-pen-2026-11-29-coulonges"
+  },
+  {
    "candidate_id": "melenchon",
    "title": "Réunion publique avec Antoine Léaument, Nadège Abomangoli et Benjamin Lucas",
    "type": "reunion",
@@ -181,35 +210,6 @@
    "status": "confirme",
    "verified_at": "2026-11-28T05:49:49+00:00",
    "changes": []
-  },
-  {
-   "candidate_id": "le-pen",
-   "title": "Marine Le Pen à la foire des Hérolles",
-   "type": "rencontre",
-   "date": "2026-11-29",
-   "time": null,
-   "city": "Coulonges",
-   "venue": "Foire des Hérolles",
-   "address": null,
-   "speakers": [
-    "Marine Le Pen"
-   ],
-   "with_candidate": true,
-   "access": "public",
-   "url": "https://www.lanouvellerepublique.fr/vienne/commune/coulonges/marine-le-pen-annoncee-a-la-foire-des-herolles-dans-la-vienne-ce-dimanche-29-novembre-1795454533",
-   "source": "La Nouvelle République",
-   "status": "a_confirmer",
-   "status_note": "Visite de foire, pas une réunion publique. Venue annoncée par le maire de la commune, non confirmée par le RN ; horaire non communiqué.",
-   "source_kind": "presse",
-   "lat": 45.60681,
-   "lon": -0.42682,
-   "postcode": "17800",
-   "department": "Charente-Maritime",
-   "region": "Nouvelle-Aquitaine",
-   "verified_at": "2026-11-26T08:34:57+00:00",
-   "first_seen": "2026-11-25T13:08:02+00:00",
-   "changes": [],
-   "id": "le-pen-2026-11-29-coulonges"
   },
   {
    "candidate_id": "lisnard",
@@ -1913,6 +1913,35 @@
    "first_seen": "2026-11-27T05:54:11+00:00",
    "changes": [],
    "id": "lisnard-2026-12-10-acy-romance-2000"
+  },
+  {
+   "candidate_id": "retailleau",
+   "title": "Réunion publique de Bruno Retailleau à Compiègne",
+   "type": "reunion",
+   "date": "2026-12-10",
+   "time": null,
+   "city": "Compiègne",
+   "venue": null,
+   "address": null,
+   "speakers": [
+    "Bruno Retailleau"
+   ],
+   "with_candidate": true,
+   "access": "a_verifier",
+   "url": "https://www.titrespresse.com/30830712603/bruno-retailleau-oise",
+   "source": "actu.fr via Titres Presse",
+   "status": "a_confirmer",
+   "status_note": "Annoncée par la presse locale (jeudi 10 décembre) ; salle et horaire non communiqués, pas encore sur un agenda officiel.",
+   "source_kind": "presse",
+   "lat": 49.40593,
+   "lon": 2.84437,
+   "postcode": "60200",
+   "department": "Oise",
+   "region": "Hauts-de-France",
+   "verified_at": "2026-11-28T11:18:52+00:00",
+   "first_seen": "2026-11-28T11:18:52+00:00",
+   "changes": [],
+   "id": "retailleau-2026-12-10-compiegne"
   },
   {
    "candidate_id": "arthaud",
